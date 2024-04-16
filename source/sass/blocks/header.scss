@@ -1,2 +1,14 @@
 @import "../global/mixins";
 @import "../global/variables";
+
+.header {
+  padding: 15px calc((100vw - 320px) / 2) 15px;
+  color: var(--light);
+  background-color: var(--bright);
+}
+
+.header__list {
+  @include reset;
+}
+
+
