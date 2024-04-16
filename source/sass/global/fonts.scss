@@ -1,7 +1,8 @@
 @import "../global/mixins";
 
-@include font("Roboto-Condensed", roboto-condensed-light, 300);
-@include font("Roboto-Condensed", roboto-condensed-regular, 400);
-@include font("Roboto-Condensed", roboto-condensed-bold, 700);
-@include font("Alumni-Sans", alumni-sans-semibold, 600);
-@include font("Alumni-Sans", alumni-sans-extrabold, 800);
+@include font("Montserrat", Montserrat-light, 300);
+@include font("Montserrat", Montserrat-regular, 400);
+@include font("Montserrat", Montserrat-medium, 500);
+@include font("Montserrat", Montserrat-semibold, 600);
+@include font("Montserrat", Montserrat-bold, 700);
+@include font("Montserrat", Montserrat-extrabold, 800);
