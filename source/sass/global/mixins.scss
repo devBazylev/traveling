@@ -1,0 +1,77 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin pseudo($content: "", $display: block) {
+  content: $content;
+  display: $display;
+}
+
+@mixin font($font_name, $file_name, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: $font_name;
+    font-style: #{$style};
+    font-weight: #{$weight};
+    src:
+      url("../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff2") format("woff2"),
+      url("../fonts/#{to-lower-case($font_name)}/#{$file_name}.woff") format("woff");
+    font-display: swap;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin grid($first-column: 1fr, $second-column: null, $third-column: null, $fourth-column: null, $fifth-column: null, $sixth-column: null, $seventh-column: null, $eighth-column: null, $nineth-column: null, $tenth-column: null, $gap: 5px) {
+  display: grid;
+  grid-template-columns: $first-column, $second-column, $third-column, $fourth-column, $fifth-column, $sixth-column, $seventh-column, $eighth-column, $nineth-column, $tenth-column;
+  gap: $gap;
+  // gap: #{$gap};
+}
+
+@mixin size($font-size: 12px, $line-height: 12px, $font-weight: 400) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: #{$font-weight};
+}
+
+@mixin btn($color: yellow, $bg-color: black, $hover-color: yellow, $hover-bg-color: black, $focus-color: yellow, $focus-bg-color: black, $active-color: yellow, $active-bg-color: black, $disabled-color: yellow, $disabled-bg-color: black, $display: block) {
+  display: $display;
+  width: 100%;
+  padding: 20px 25px;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid transparent;
+  color: $color;
+  background-color: $bg-color;
+  text-transform: uppercase;
+  letter-spacing: 0.1px;
+  word-break: break-all;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+  }
+
+  &:focus {
+    color: $focus-color;
+    background-color: $focus-bg-color;
+  }
+
+  &:active {
+    color: $active-color;
+    background-color: $active-bg-color;
+  }
+
+  &:disabled {
+    color: $disabled-color;
+    background-color: $disabled-bg-color;
+  }
+}
