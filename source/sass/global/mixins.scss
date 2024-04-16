@@ -3,8 +3,7 @@
     font-family: $font_name;
     font-style: #{$style};
     font-weight: #{$weight};
-    src:
-      url("../fonts/#{to-lower-case($file_name)}.ttf") format("ttf");
+    src: url("../fonts/#{to-lower-case($file_name)}.ttf") format("ttf");
     font-display: swap;
   }
 }
@@ -30,6 +29,7 @@
   display: grid;
   grid-template-columns: $first-column, $second-column, $third-column, $fourth-column, $fifth-column, $sixth-column, $seventh-column, $eighth-column, $nineth-column, $tenth-column;
   gap: $gap;
+
   // gap: #{$gap};
 }
 
