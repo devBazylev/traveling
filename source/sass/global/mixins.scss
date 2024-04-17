@@ -29,8 +29,6 @@
   display: grid;
   grid-template-columns: $first-column, $second-column, $third-column, $fourth-column, $fifth-column, $sixth-column, $seventh-column, $eighth-column, $nineth-column, $tenth-column;
   gap: $gap;
-
-  // gap: #{$gap};
 }
 
 @mixin size($font-size: 12px, $line-height: 12px, $font-weight: 400) {
