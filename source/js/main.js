@@ -2,4 +2,4 @@
 
 import './webp.js';
 import './header.js';
-import './hero.js';
+// import './hero.js';

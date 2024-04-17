@@ -37,24 +37,17 @@
   font-weight: #{$font-weight};
 }
 
-@mixin btn($color: yellow, $bg-color: black, $hover-color: yellow, $hover-bg-color: black, $focus-color: yellow, $focus-bg-color: black, $active-color: yellow, $active-bg-color: black, $disabled-color: yellow, $disabled-bg-color: black, $display: block) {
-  display: $display;
-  width: 100%;
-  padding: 20px 25px;
-  text-align: center;
-  vertical-align: middle;
-  border: 2px solid transparent;
+@mixin btn($color: var(--light), $bg-color: var(--bright), $hover-color: var(--dark-bright), $hover-bg-color: var(--light), $focus-color: var(--dark-bright), $focus-bg-color: var(--light), $active-color: var(--light), $active-bg-color: var(--dark-bright), $disabled-color: var(--light), $disabled-bg-color: var(--stormy)) {
+  border: 1px solid transparent;
   color: $color;
   background-color: $bg-color;
-  text-transform: uppercase;
-  letter-spacing: 0.1px;
   word-break: break-all;
-  transition: 0.3s ease;
   cursor: pointer;
 
   &:hover {
     color: $hover-color;
     background-color: $hover-bg-color;
+    border: 1px solid var(--dark-bright);
   }
 
   &:focus {

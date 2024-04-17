@@ -20,24 +20,12 @@
       </a>
       <nav class="header__navigation header__navigation--no-js">
         <ul class="header__list">
-          <li class="header__item">
-            <a class="header__link" href="#">Туры</a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Обучение</a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">О нас</a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Отзывы</a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Фотографии</a>
-          </li>
-          <li class="header__item">
-            <a class="header__link" href="#">Контакты</a>
-          </li>
+          <li><a class="header__link" href="#">Туры</a></li>
+          <li><a class="header__link" href="#">Обучение</a></li>
+          <li><a class="header__link" href="#">О нас</a></li>
+          <li><a class="header__link" href="#">Отзывы</a></li>
+          <li><a class="header__link" href="#">Фотографии</a></li>
+          <li><a class="header__link" href="#">Контакты</a></li>
         </ul>
       </nav>
       <button class="header__button" type="button">
@@ -48,20 +36,24 @@
 
     <main class="page__main">
       <section class="hero" data-test="hero">
-        <div class="hero__slider">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/games-desk@1x.webp 1x, img/games-desk@2x.webp 2x" width="660" height="500">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/games-tab@1x.webp 1x, img/games-tab@2x.webp 2x" width="378" height="348">
-            <source type="image/webp" srcset="img/games-mob@1x.webp 1x, img/games-mob@2x.webp 2x" width="290" height="290">
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/games-desk@1x.png 1x, img/games-desk@2x.png 2x" width="660" height="500">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/games-tab@1x.png 1x, img/games-tab@2x.png 2x" width="378" height="348">
-            <img class="games__image" src="img/games-mob@1x.png" srcset="img/games-mob@2x.png 2x" width="290" height="290" alt="Участник соревнований." loading="lazy">
-          </picture>
-        </div>
-        <div class="hero__content">
-          <h1>hero</h1>
-          <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
-          <button>Смотреть тур</button>
+        <h1 class="visually-hidden">Огромный выбор туров в горы.</h1>
+        <div class="hero__slider swiper-wrapper">
+          <div class="hero__slide swiper-slide" tabindex="0">
+            <h2>Захватывающие вершины Кавказа</h2>
+            <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+            <a class="hero__button" href="#">Смотреть тур</a>
+          </div>
+          <div class="hero__slide swiper-slide" tabindex="0">
+            <h2>Невероятная природа Камчатки</h2>
+            <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+            <a class="hero__button" href="#">Смотреть тур</a>
+          </div>
+          <div class="hero__slide swiper-slide" tabindex="0">
+            <h2>Магические пейзажи Алтайского Края</h2>
+            <p>Алтайский трекинг-тур – это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+            <a class="hero__button" href="#">Смотреть тур</a>
+          </div>
+          <div>pagination</div>
         </div>
       </section>
 

@@ -1,2 +1,156 @@
 @import "../global/mixins";
 @import "../global/variables";
+
+.hero {
+  padding: 0 calc((100vw - 320px) / 2);
+
+  @media (min-width: $tab) {
+    padding: 0 calc((100vw - 768px) / 2);
+  }
+
+  @media (min-width: $desk) {
+    padding: 0 calc((100vw - 1440px) / 2);
+  }
+}
+
+.hero__slider {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.hero__slide h2 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 26px;
+  color: var(--light);
+  text-align: center;
+
+  @media (min-width: $tab) {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  @media (min-width: $desk) {
+    font-size: 77px;
+    line-height: 77px;
+    text-align: left;
+  }
+}
+
+.hero__slide p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--light);
+  text-align: center;
+
+  @media (min-width: $tab) {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desk) {
+    text-align: left;
+  }
+}
+
+.hero__button {
+  @include btn;
+  display: block;
+  width: 180px;
+  min-height: 56px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+
+  @media (min-width: $desk) {
+    margin: 0 0 0 auto;
+  }
+}
+
+.hero__slide:nth-of-type(1) {
+  background-repeat: no-repeat;
+
+  background-image: image-set(
+    url("../../img/hero-1-mob@2x.webp") type("image/webp") 2x,
+    url("../../img/hero-1-mob@1x.webp") type("image/webp") 1x,
+    url("../../img/hero-1-mob@2x.jpg") type("image/jpg") 2x,
+    url("../../img/hero-1-mob@1x.jpg") type("image/jpg") 1x
+  );
+
+  @media (min-width: $tab) {
+    background-image: image-set(
+      url("../../img/hero-1-tab@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-1-tab@1x.webp") type("image/webp") 1x,
+      url("../../img/hero-1-tab@2x.jpg") type("image/jpg") 2x,
+      url("../../img/hero-1-tab@1x.jpg") type("image/jpg") 1x
+    );
+  }
+
+  @media (min-width: $desk) {
+    background-image: image-set(
+      url("../../img/hero-1-desk@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-1-desk@1x.webp") type("image/webp") 1x,
+      url("../../img/hero-1-desk@2x.jpg") type("image/jpg") 2x,
+      url("../../img/hero-1-desk@1x.jpg") type("image/jpg") 1x
+    );
+  }
+}
+
+.hero__slide:nth-of-type(2) {
+  background-repeat: no-repeat;
+
+  background-image: image-set(
+    url("../../img/hero-2-mob@2x.webp") type("image/webp") 2x,
+    url("../../img/hero-2-mob@1x.webp") type("image/webp") 1x,
+    url("../../img/hero-2-mob@2x.jpg") type("image/jpg") 2x,
+    url("../../img/hero-2-mob@1x.jpg") type("image/jpg") 1x
+  );
+
+  @media (min-width: $tab) {
+    background-image: image-set(
+      url("../../img/hero-2-tab@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-2-tab@1x.webp") type("image/webp") 1x,
+      url("../../img/hero-2-tab@2x.jpg") type("image/jpg") 2x,
+      url("../../img/hero-2-tab@1x.jpg") type("image/jpg") 1x
+    );
+  }
+
+  @media (min-width: $desk) {
+    background-image: image-set(
+      url("../../img/hero-2-desk@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-2-desk@1x.webp") type("image/webp") 1x,
+      url("../../img/hero-2-desk@2x.jpg") type("image/jpg") 2x,
+      url("../../img/hero-2-desk@1x.jpg") type("image/jpg") 1x
+    );
+  }
+}
+
+.hero__slide:nth-of-type(3) {
+  background-repeat: no-repeat;
+
+  background-image: image-set(
+    url("../../img/hero-3-mob@2x.webp") type("image/webp") 2x,
+    url("../../img/hero-3-mob@1x.webp") type("image/webp") 1x,
+    url("../../img/hero-3-mob@2x.jpg") type("image/jpg") 2x,
+    url("../../img/hero-3-mob@1x.jpg") type("image/jpg") 1x
+  );
+
+  @media (min-width: $tab) {
+    background-image: image-set(
+      url("../../img/hero-3-tab@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-3-tab@1x.webp") type("image/webp") 1x,
+      url("../../img/hero-3-tab@2x.jpg") type("image/jpg") 2x,
+      url("../../img/hero-3-tab@1x.jpg") type("image/jpg") 1x
+    );
+  }
+
+  @media (min-width: $desk) {
+    background-image: image-set(
+      url("../../img/hero-3-desk@2x.webp") type("image/webp") 2x,
+      url("../../img/hero-3-desk@1x.webp") type("image/webp") 1x,
+      url("../../img/hero-3-desk@2x.jpg") type("image/jpg") 2x,
+      url("../../img/hero-3-desk@1x.jpg") type("image/jpg") 1x
+    );
+  }
+}
