@@ -153,20 +153,12 @@
   top: 1px;
   left: 7px;
   transform: rotate(45deg);
-
-  @media (min-width: $tab) {
-    left: 17px;
-  }
 }
 
 .header__navigation + .header__button::after {
   top: -1px;
   left: 7px;
   transform: rotate(-45deg);
-
-  @media (min-width: $tab) {
-    left: 17px;
-  }
 }
 
 .header__navigation--closed + .header__button::before {
