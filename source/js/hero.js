@@ -7,6 +7,7 @@ import { Pagination } from 'swiper/modules';
 
 new Swiper('.swiper', {
   modules: [Pagination],
+  loop: true,
 
   breakpoints: {
     320: {

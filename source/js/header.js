@@ -8,8 +8,8 @@ if(window.innerWidth < 1440){
   nav.classList.add('header__navigation--closed');
 }
 
-const toggleMenu = () => {
+const onNav = () => {
   nav.classList.toggle('header__navigation--closed');
 };
 
-burger.addEventListener('click', toggleMenu);
+burger.addEventListener('click', onNav);
