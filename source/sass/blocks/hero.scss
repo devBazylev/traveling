@@ -34,22 +34,23 @@
 .hero__slide {
   @include grid;
   gap: 5px;
-  grid-template-rows: repeat(auto-fit, minmax(53px, auto) minmax(128px, auto) minmax(45px, auto) minmax(56px, auto));
+  grid-template-rows: repeat(auto-fit, minmax(53px, auto) minmax(128px, auto) minmax(45px, auto));
   width: 320px;
   padding: 144.5px 15px 160px;
   visibility: hidden;
   background-repeat: no-repeat;
 
   @media (min-width: $tab) {
-    grid-template-rows: repeat(auto-fit, minmax(120px, auto) minmax(104px, auto) minmax(56px, auto) minmax(186px, auto));
+    grid-template-rows: repeat(auto-fit, minmax(120px, auto) minmax(104px, auto) minmax(56px, auto));
     width: 768px;
-    padding: 342px 15px 377px;
+    padding: 342px 15px 402px;
   }
 
   @media (min-width: $desk) {
-    grid-template-rows: repeat(auto-fit, minmax(167px, auto) minmax(99px, auto) minmax(56px, auto) minmax(56px, auto));
+    grid-template-rows: repeat(auto-fit, minmax(167px, auto) minmax(99px, auto) minmax(56px, auto));
+    gap: 10px;
     width: 1440px;
-    padding: 200px 120px 40px;
+    padding: 200px 120px 258px;
   }
 }
 
@@ -123,6 +124,10 @@
   gap: 20px;
   width: fit-content;
   margin: 0 auto 40px;
+
+  @media (min-width: $desk) {
+    margin: 0 120px 92px auto;
+  }
 }
 
 .hero .swiper-pagination-bullet {
@@ -131,10 +136,21 @@
   background-color: transparent;
   border: 1px solid var(--light);
   border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: $tab) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .hero .swiper-pagination-bullet-active {
   background-color: var(--light);
+}
+
+.hero .swiper-pagination-bullet:hover {
+  border: 1px solid var(--cloudy);
+  background-color: var(--cloudy);
 }
 
 // .hero__button {
