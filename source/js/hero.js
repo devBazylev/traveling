@@ -7,7 +7,13 @@ import { Pagination } from 'swiper/modules';
 
 new Swiper('.swiper', {
   modules: [Pagination],
+
+  watchSlidesProgress: true,
+  slideActiveClass: 'hero__slide--active',
   loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
   breakpoints: {
     320: {
@@ -18,6 +24,7 @@ new Swiper('.swiper', {
     },
     1440: {
       width: 1440,
+      simulateTouch: false,
     },
   }
 });

@@ -3,6 +3,8 @@
 
 .hero {
   padding: 0 calc((100vw - 320px) / 2);
+  overflow: hidden;
+
 
   @media (min-width: $tab) {
     padding: 0 calc((100vw - 768px) / 2);
@@ -18,7 +20,27 @@
   overflow: hidden;
 }
 
+.hero__slide {
+  @include grid;
+  grid-template-rows: repeat(auto-fit, minmax(62px, auto) minmax(135px, auto) minmax(56px, auto) minmax(56px, auto));
+  width: 320px;
+  padding: 144.5px 15px 40px;
+
+  @media (min-width: $tab) {
+    width: 768px;
+  }
+
+  @media (min-width: $desk) {
+    width: 1440px;
+  }
+}
+
+.hero__slide--active {
+  visibility: visible;
+}
+
 .hero__slide h2 {
+  margin: 0 auto;
   font-size: 26px;
   font-weight: 800;
   line-height: 26px;
@@ -38,6 +60,7 @@
 }
 
 .hero__slide p {
+  margin: 0 auto;
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
@@ -54,18 +77,35 @@
   }
 }
 
-.hero__button {
+.hero__link {
   @include btn;
   display: block;
   width: 180px;
-  min-height: 56px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 19px 20px 19px;
   text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
 
   @media (min-width: $desk) {
     margin: 0 0 0 auto;
   }
+}
+
+.hero__pagination {
+  @include flex;
+  gap: 20px;
+  width: fit-content;
+  background-color: aqua;
+}
+
+.hero__button {
+  width: 16px;
+  height: 16px;
+  background-color: var(--light);
+  border: 1px solid var(--light);
+  border-radius: 50%;
 }
 
 .hero__slide:nth-of-type(1) {

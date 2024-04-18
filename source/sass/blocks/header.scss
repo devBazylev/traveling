@@ -39,6 +39,7 @@
 
 .header__navigation {
   position: absolute;
+  z-index: 1;
   grid-area: 3/1/4/5;
   width: 100%;
   padding: 4px calc((100vw - 290px) / 2) 39px;

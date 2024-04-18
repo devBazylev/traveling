@@ -10,6 +10,11 @@ if(window.innerWidth < 1440){
 
 const onNav = () => {
   nav.classList.toggle('header__navigation--closed');
+  if (!nav.classList.contains('header__navigation--closed')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'visible';
+  }
 };
 
 burger.addEventListener('click', onNav);
