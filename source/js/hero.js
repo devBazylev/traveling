@@ -2,17 +2,17 @@ import Swiper from 'swiper';
 
 import { Pagination } from 'swiper/modules';
 
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-
-new Swiper('.swiper', {
+new Swiper('.hero', {
   modules: [Pagination],
 
   watchSlidesProgress: true,
   slideActiveClass: 'hero__slide--active',
   loop: true,
+  spaceBetween: 50,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.hero__button',
+
+    clickable: true,
   },
 
   breakpoints: {

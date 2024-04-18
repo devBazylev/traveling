@@ -3,7 +3,7 @@
     font-family: #{$font_name};
     font-style: #{$style};
     font-weight: #{$weight};
-    src: url("../fonts/#{to-lower-case($file_name)}.ttf");
+    src: url("../fonts/#{to-lower-case($file_name)}.ttf") format("truetype");
     font-display: swap;
   }
 }
