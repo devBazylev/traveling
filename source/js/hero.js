@@ -10,7 +10,7 @@ new Swiper('.hero', {
   loop: true,
   spaceBetween: 50,
   pagination: {
-    el: '.hero__button',
+    el: '.swiper-pagination',
 
     clickable: true,
   },

@@ -18,6 +18,7 @@
 }
 
 .hero__slider {
+  grid-area: 1/1/2/2;
   width: 320px;
   margin: 0 auto;
 
@@ -35,15 +36,14 @@
   gap: 5px;
   grid-template-rows: repeat(auto-fit, minmax(53px, auto) minmax(128px, auto) minmax(45px, auto) minmax(56px, auto));
   width: 320px;
-  padding: 144.5px 15px 40px;
-  // visibility: hidden;
+  padding: 144.5px 15px 160px;
+  visibility: hidden;
   background-repeat: no-repeat;
 
   @media (min-width: $tab) {
-    grid-template-rows: repeat(auto-fit, minmax(115px, auto) minmax(100px, auto) minmax(56px, auto) minmax(56px, auto));
-    gap: 10px;
+    grid-template-rows: repeat(auto-fit, minmax(120px, auto) minmax(104px, auto) minmax(56px, auto) minmax(186px, auto));
     width: 768px;
-    padding: 342px 15px 40px;
+    padding: 342px 15px 377px;
   }
 
   @media (min-width: $desk) {
@@ -117,18 +117,33 @@
 
 .hero__pagination {
   @include flex;
+  z-index: 1;
+  grid-area: 1/1/2/2;
+  align-self: end;
   gap: 20px;
   width: fit-content;
-  background-color: aqua;
+  margin: 0 auto 40px;
 }
 
-.hero__button {
+.hero .swiper-pagination-bullet {
   width: 16px;
   height: 16px;
-  background-color: var(--light);
+  background-color: transparent;
   border: 1px solid var(--light);
   border-radius: 50%;
 }
+
+.hero .swiper-pagination-bullet-active {
+  background-color: var(--light);
+}
+
+// .hero__button {
+//   width: 16px;
+//   height: 16px;
+//   background-color: var(--light);
+//   border: 1px solid var(--light);
+//   border-radius: 50%;
+// }
 
 .hero__slide--first {
   background-image: image-set(
