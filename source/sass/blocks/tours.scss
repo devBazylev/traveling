@@ -1,2 +1,36 @@
 @import "../global/mixins";
 @import "../global/variables";
+
+.tours {
+  width: 100vw;
+  width: 1440px;
+  padding: 20px 15px;
+  overflow: hidden;
+
+  @media (min-width: $tab) {
+    padding: 40px 45px;
+  }
+
+  @media (min-width: $desk) {
+    padding: 100px 120px;
+  }
+}
+
+.tours__slider {
+  width: calc(100vw - 30px);
+  width: 500px;
+  margin: 0 auto;
+
+  @media (min-width: $tab) {
+    width: calc(100vw - 90px);
+  }
+
+  @media (min-width: $desk) {
+    width: calc(100vw - 240px);
+  }
+}
+
+// .tours__slide--active,
+// .tours__slide--visible {
+//   visibility: visible;
+// }

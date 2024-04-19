@@ -38,7 +38,7 @@
       <section class="hero swiper" data-test="hero">
         <h1 class="visually-hidden">Огромный выбор туров в горы.</h1>
         <div class="hero__slider swiper-wrapper">
-          <div class="hero__slide hero__slide--first swiper-slide">
+          <div class="hero__slide swiper-slide">
             <div class="hero__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero-1-desk@1x.webp 1x, img/hero-1-desk@2x.webp 2x" width="1440" height="800">
@@ -59,7 +59,7 @@
               </div>
             </div>
           </div>
-          <div class="hero__slide hero__slide--second swiper-slide">
+          <div class="hero__slide swiper-slide">
             <div class="hero__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero-2-desk@1x.webp 1x, img/hero-2-desk@2x.webp 2x" width="1440" height="800">
@@ -80,7 +80,7 @@
               </div>
             </div>
           </div>
-          <div class="hero__slide hero__slide--third swiper-slide">
+          <div class="hero__slide swiper-slide">
             <div class="hero__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/hero-3-desk@1x.webp 1x, img/hero-3-desk@2x.webp 2x" width="1440" height="800">
@@ -105,8 +105,74 @@
         <div class="hero__pagination swiper-pagination"></div>
       </section>
 
-      <section class="tours" id="tours" data-test="tours">
-        <h2>tours</h2>
+      <section class="tours swiper" id="tours" data-test="tours">
+        <h2 class="tours__title page__title">Ближайшие туры</h2>
+        <div class="tours__headline page__headline" aria-hidden="true">Ближайшие туры</div>
+        <button class="tours__button tours__button--prev swiper-button-prev" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="tours__button tours__button--next swiper-button-next" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
+        <div class="tours__slider swiper-wrapper">
+          <div class="tours__slide tours__slide--first swiper-slide">
+            <div class="tours__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-1-desk@1x.webp 1x, img/tours-1-desk@2x.webp 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tours-1-tab@1x.webp 1x, img/tours-1-tab@2x.webp 2x" width="330" height="416">
+                <source type="image/webp" srcset="img/tours-1-mob@1x.webp 1x, img/tours-1-mob@2x.webp 2x" width="290" height="416">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-1-desk@1x.jpg 1x, img/tours-1-desk@2x.jpg 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tours-1-tab@1x.jpg 1x, img/tours-1-tab@2x.jpg 2x" width="330" height="416">
+                <img class="tours__image" src="img/tours-1-mob@1x.jpg" srcset="img/tours-1-mob@2x.jpg 2x" width="290" height="416" alt="Гора Эльбруса.">
+              </picture>
+            </div>
+            <div class="tours__content">
+            </div>
+          </div>
+          <div class="tours__slide tours__slide--second swiper-slide">
+            <div class="tours__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-2-desk@1x.webp 1x, img/tours-2-desk@2x.webp 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tours-2-tab@1x.webp 1x, img/tours-2-tab@2x.webp 2x" width="330" height="416">
+                <source type="image/webp" srcset="img/tours-2-mob@1x.webp 1x, img/tours-2-mob@2x.webp 2x" width="290" height="416">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-2-desk@1x.jpg 1x, img/tours-2-desk@2x.jpg 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tours-2-tab@1x.jpg 1x, img/tours-2-tab@2x.jpg 2x" width="330" height="416">
+                <img class="tours__image" src="img/tours-2-mob@1x.jpg" srcset="img/tours-2-mob@2x.jpg 2x" width="290" height="416" alt="Гора Эльбруса.">
+              </picture>
+            </div>
+            <div class="tours__content">
+            </div>
+          </div>
+          <div class="tours__slide tours__slide--third swiper-slide">
+            <div class="tours__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-3-desk@1x.webp 1x, img/tours-3-desk@2x.webp 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tours-3-tab@1x.webp 1x, img/tours-3-tab@2x.webp 2x" width="330" height="416">
+                <source type="image/webp" srcset="img/tours-3-mob@1x.webp 1x, img/tours-3-mob@2x.webp 2x" width="290" height="416">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-3-desk@1x.jpg 1x, img/tours-3-desk@2x.jpg 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tours-3-tab@1x.jpg 1x, img/tours-3-tab@2x.jpg 2x" width="330" height="416">
+                <img class="tours__image" src="img/tours-3-mob@1x.jpg" srcset="img/tours-3-mob@2x.jpg 2x" width="290" height="416" alt="Гора Эльбруса.">
+              </picture>
+            </div>
+            <div class="tours__content">
+            </div>
+          </div>
+          <div class="tours__slide tours__slide--fourth swiper-slide">
+            <div class="tours__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-4-desk@1x.webp 1x, img/tours-4-desk@2x.webp 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tours-4-tab@1x.webp 1x, img/tours-4-tab@2x.webp 2x" width="330" height="416">
+                <source type="image/webp" srcset="img/tours-4-mob@1x.webp 1x, img/tours-4-mob@2x.webp 2x" width="290" height="416">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-4-desk@1x.jpg 1x, img/tours-4-desk@2x.jpg 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/tours-4-tab@1x.jpg 1x, img/tours-4-tab@2x.jpg 2x" width="330" height="416">
+                <img class="tours__image" src="img/tours-4-mob@1x.jpg" srcset="img/tours-4-mob@2x.jpg 2x" width="290" height="416" alt="Гора Эльбруса.">
+              </picture>
+            </div>
+            <div class="tours__content">
+            </div>
+          </div>
+        </div>
+        <a class="tours__link" href="#">Показать все туры</a>
       </section>
 
       <section class="training" id="training" data-test="training">
