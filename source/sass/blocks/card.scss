@@ -5,8 +5,7 @@
   @include grid;
   width: auto;
   height: 416px;
-  padding: 30px 20px;
-  overflow: auto;
+  // overflow: auto;
 }
 
 .card__picture {
@@ -19,10 +18,11 @@
 
 .card__content {
   @include flex;
+  justify-content: end;
   grid-area: 1/1/2/2;
   gap: 15px;
   flex-direction: column;
-  align-items: end;
+  padding: 30px 20px;
   color: var(--light);
 }
 
@@ -32,6 +32,7 @@
 
 .card__title {
   order: -1;
+  margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -118,6 +119,7 @@
 
 .card__property {
   grid-area: 1/1/2/2;
+  margin: 0 0 4px;
   font-size: 12px;
   font-weight: 300;
   line-height: 12px;
@@ -130,39 +132,31 @@
   line-height: 13px;
 }
 
-.card__stars-empty,
 .card__stars {
-  width: 80px;
+  width: 84px;
+  height: 16px;
   background-color: var(--light);
   mask-position: center;
   mask-size: contain;
-  mask-repeat: repeat-x;
-}
-
-.card__stars-empty {
-  mask-image: url("/__spritemap#sprite-star-empty-view");
-}
-
-.card__stars {
-  mask-image: url("/__spritemap#sprite-star-view");
+  mask-repeat: no-repeat;
 }
 
 .card__stars--one {
-  width: 16px;
+  mask-image: url("/__spritemap#sprite-stars-1-view");
 }
 
 .card__stars--two {
-  width: 32px;
+  mask-image: url("/__spritemap#sprite-stars-2-view");
 }
 
 .card__stars--three {
-  width: 48px;
+  mask-image: url("/__spritemap#sprite-stars-3-view");
 }
 
 .card__stars--four {
-  width: 64px;
+  mask-image: url("/__spritemap#sprite-stars-4-view");
 }
 
 .card__stars--five {
-  width: 80px;
+  mask-image: url("/__spritemap#sprite-stars-5-view");
 }

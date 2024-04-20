@@ -105,7 +105,8 @@
         <div class="hero__pagination swiper-pagination"></div>
       </section>
 
-      <section class="tours swiper" id="tours" data-test="tours">
+      <section class="tours" id="tours" data-test="tours">
+      <!-- <section class="tours swiper" id="tours" data-test="tours"> -->
         <h2 class="tours__title page__title">Ближайшие туры</h2>
         <div class="tours__headline page__headline" aria-hidden="true">Ближайшие туры</div>
         <button class="tours__button tours__button--prev swiper-button-prev" type="button">
@@ -114,8 +115,10 @@
         <button class="tours__button tours__button--next swiper-button-next" type="button">
           <span class="visually-hidden">Следующий слайд</span>
         </button>
-        <div class="tours__slider swiper-wrapper">
-          <article class="card card--first swiper-slide">
+        <div class="tours__slider">
+        <!-- <div class="tours__slider swiper-wrapper"> -->
+          <article class="card">
+          <!-- <article class="card card--first swiper-slide"> -->
             <div class="card__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-1-desk@1x.webp 1x, img/tours-1-desk@2x.webp 2x" width="380" height="416">
@@ -139,7 +142,7 @@
               <div class="card__description">
                 <div class="card__overview">
                   <div class="card__property">Сложность</div>
-                  <div class="card__value card__stars-empty"></div>
+                  <!-- <div class="card__value card__stars-empty"></div> -->
                   <div class="card__value card__stars card__stars--four"></div>
                 </div>
                 <div class="card__overview">
@@ -153,7 +156,7 @@
               </div>
             </div>
           </article>
-          <div class="tours__slide tours__slide--second swiper-slide">
+          <!-- <div class="tours__slide tours__slide--second swiper-slide">
             <div class="tours__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-2-desk@1x.webp 1x, img/tours-2-desk@2x.webp 2x" width="380" height="416">
@@ -166,8 +169,8 @@
             </div>
             <div class="tours__content">
             </div>
-          </div>
-          <div class="tours__slide tours__slide--third swiper-slide">
+          </div> -->
+          <!-- <div class="tours__slide tours__slide--third swiper-slide">
             <div class="tours__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-3-desk@1x.webp 1x, img/tours-3-desk@2x.webp 2x" width="380" height="416">
@@ -180,8 +183,8 @@
             </div>
             <div class="tours__content">
             </div>
-          </div>
-          <div class="tours__slide tours__slide--fourth swiper-slide">
+          </div> -->
+          <!-- <div class="tours__slide tours__slide--fourth swiper-slide">
             <div class="tours__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-4-desk@1x.webp 1x, img/tours-4-desk@2x.webp 2x" width="380" height="416">
@@ -194,7 +197,7 @@
             </div>
             <div class="tours__content">
             </div>
-          </div>
+          </div> -->
         </div>
         <a class="tours__link" href="#">Показать все туры</a>
       </section>

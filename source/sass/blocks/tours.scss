@@ -2,8 +2,10 @@
 @import "../global/variables";
 
 .tours {
+  @include grid;
+  grid-template-rows: repeat(auto-fit, minmax(55px, auto) minmax(416px, auto) minmax(34px, auto));
+  gap: 25px;
   width: 100vw;
-  // width: 1440px;
   padding: 20px 15px;
   overflow: hidden;
 
@@ -16,9 +18,23 @@
   }
 }
 
+.tours__title,
+.tours__headline,
+.tours__button {
+  grid-area: 1/1/2/2;
+}
+
+.tours__title {
+  margin: 19px 0 0;
+}
+
+.tours__headline {
+  margin: 3px 0 0;
+}
+
 .tours__slider {
+  grid-area: 2/1/3/2;
   width: calc(100vw - 30px);
-  // width: 500px;
   margin: 0 auto;
 
   @media (min-width: $tab) {
@@ -37,8 +53,13 @@
 
 .tours__button {
   @include btn;
+  display: none;
   width: 37px;
   height: 35px;
+
+  @media (min-width: $tab) {
+    display: block;
+  }
 }
 
 .tours__button::before {
@@ -67,12 +88,16 @@
 
 .tours__link {
   @include flex;
-  gap: 12px;
+  grid-area: 3/1/4/2;
+  gap: 10.3px;
+  margin: 0 auto;
+  padding: 10px 30px 10px 33.5px;
   font-size: 14px;
   font-weight: 700;
   line-height: 14px;
   letter-spacing: 0.56px;
   text-transform: uppercase;
+  color: var(--main);
 
   @media (min-width: $tab) {
     font-size: 16px;
@@ -83,8 +108,10 @@
 
 .tours__link::after {
   @include pseudo;
+  width: 12px;
+  height: 14px;
   position: relative;
-  background-color: var(--light);
+  background-color: var(--main);
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -107,4 +134,22 @@
 .tours__link--disabled,
 .tours__link:not([href]) {
   color: var(--stormy);
+}
+
+.tours__link:hover::after {
+  background-color: var(--bright-trans-10);
+}
+
+.tours__link:focus::after {
+  background-color: var(--bright);
+}
+
+.tours__link:active::after {
+  background-color: var(--dark-bright);
+}
+
+.tours__link:disabled::after,
+.tours__link--disabled .tours__link::after,
+.tours__link:not([href])::after {
+  background-color: var(--stormy);
 }
