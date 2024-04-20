@@ -3,7 +3,7 @@
 
 .tours {
   width: 100vw;
-  width: 1440px;
+  // width: 1440px;
   padding: 20px 15px;
   overflow: hidden;
 
@@ -18,7 +18,7 @@
 
 .tours__slider {
   width: calc(100vw - 30px);
-  width: 500px;
+  // width: 500px;
   margin: 0 auto;
 
   @media (min-width: $tab) {
@@ -30,7 +30,81 @@
   }
 }
 
-// .tours__slide--active,
-// .tours__slide--visible {
-//   visibility: visible;
-// }
+.tours__slide--active,
+.tours__slide--visible {
+  visibility: visible;
+}
+
+.tours__button {
+  @include btn;
+  width: 37px;
+  height: 35px;
+}
+
+.tours__button::before {
+  @include pseudo;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: var(--light);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.tours__button--prev::before {
+  top: 1px;
+  left: 1px;
+  mask-image: url("/__spritemap#sprite-arrow-view");
+  transform: rotate(180deg);
+}
+
+.tours__button--next::before {
+  top: 1px;
+  left: 1px;
+  mask-image: url("/__spritemap#sprite-arrow-view");
+}
+
+.tours__link {
+  @include flex;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+
+  @media (min-width: $tab) {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.64px;
+  }
+}
+
+.tours__link::after {
+  @include pseudo;
+  position: relative;
+  background-color: var(--light);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  mask-image: url("/__spritemap#sprite-half-arrow-view");
+}
+
+.tours__link:hover {
+  color: var(--bright-trans-10);
+}
+
+.tours__link:focus {
+  color: var(--bright);
+}
+
+.tours__link:active {
+  color: var(--dark-bright);
+}
+
+.tours__link:disabled,
+.tours__link--disabled,
+.tours__link:not([href]) {
+  color: var(--stormy);
+}

@@ -59,7 +59,9 @@
     background-color: $active-bg-color;
   }
 
-  &:disabled {
+  &:disabled,
+  &--disabled,
+  &:not([href]) {
     color: $disabled-color;
     background-color: $disabled-bg-color;
   }
