@@ -12,15 +12,17 @@ new Swiper('.tours', {
   slidesPerView: 'auto',
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.tours__button--next',
+    prevEl: '.tours__button--prev',
+    // nextEl: '.swiper-button-next',
+    // prevEl: '.swiper-button-prev',
   },
   // по одному слайду переключается!!!
 
   breakpoints: {
     320: {
       initialSlide: 0,
-      spaceBetween: 50,
+      spaceBetween: 30,
     },
     768: {
       initialSlide: 0,

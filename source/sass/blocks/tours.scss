@@ -89,14 +89,16 @@
 }
 
 .tours__button::before {
-  @include pseudo;
-  position: relative;
-  width: 20px;
-  height: 9px;
-  background-color: var(--light);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  @media (min-width: $tab) {
+    @include pseudo;
+    position: relative;
+    width: 20px;
+    height: 9px;
+    background-color: var(--light);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
 }
 
 .tours__button--prev::before {

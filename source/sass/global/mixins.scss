@@ -60,9 +60,12 @@
   }
 
   &:disabled,
-  &--disabled,
-  &:not([href]) {
+  &--disabled {
     color: $disabled-color;
     background-color: $disabled-bg-color;
   }
 }
+
+// &:not([href]) {
+//   background-color: ;
+// }

@@ -3,8 +3,8 @@
 
 .card {
   @include grid;
-  width: auto;
-  height: 416px;
+  width: 290px;
+  min-height: 416px;
   visibility: hidden;
   // overflow: auto;
 
