@@ -11,7 +11,7 @@ new Swiper('.hero', {
   spaceBetween: 50,
   pagination: {
     el: '.swiper-pagination',
-
+    // type: 'bullets',
     clickable: true,
   },
 

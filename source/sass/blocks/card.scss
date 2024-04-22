@@ -6,7 +6,7 @@
   width: 290px;
   min-height: 416px;
   visibility: hidden;
-  // overflow: auto;
+  overflow: auto;
 
   @media (min-width: $tab) {
     width: 330px;
@@ -17,10 +17,34 @@
   }
 }
 
+.card--active {
+  margin-left: calc((100vw - 320px) / 2);
+
+  @media (min-width: 625px) {
+    margin-left: calc((100vw - 625px) / 2);
+  }
+
+  @media (min-width: $tab) {
+    margin-left: calc((100vw - 768px) / 2);
+  }
+
+  @media (min-width: 1116px) {
+    margin-left: calc((100vw - 1116px) / 2);
+  }
+
+  @media (min-width: $desk) {
+    margin-left: auto;
+  }
+}
+
 .card--active,
 .card--visible {
   visibility: visible;
 }
+
+// .card--prev {
+//   visibility: hidden;
+// }
 
 .card__picture {
   grid-area: 1/1/2/2;
@@ -36,7 +60,7 @@
   grid-area: 1/1/2/2;
   gap: 14px;
   flex-direction: column;
-  padding: 30px 20px 27px;
+  padding: 30px 20px 32px;
   color: var(--light);
 }
 

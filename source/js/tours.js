@@ -8,6 +8,7 @@ new Swiper('.tours', {
   watchSlidesProgress: true,
   slideActiveClass: 'card--active',
   slideFullyVisibleClass: 'card--visible',
+  // slidePrevClass: 'card--prev',
 
   slidesPerView: 'auto',
 
@@ -22,7 +23,7 @@ new Swiper('.tours', {
   breakpoints: {
     320: {
       initialSlide: 0,
-      spaceBetween: 30,
+      spaceBetween: 15,
     },
     768: {
       initialSlide: 0,

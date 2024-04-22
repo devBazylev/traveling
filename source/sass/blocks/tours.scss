@@ -4,18 +4,18 @@
 .tours {
   @include grid;
   grid-template-rows: repeat(auto-fit, minmax(55px, auto) minmax(416px, auto) minmax(34px, auto));
-  gap: 25px;
+  gap: 20px;
   width: 100vw;
-  padding: 20px 15px;
+  padding: 20px 0;
   overflow: hidden;
 
   @media (min-width: $tab) {
-    padding: 40px 45px;
+    padding: 40px 0;
   }
 
   @media (min-width: $desk) {
-    gap: 47px;
-    padding: 100px 120px;
+    gap: 42px;
+    padding: 100px 0;
   }
 }
 
@@ -25,35 +25,29 @@
   grid-area: 1/1/2/2;
 }
 
-// .tours__title,
-// .tours__headline,
-// .tours__button {
-//   grid-area: 1/1/2/2;
-// }
-
 .tours__title {
-  margin: 19px 0 0;
+  margin: 19px 0 19px calc((100vw - 290px) / 2);
 
   @media (min-width: $tab) {
-    margin: 30px 0 0;
+    margin: 30px 0 5px calc((100vw - 678px) / 2);
     padding: 0 200px 0 0;
   }
 
   @media (min-width: $desk) {
-    margin: 23px 0 0;
+    margin: 23px 0 8px calc((100vw - 1200px) / 2);
   }
 }
 
 .tours__headline {
-  margin: 3px 0 0;
+  margin: 3px 0 0 calc((100vw - 290px) / 2);
 
   @media (min-width: $tab) {
-    margin: 5px 0 0;
+    margin: 5px 0 0 calc((100vw - 678px) / 2);
     padding: 0 200px 0 0;
   }
 
   @media (min-width: $desk) {
-    margin: 6px 0 0;
+    margin: 6px 0 0 calc((100vw - 1200px) / 2);
   }
 }
 
@@ -85,13 +79,21 @@
 
 .tours__button--prev {
   @media (min-width: $tab) {
-    margin: 20px 41px 0 auto;
+    margin: 20px calc((100vw - 596px) / 2) 0 auto;
+  }
+
+  @media (min-width: $desk) {
+    margin: 20px calc((100vw - 1118px) / 2) 0 auto;
   }
 }
 
 .tours__button--next {
   @media (min-width: $tab) {
-    margin: 20px 0 0 auto;
+    margin: 20px calc((100vw - 678px) / 2) 0 auto;
+  }
+
+  @media (min-width: $desk) {
+    margin: 20px calc((100vw - 1200px) / 2) 0 auto;
   }
 }
 
