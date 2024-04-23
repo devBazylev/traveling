@@ -6,7 +6,7 @@
   width: 290px;
   min-height: 416px;
   visibility: hidden;
-  overflow: auto;
+  // overflow: auto;
 
   @media (min-width: $tab) {
     width: 330px;
@@ -21,19 +21,19 @@
   margin-left: calc((100vw - 320px) / 2);
 
   @media (min-width: 625px) {
-    margin-left: calc((100vw - 625px) / 2);
+    margin-left: calc((100vw - 595px) / 2);
   }
 
   @media (min-width: $tab) {
-    margin-left: calc((100vw - 768px) / 2);
+    margin-left: calc((100vw - 678px) / 2);
   }
 
   @media (min-width: 1116px) {
-    margin-left: calc((100vw - 1116px) / 2);
+    margin-left: calc((100vw - 1026px) / 2);
   }
 
   @media (min-width: $desk) {
-    margin-left: auto;
+    margin-left: 120px;
   }
 }
 
