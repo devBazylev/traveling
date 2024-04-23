@@ -15,14 +15,17 @@
 
 .training__title {
   grid-area: 1/2/2/3;
+  margin: 37px 0 33px;
 }
 
 .training__headline {
   grid-area: 1/2/2/3;
+  margin: 20px 0 0;
 }
 
 .training > p {
   grid-area: 2/2/3/3;
+  margin: 0 0 7px;
   font-size: 14px;
   line-height: 20px;
 
@@ -133,13 +136,17 @@
 
 .training__instructor {
   @include grid;
-  padding: 15px;
+  grid-template-rows: repeat(auto-fit, minmax(215px, auto) minmax(47px, auto) minmax(64px, auto));
+  align-items: start;
+  min-height: 356px;
+  padding: 14px;
   border: 1px solid var(--bright-trans-10);
+  overflow: auto;
 }
 
 .training__picture {
   grid-area: 1/1/2/2;
-  margin: 0 0 15px;
+  // margin: 0 0 7px;
   overflow: hidden;
 }
 
@@ -149,7 +156,8 @@
 
 .training__name {
   grid-area: 2/1/3/2;
-  margin: 0 0 15px;
+  // margin: 1px 0 15px;
+  margin: 1px 0 0;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -167,8 +175,8 @@
 .training__social::before {
   @include pseudo;
   position: relative;
-  top: -4px;
-  left: -1px;
+  top: 7px;
+  left: 4px;
   width: 14px;
   height: 8px;
   background-color: var(--main);
@@ -176,6 +184,44 @@
   mask-position: center;
   mask-size: contain;
   mask-image: url("/__spritemap#sprite-training-vk-view");
+}
+
+.training__social:hover {
+  border: 1px solid var(--main);
+}
+
+.training__social:focus {
+  border: 1px solid transparent;
+}
+
+.training__social:active {
+  border: 1px solid var(--bright);
+  background-color: var(--bright);
+}
+
+.training__social:disabled,
+.training__social--disabled,
+.training__social:not([href]) {
+  border: 1px solid var(--main-trans-30);
+  cursor: default;
+}
+
+.training__social:hover::before {
+  background-color: var(--main);
+}
+
+.training__social:focus::before {
+  background-color: var(--main);
+}
+
+.training__social:active::before {
+  background-color: var(--light);
+}
+
+.training__social:disabled::before,
+.training__social--disabled::before,
+.training__social:not([href])::before {
+  background-color: var(--main-trans-30);
 }
 
 .training__instructor p {
@@ -187,7 +233,7 @@
 
 .training__subtitle {
   grid-area: 4/2/5/3;
-  margin: 25px 0 25px;
+  margin: 26px 0 25px;
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
@@ -210,6 +256,9 @@
 
 .training__list {
   @include reset;
+  @include grid;
+  gap: 10px;
+  grid-template-rows: repeat(auto-fit, minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(50px, auto));
 }
 
 .training__item {
@@ -237,25 +286,24 @@
   left: -1px;
   width: 25px;
   height: 25px;
-  background-color: var(--main);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  // background-color: var(--main);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .training__item--map::before {
-  mask-image: url("/__spritemap#sprite-training-vk-view");
-  // mask-image: url("/__spritemap#sprite-map-view");
+  background-image: url("/__spritemap#sprite-map-view");
 }
 
 .training__item--boots::before {
-  mask-image: url("/__spritemap#sprite-boots-view");
+  background-image: url("/__spritemap#sprite-boots-view");
 }
 
 .training__item--mountains::before {
-  mask-image: url("/__spritemap#sprite-mountains-view");
+  background-image: url("/__spritemap#sprite-mountains-view");
 }
 
 .training__item--pine-trees::before {
-  mask-image: url("/__spritemap#sprite-pine-trees-view");
+  background-image: url("/__spritemap#sprite-pine-trees-view");
 }
