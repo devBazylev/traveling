@@ -3,6 +3,7 @@
 
 .training {
   @include grid(1fr 290px 1fr);
+
   padding: 0 0 20px;
 
   @media (min-width: $tab) {
@@ -38,6 +39,7 @@
 
 .training__slider {
   @include grid(1fr 290px 1fr);
+
   grid-area: 3/1/4/4;
 
   @media (min-width: $tab) {
@@ -55,6 +57,7 @@
 
 .training__button {
   @include btn;
+
   display: none;
   width: 37px;
   height: 35px;
@@ -89,6 +92,7 @@
 .training__button::before {
   @media (min-width: $tab) {
     @include pseudo;
+
     position: relative;
     width: 20px;
     height: 9px;
@@ -137,6 +141,7 @@
 
 .training__instructor {
   @include grid;
+
   grid-template-rows: repeat(auto-fit, minmax(215px, auto) minmax(47px, auto) minmax(64px, auto));
   align-items: start;
   width: 290px;
@@ -156,6 +161,7 @@
 
 .training__picture {
   grid-area: 1/1/2/2;
+
   // margin: 0 0 7px;
   overflow: hidden;
 }
@@ -166,6 +172,7 @@
 
 .training__name {
   grid-area: 2/1/3/2;
+
   // margin: 1px 0 15px;
   margin: 1px 0 0;
   font-size: 14px;
@@ -184,6 +191,7 @@
 
 .training__social::before {
   @include pseudo;
+
   position: relative;
   top: 7px;
   left: 4px;
@@ -261,12 +269,14 @@
 
 .training__wrapper {
   grid-area: 5/2/6/3;
+
   @include grid;
 }
 
 .training__list {
   @include reset;
   @include grid;
+
   // @include grid(20px 1fr);
   // grid-auto-flow: dense;
   gap: 25px;
@@ -287,6 +297,7 @@
 
 .training__item {
   @include flex;
+
   position: relative;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -308,6 +319,7 @@
 
 .training__item::before {
   @include pseudo;
+
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
@@ -348,6 +360,7 @@
 
 .training__item::after {
   @include pseudo;
+
   position: absolute;
   transform: translate(-50%, -51%);
   top: 52%;
