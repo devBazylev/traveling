@@ -3,6 +3,7 @@
 
 .header {
   @include grid(1fr 56px 264px 1fr);
+
   position: relative;
   grid-template-rows: repeat(auto-fit, minmax(62px, auto) minmax(27px, auto) minmax(0, auto));
   grid-auto-flow: dense;
@@ -67,6 +68,7 @@
 .header__list {
   @include reset;
   @include grid;
+
   gap: 0;
 
   @media (min-width: $desk) {
@@ -145,6 +147,7 @@
 .header__navigation + .header__button::before,
 .header__navigation + .header__button::after {
   @include pseudo;
+
   position: relative;
   width: 30px;
   height: 2px;
@@ -172,7 +175,7 @@
   box-shadow: 0 -8.4px 0 0 var(--light), 0 8.4px 0 0 var(--light);
 }
 
-.header__navigation--closed + .header__button::after{
+.header__navigation--closed + .header__button::after {
   left: 26px;
   width: 9px;
   transform: rotate(0);

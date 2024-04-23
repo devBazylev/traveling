@@ -3,6 +3,7 @@
 
 .hero {
   @include grid;
+
   width: 320px;
   margin: 0 auto;
   overflow: hidden;
@@ -32,6 +33,7 @@
 
 .hero__slide {
   @include grid;
+
   gap: 5px;
   width: 320px;
   visibility: hidden;
@@ -123,6 +125,7 @@
 
 .hero__link {
   @include btn;
+
   align-self: start;
   display: block;
   width: 180px;
@@ -148,6 +151,7 @@
 
   @media (min-width: $desk) {
     @include flex;
+
     align-self: start;
     gap: 10px;
     width: fit-content;
@@ -165,6 +169,7 @@
 
   &::before {
     @include pseudo;
+
     position: relative;
     background-color: var(--light);
     mask-repeat: no-repeat;
@@ -199,6 +204,7 @@
 
 .hero__pagination {
   @include flex;
+
   z-index: 1;
   grid-area: 1/1/2/2;
   align-self: end;

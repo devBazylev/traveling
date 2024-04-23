@@ -3,6 +3,7 @@
 
 .tours {
   @include grid;
+
   grid-template-rows: repeat(auto-fit, minmax(55px, auto) minmax(416px, auto) minmax(34px, auto));
   gap: 20px;
   width: 100vw;
@@ -67,6 +68,7 @@
 
 .tours__button {
   @include btn;
+
   display: none;
   width: 37px;
   height: 35px;
@@ -100,6 +102,7 @@
 .tours__button::before {
   @media (min-width: $tab) {
     @include pseudo;
+
     position: relative;
     width: 20px;
     height: 9px;
@@ -144,6 +147,7 @@
 
 .tours__link {
   @include flex;
+
   grid-area: 3/1/4/2;
   gap: 10.3px;
   margin: 5px auto 0;
@@ -169,6 +173,7 @@
 
 .tours__link::after {
   @include pseudo;
+
   width: 12px;
   height: 14px;
   position: relative;
