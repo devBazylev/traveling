@@ -19,10 +19,10 @@
   display: $display;
 }
 
-@mixin flex {
+@mixin flex($wrap: wrap) {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: $wrap;
 }
 
 @mixin grid($first-column: 1fr, $second-column: null, $third-column: null, $fourth-column: null, $fifth-column: null, $sixth-column: null, $seventh-column: null, $eighth-column: null, $nineth-column: null, $tenth-column: null) {

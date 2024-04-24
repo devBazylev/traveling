@@ -12,6 +12,12 @@ const addClass = (varr, classs) => {
   varr.classList.add(classs);
 };
 
+const addClassArray = (elems, classs) => {
+  elems.forEach((elem) => {
+    addClass(elem, classs);
+  });
+};
+
 const toggleClass = (varr, classs) => {
   varr.classList.toggle(classs);
 };
@@ -51,4 +57,4 @@ const removeListenerArray = (array, action, func) => {
   });
 };
 
-export { setDataId, addClass, removeClass, toggleClass, setClassArray, resetClassArray, changeText, setListenerArray, removeListenerArray, setListener };
+export { setDataId, addClass, removeClass, addClassArray, toggleClass, setClassArray, resetClassArray, changeText, setListenerArray, removeListenerArray, setListener };
