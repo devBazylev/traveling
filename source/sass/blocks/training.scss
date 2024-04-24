@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $desk) {
-
+    margin: 54.5px 0 32px;
   }
 }
 
@@ -37,7 +37,7 @@
   }
 
   @media (min-width: $desk) {
-
+    margin: 38px 0 0;
   }
 }
 
@@ -50,7 +50,10 @@
   @media (min-width: $tab) {
     font-size: 16px;
     line-height: 24px;
-    padding: 0 56px 0 0;
+  }
+
+  @media (min-width: $desk) {
+    padding: 0 340px 0 0;
   }
 }
 
@@ -74,6 +77,10 @@
   @media (min-width: $tab) {
     margin: 23px 0 37px;
   }
+
+  @media (min-width: $desk) {
+    margin: 55px 0 16px;
+  }
 }
 
 .training__button {
@@ -96,7 +103,7 @@
   }
 
   @media (min-width: $desk) {
-    margin: 20px calc((100vw - 1118px) / 2) 0 auto;
+    margin: 51px calc((100vw - 1118px) / 2) 0 auto;
   }
 }
 
@@ -106,7 +113,7 @@
   }
 
   @media (min-width: $desk) {
-    margin: 20px calc((100vw - 1200px) / 2) 0 auto;
+    margin: 51px calc((100vw - 1200px) / 2) 0 auto;
   }
 }
 
@@ -159,11 +166,11 @@
 .training__container {
   @include flex;
   grid-area: 2/2/3/3;
+  gap: 20px 0;
 }
 
 .training__instructor {
   @include grid;
-
   grid-template-rows: repeat(auto-fit, minmax(215px, auto) minmax(47px, auto) minmax(64px, auto));
   align-items: start;
   width: 290px;
@@ -173,10 +180,12 @@
   overflow: auto;
 
   @media (min-width: $tab) {
+    grid-template-rows: repeat(auto-fit, minmax(215px, auto) minmax(47px, auto) minmax(96px, auto));
     width: 212.6px;
   }
 
   @media (min-width: $desk) {
+    grid-template-rows: repeat(auto-fit, minmax(215px, auto) minmax(47px, auto) minmax(63px, auto));
     width: 285px;
   }
 }
@@ -190,25 +199,25 @@
   display: block;
 }
 
-// .training__image--first {
-//   object-position: 50% 50%;
-// }
+.training__image--second {
+  object-fit: cover;
+  height: 200px;
 
-// .training__image--second {
-//   width: 245px;
-//   height: 202px;
-//   object-fit: fill;
-//   object-position: -31px 1px;
+  @media (min-width: $tab) {
+    max-width: fit-content;
+    height: 200px;
+  }
+}
 
-//   @media (min-width: $tab) {
-//     max-width: fit-content;
-//     height: 200px;
-//   }
-// }
+.training__image--fourth {
+  object-fit: cover;
+  height: 200px;
+}
 
-// .training__image--third {
-
-// }
+.training__image--fifth {
+  object-fit: cover;
+  height: 200px;
+}
 
 .training__name {
   grid-area: 2/1/3/2;
@@ -295,26 +304,39 @@
   line-height: 16px;
 
   @media (min-width: $tab) {
+    margin: 27px 0 23px;
     font-size: 18px;
     line-height: 18px;
   }
 
   @media (min-width: $desk) {
+    margin: 58px 0 10px;
     font-size: 21px;
     line-height: 21px;
   }
 }
 
-.training__wrapper {
-  grid-area: 5/2/6/3;
-
-  @include grid;
-}
-
 .training__list {
   @include reset;
   @include grid(2px 1fr);
+  grid-area: 5/2/6/3;
   margin: 0 0 0 6px;
+
+  @media (min-width: $tab) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 74px 8px;
+    margin: 0;
+    grid-auto-flow: dense;
+  }
+
+  @media (min-width: $desk) {
+    position: relative;
+    grid-template-columns: 245px 247px 244px 245px 1fr;
+    grid-template-rows: minmax(97.9px, auto);
+    gap: 0 8px;
+    border-bottom: 2px solid var(--bright);
+  }
 }
 
 .training__list::before {
@@ -330,6 +352,17 @@
   @media (min-width: $tab) {
     display: none;
   }
+
+  @media (min-width: $desk) {
+    position: absolute;
+    display: block;
+    grid-area: none;
+    top: auto;
+    width: 20px;
+    bottom: -4px;
+    height: 6px;
+    background-color: var(--light);
+  }
 }
 
 .training__item {
@@ -341,11 +374,14 @@
   line-height: 18px;
 
   @media (min-width: $tab) {
+    margin: 0;
+    padding: 17px 85px 0 45px;
     font-size: 14px;
     line-height: 22px;
   }
 
   @media (min-width: $desk) {
+    padding: 17px 0 0 45px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -353,18 +389,41 @@
 
 .training__item--map {
   grid-area: 1/2/3/3;
+
+  @media (min-width: $tab) {
+    grid-area: auto;
+  }
 }
 
 .training__item--boots {
   grid-area: 3/2/5/3;
+
+  @media (min-width: $tab) {
+    grid-area: auto;
+  }
 }
 
 .training__item--pine-tree {
   grid-area: 5/2/7/3;
+
+  @media (min-width: $tab) {
+    grid-area: auto;
+    grid-column: 2/3;
+    padding: 17px 85px 0 44px;
+  }
+
+  @media (min-width: $desk) {
+    grid-column: auto;
+    padding: 17px 0 0 44px;
+  }
 }
 
 .training__item--mountain {
   grid-area: 7/2/9/3;
+
+  @media (min-width: $tab) {
+    grid-area: auto;
+  }
 }
 
 .training__item:last-child {
@@ -385,6 +444,11 @@
   width: 25px;
   height: 25px;
   background-image: url("/__spritemap#sprite-map-view");
+
+  @media (min-width: $tab) {
+    top: 19px;
+    left: 10px;
+  }
 }
 
 .training__item--boots::before {
@@ -393,6 +457,13 @@
   width: 27px;
   height: 25px;
   background-image: url("/__spritemap#sprite-boots-view");
+
+  @media (min-width: $tab) {
+    top: 19px;
+    left: 11px;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .training__item--pine-tree::before {
@@ -401,6 +472,18 @@
   width: 25px;
   height: 25px;
   background-image: url("/__spritemap#sprite-pine-tree-view");
+
+  @media (min-width: $tab) {
+    top: 19px;
+    left: 10px;
+    height: 23px;
+  }
+
+  @media (min-width: $desk) {
+    top: 19px;
+    left: 9px;
+    height: 25px;
+  }
 }
 
 .training__item--mountain::before {
@@ -409,6 +492,11 @@
   width: 25px;
   height: 25px;
   background-image: url("/__spritemap#sprite-mountain-view");
+
+  @media (min-width: $tab) {
+    top: 19px;
+    left: 10px;
+  }
 }
 
 .training__item::after {
@@ -426,4 +514,15 @@
   @media (min-width: $tab) {
     display: none;
   }
+
+  @media (min-width: $desk) {
+    display: block;
+    top: auto;
+    bottom: -15px;
+    left: 27.4px;
+  }
+}
+
+.training__item--pine-tree::after {
+  left: 6.4px;
 }
