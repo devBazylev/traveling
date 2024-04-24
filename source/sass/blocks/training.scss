@@ -18,11 +18,27 @@
 .training__title {
   grid-area: 1/2/2/3;
   margin: 37px 0 33px;
+
+  @media (min-width: $tab) {
+    margin: 68px 0 24px;
+  }
+
+  @media (min-width: $desk) {
+
+  }
 }
 
 .training__headline {
   grid-area: 1/2/2/3;
   margin: 20px 0 0;
+
+  @media (min-width: $tab) {
+    margin: 43px 0 0;
+  }
+
+  @media (min-width: $desk) {
+
+  }
 }
 
 .training > p {
@@ -34,6 +50,7 @@
   @media (min-width: $tab) {
     font-size: 16px;
     line-height: 24px;
+    padding: 0 56px 0 0;
   }
 }
 
@@ -53,6 +70,10 @@
 
 .training__slider-title {
   grid-area: 1/2/2/3;
+
+  @media (min-width: $tab) {
+    margin: 23px 0 37px;
+  }
 }
 
 .training__button {
@@ -136,6 +157,7 @@
 }
 
 .training__container {
+  @include flex;
   grid-area: 2/2/3/3;
 }
 
@@ -161,8 +183,6 @@
 
 .training__picture {
   grid-area: 1/1/2/2;
-
-  // margin: 0 0 7px;
   overflow: hidden;
 }
 
@@ -170,10 +190,28 @@
   display: block;
 }
 
+.training__image--first {
+  object-position: 50% 50%;
+}
+
+.training__image--second {
+  width: 245px;
+  height: 202px;
+  object-fit: fill;
+  object-position: -31px 1px;
+
+  @media (min-width: $tab) {
+    max-width: fit-content;
+    height: 200px;
+  }
+}
+
+.training__image--third {
+
+}
+
 .training__name {
   grid-area: 2/1/3/2;
-
-  // margin: 1px 0 15px;
   margin: 1px 0 0;
   font-size: 14px;
   font-weight: 700;
