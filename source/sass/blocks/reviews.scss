@@ -1,0 +1,256 @@
+@import "../global/mixins";
+@import "../global/variables";
+
+.reviews {
+  @include grid(1fr 290px 1fr);
+  padding: 0 0 20px;
+  overflow: hidden;
+
+  @media (min-width: $tab) {
+    grid-template-columns: 1fr 678px 1fr;
+  }
+
+  @media (min-width: $desk) {
+    grid-template-columns: 1fr 1200px 1fr;
+  }
+}
+
+.reviews__title {
+  grid-area: 1/2/2/3;
+  margin: 38px 0 31px;
+
+  @media (min-width: $tab) {
+    margin: 72px 0 25px;
+  }
+
+  @media (min-width: $desk) {
+    margin: 225px 0 38px;
+  }
+}
+
+.reviews__headline {
+  grid-area: 1/2/2/3;
+  margin: 24px 0 0;
+
+  @media (min-width: $tab) {
+    margin: 47px 0 0;
+  }
+
+  @media (min-width: $desk) {
+    margin: 186px 0 0;
+  }
+}
+
+.reviews__button {
+  @include btn;
+  display: none;
+  width: 37px;
+  height: 35px;
+
+  @media (min-width: $tab) {
+    grid-area: 1/2/2/3;
+    display: block;
+    z-index: 1;
+  }
+}
+
+.reviews__button--prev {
+  @media (min-width: $tab) {
+    margin: 62px 41px 0 auto;
+  }
+
+  @media (min-width: $desk) {
+    margin: 225px 41px 0 auto;
+  }
+}
+
+.reviews__button--next {
+  @media (min-width: $tab) {
+    margin: 62px 0 0 auto;
+  }
+
+  @media (min-width: $desk) {
+    margin: 225px 0 0 auto;
+  }
+}
+
+.reviews__button::before {
+  @media (min-width: $tab) {
+    @include pseudo;
+    position: relative;
+    width: 20px;
+    height: 9px;
+    background-color: var(--light);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
+
+.reviews__button--prev::before {
+  @media (min-width: $tab) {
+    left: 1px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    transform: rotate(180deg);
+  }
+}
+
+.reviews__button--next::before {
+  @media (min-width: $tab) {
+    left: 2px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+  }
+}
+
+.reviews__button:hover::before {
+  background-color: var(--dark-bright);
+}
+
+.reviews__button:focus::before {
+  background-color: var(--dark-bright);
+}
+
+.reviews__button:active::before {
+  background-color: var(--light);
+}
+
+.reviews__button:disabled::before,
+.reviews__button--disabled::before {
+  background-color: var(--light);
+}
+
+.reviews__container {
+  @include flex(nowrap);
+  grid-area: 2/2/3/3;
+  gap: 20px 0;
+}
+
+.reviews__slide {
+  @include grid;
+  width: 290px;
+  height: 484px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px 0px var(--shadow);
+  overflow: auto;
+
+  @media (min-width: $tab) {
+    grid-template-columns: 186px 1fr;
+    gap: 0 30px;
+    width: 565px;
+    height: 277px;
+    padding: 20px 20px 15px;
+  }
+
+  @media (min-width: $desk) {
+    position: relative;
+    left: 10px;
+    grid-template-columns: 258px 1fr;
+    width: 700px;
+    height: 293px;
+    padding: 18px 20px 15px;
+  }
+}
+
+// .reviews__slide--active {
+//   visibility: visible;
+// }
+
+// .reviews__slide--prev {
+//   visibility: hidden;
+// }
+
+.reviews__picture {
+  margin: 0 0 14px;
+
+  @media (min-width: $tab) {
+    grid-row: span 4;
+    margin: 0;
+  }
+
+  @media (min-width: $desk) {
+    margin: 2px 0 0;
+  }
+}
+
+// .reviews__image--second {
+//   height: 169px;
+//   object-fit: cover;
+
+//   @media (min-width: $tab) {
+//     height: auto;
+//     object-fit: contain;
+//   }
+// }
+
+.reviews p {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @media (min-width: $tab) {
+    grid-column: 2/3;
+    letter-spacing: 0;
+  }
+
+  @media (min-width: $desk) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.reviews p:nth-of-type(1) {
+  @media (min-width: $tab) {
+    margin: 3.5px 0 2px;
+  }
+
+  @media (min-width: $desk) {
+    margin: 0 0 1px;
+  }
+}
+
+.reviews p:nth-of-type(2) {
+  @media (min-width: $tab) {
+    margin: 0 0 17px;
+  }
+
+  @media (min-width: $desk) {
+    margin: 0;
+  }
+}
+
+.reviews__user {
+  margin: 6px 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+
+  @media (min-width: $tab) {
+    grid-column: 2/3;
+    margin: 0;
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  @media (min-width: $desk) {
+    position: relative;
+    top: -5px;
+  }
+}
+
+.reviews__sign {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+
+  @media (min-width: $tab) {
+    position: relative;
+    grid-column: 2/3;
+    top: -1px;
+  }
+
+  @media (min-width: $desk) {
+    line-height: 100%;
+    top: -6px;
+  }
+}

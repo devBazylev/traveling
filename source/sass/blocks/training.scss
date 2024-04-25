@@ -96,21 +96,21 @@
 
 .training__button--prev {
   @media (min-width: $tab) {
-    margin: 20px calc((100vw - 596px) / 2) 0 auto;
+    margin: 20px 41px 0 auto;
   }
 
   @media (min-width: $desk) {
-    margin: 51px calc((100vw - 1118px) / 2) 0 auto;
+    margin: 51px 41px 0 auto;
   }
 }
 
 .training__button--next {
   @media (min-width: $tab) {
-    margin: 20px calc((100vw - 678px) / 2) 0 auto;
+    margin: 20px 0 0 auto;
   }
 
   @media (min-width: $desk) {
-    margin: 51px calc((100vw - 1200px) / 2) 0 auto;
+    margin: 51px 0 0 auto;
   }
 }
 

@@ -9,12 +9,12 @@ new Swiper('.tours', {
   slideFullyVisibleClass: 'card--visible',
 
   slidesPerView: 'auto',
+  slidesPerGroup: 1,
 
   navigation: {
     nextEl: '.tours__button--next',
     prevEl: '.tours__button--prev',
   },
-  // по одному слайду переключается!!!
 
   breakpoints: {
     320: {
@@ -32,3 +32,8 @@ new Swiper('.tours', {
     },
   }
 });
+
+// watchOverflow: true,
+// centeredSlides: true,
+// loopAdditionalSlides: 2,
+// slideVisibleClass: 'card--part',
