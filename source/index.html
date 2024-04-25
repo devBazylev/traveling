@@ -272,7 +272,7 @@
 
       <section class="training" id="training" data-test="training">
         <h2 class="training__title page__title">Обучение</h2>
-        <div class="training__headline page__headline">Обучение</div>
+        <div class="training__headline page__headline" aria-hidden="true">Обучение</div>
         <p>Обучение проводится квалифицированными специалистами, за плечами&nbsp;которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
         <div class="training__slider swiper">
           <h3 class="training__slider-title page__title">Наши инструкторы</h3>
@@ -363,15 +363,89 @@
 
       <section class="about" id="about" data-test="about">
         <h2 class="about__title page__title">О нас</h2>
-        <div class="about__headline page__headline">О нас</div>
+        <div class="about__headline page__headline" aria-hidden="true">О нас</div>
         <h3>История компании</h3>
         <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось, что мы этим стали жить. Спустя&nbsp;5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
         <h3>Наша цель</h3>
         <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
       </section>
 
+      <!-- <section class="reviews swiper" id="reviews" data-test="reviews"> -->
       <section class="reviews" id="reviews" data-test="reviews">
-        <h2>reviews</h2>
+        <h2 class="reviews__title page__title">Отзывы</h2>
+        <div class="reviews__headline page__headline" aria-hidden="true">Отзывы</div>
+        <button class="reviews__button reviews__button--prev swiper-button-prev" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="reviews__button reviews__button--next swiper-button-next" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
+        <div class="reviews__container swiper-wrapper">
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-1-desk@1x.webp 1x, img/reviews-1-desk@2x.webp 2x" width="258" height="253">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-1-tab@1x.webp 1x, img/reviews-1-tab@2x.webp 2x" width="186" height="237">
+                <source type="image/webp" srcset="img/reviews-1-mob@1x.webp 1x, img/reviews-1-mob@2x.webp 2x" width="250" height="169">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-1-desk@1x.jpg 1x, img/reviews-1-desk@2x.jpg 2x" width="258" height="253">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-1-tab@1x.jpg 1x, img/reviews-1-tab@2x.jpg 2x" width="186" height="237">
+                <img class="reviews__image reviews__image--first" src="img/reviews-1-mob@1x.jpg" srcset="img/reviews-1-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователся." loading="lazy">
+              </picture>
+            </div>
+            <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
+            <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
+            <h3 class="reviews__user">Фролов Александр</h3>
+            <div class="reviews__sign">38 лет, Москва</div>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-2-desk@1x.webp 1x, img/reviews-2-desk@2x.webp 2x" width="258" height="253">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-2-tab@1x.webp 1x, img/reviews-2-tab@2x.webp 2x" width="186" height="237">
+                <source type="image/webp" srcset="img/reviews-2-mob@1x.webp 1x, img/reviews-2-mob@2x.webp 2x" width="250" height="169">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-2-desk@1x.jpg 1x, img/reviews-2-desk@2x.jpg 2x" width="258" height="253">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-2-tab@1x.jpg 1x, img/reviews-2-tab@2x.jpg 2x" width="186" height="237">
+                <img class="reviews__image reviews__image--second" src="img/reviews-2-mob@1x.jpg" srcset="img/reviews-2-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователся." loading="lazy">
+              </picture>
+            </div>
+            <p>Хороший полноценный поход<br>с разнообразными локациями. В начале<br>дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно!</p>
+            <p>Инструктор Федор дружелюбный,<br>внимательный к технике безопасности и своим туристам. Всем советую этот тур.</p>
+            <h3 class="reviews__user">Иван Соловьёв</h3>
+            <div class="reviews__sign">25 лет, Владивосток</div>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-3-desk@1x.webp 1x, img/reviews-3-desk@2x.webp 2x" width="258" height="253">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-3-tab@1x.webp 1x, img/reviews-3-tab@2x.webp 2x" width="186" height="237">
+                <source type="image/webp" srcset="img/reviews-3-mob@1x.webp 1x, img/reviews-3-mob@2x.webp 2x" width="250" height="169">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-3-desk@1x.jpg 1x, img/reviews-3-desk@2x.jpg 2x" width="258" height="253">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-3-tab@1x.jpg 1x, img/reviews-3-tab@2x.jpg 2x" width="186" height="237">
+                <img class="reviews__image reviews__image--third" src="img/reviews-3-mob@1x.jpg" srcset="img/reviews-3-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователся." loading="lazy">
+              </picture>
+            </div>
+            <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
+            <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+            <h3 class="reviews__user">Евгения Баженова</h3>
+            <div class="reviews__sign">23 года, Кострома</div>
+          </div>
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-4-desk@1x.webp 1x, img/reviews-4-desk@2x.webp 2x" width="258" height="253">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-4-tab@1x.webp 1x, img/reviews-4-tab@2x.webp 2x" width="186" height="237">
+                <source type="image/webp" srcset="img/reviews-4-mob@1x.webp 1x, img/reviews-4-mob@2x.webp 2x" width="250" height="169">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-4-desk@1x.jpg 1x, img/reviews-4-desk@2x.jpg 2x" width="258" height="253">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-4-tab@1x.jpg 1x, img/reviews-4-tab@2x.jpg 2x" width="186" height="237">
+                <img class="reviews__image reviews__image--fourth" src="img/reviews-4-mob@1x.jpg" srcset="img/reviews-4-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователся." loading="lazy">
+              </picture>
+            </div>
+            <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину. </p>
+            <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
+            <h3 class="reviews__user">Елена Пирогова</h3>
+            <div class="reviews__sign">37 лет, Тюмень</div>
+          </div>
+        </div>
       </section>
 
       <section class="adv" data-test="adv">

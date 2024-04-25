@@ -9,12 +9,12 @@ new Swiper('.training__slider', {
   slideFullyVisibleClass: 'training__instructor--visible',
 
   slidesPerView: 'auto',
+  slidesPerGroup: 1,
 
   navigation: {
     nextEl: '.training__button--next',
     prevEl: '.training__button--prev',
   },
-  // по одному слайду переключается!!!
 
   breakpoints: {
     320: {
