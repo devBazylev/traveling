@@ -118,7 +118,7 @@
           <span class="visually-hidden">Следующий слайд</span>
         </button>
         <div class="tours__slider swiper-wrapper">
-          <article class="card card--first swiper-slide">
+          <article class="card card--first swiper-slide" lazy="true">
             <div class="card__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-1-desk@1x.webp 1x, img/tours-1-desk@2x.webp 2x" width="380" height="416">
@@ -370,8 +370,7 @@
         <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
       </section>
 
-      <!-- <section class="reviews swiper" id="reviews" data-test="reviews"> -->
-      <section class="reviews" id="reviews" data-test="reviews">
+      <section class="reviews swiper" id="reviews" data-test="reviews">
         <h2 class="reviews__title page__title">Отзывы</h2>
         <div class="reviews__headline page__headline" aria-hidden="true">Отзывы</div>
         <button class="reviews__button reviews__button--prev swiper-button-prev" type="button">
@@ -448,8 +447,37 @@
         </div>
       </section>
 
-      <section class="adv" data-test="adv">
-        <h2>adv</h2>
+      <section class="adv swiper" data-test="adv">
+        <h2 class="adv__title page__title">Преимущества</h2>
+        <div class="adv__headline page__headline" aria-hidden="true">Преимущества</div>
+        <div class="adv__container swiper-wrapper">
+          <div class="adv__card adv__card--shield swiper-slide">
+            <h3>Безопасность</h3>
+            <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы <span>безопасности. Имеем планы действий</span> на случай непредвиденных <span>обстоятельств</span> и даём гарантию полной <span>безопасности</span> во время всего тура.</p>
+          </div>
+          <div class="adv__card adv__card--crown swiper-slide">
+            <h3>Экспертиза и знания</h3>
+            <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. <span>Это гарантирует,</span> что наши клиенты <span>находятся</span> в надёжных руках и могут в полной мере насладиться опытом без опасений.</p>
+          </div>
+          <div class="adv__card adv__card--boot swiper-slide">
+            <h3>Оборудование и снаряжение</h3>
+            <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически выгодным.</p>
+          </div>
+          <div class="adv__card adv__card--path swiper-slide">
+            <h3>Индивидуальные маршруты</h3>
+            <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный опыт.</p>
+          </div>
+          <div class="adv__card adv__card--leaf swiper-slide">
+            <h3>Бережное отношение <span>к&nbsp;природе</span></h3>
+            <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
+          </div>
+        </div>
+        <button class="adv__button adv__button--prev swiper-button-prev" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="adv__button adv__button--next swiper-button-next" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
       </section>
 
       <section class="gallery" id="gallery" data-test="gallery">

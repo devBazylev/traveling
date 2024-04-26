@@ -1,0 +1,287 @@
+@import "../global/mixins";
+@import "../global/variables";
+
+.adv {
+  @include grid(1fr 290px 1fr);
+  padding: 0 0 20px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: $tab) {
+    grid-template-columns: 1fr 678px 1fr;
+  }
+
+  @media (min-width: $desk) {
+    grid-template-columns: 1fr 1200px 1fr;
+    margin: 0 auto;
+  }
+}
+
+.adv__title {
+  grid-area: 1/2/2/3;
+  margin: 37px 0 36px;
+
+  @media (min-width: $tab) {
+    margin: 90px 0 50px;
+  }
+
+  @media (min-width: $desk) {
+    margin: 202px 0 50px;
+  }
+}
+
+.adv__headline {
+  grid-area: 1/2/2/3;
+  margin: 23px 0 0;
+
+  @media (min-width: $tab) {
+    margin: 65px 0 0;
+  }
+
+  @media (min-width: $desk) {
+    margin: 173px 0 0;
+  }
+}
+
+.adv__container {
+  @include flex;
+  grid-area: 2/2/3/3;
+  gap: 15px;
+
+  @media (min-width: $tab) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desk) {
+    grid-area: 2/1/3/4;
+    gap: unset;
+    flex-wrap: nowrap;
+    margin: auto;
+  }
+}
+
+.adv__card {
+  width: 290px;
+  height: fit-content;
+  padding: 19px 9px;
+  border: 1px solid var(--bright-trans-10);
+  overflow: auto;
+
+  @media (min-width: $tab) {
+    width: 324px;
+    height: 340px;
+    padding: 29px 19px;
+  }
+
+  @media (min-width: $desk) {
+    position: relative;
+    left: -290px;
+    width: 380px;
+    height: 329px;
+    padding: 39px 19px;
+  }
+}
+
+.adv__card--leaf {
+  @media (min-width: $tab) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desk) {
+    margin: unset;
+  }
+}
+
+.adv__card::before {
+  @include pseudo;
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 20px;
+  border: 1px solid var(--bright);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+
+  @media (min-width: $tab) {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 26px;
+  }
+
+  @media (min-width: $desk) {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 30px;
+  }
+}
+
+.adv__card--shield::before {
+  background-image: url("/__spritemap#sprite-shield-view");
+}
+
+.adv__card--crown::before {
+  background-image: url("/__spritemap#sprite-crown-view");
+}
+
+.adv__card--boot::before {
+  background-image: url("/__spritemap#sprite-boot-view");
+}
+
+.adv__card--path::before {
+  background-image: url("/__spritemap#sprite-path-view");
+}
+
+.adv__card--leaf::before {
+  background-image: url("/__spritemap#sprite-leaf-view");
+}
+
+.adv__card h3 {
+  margin: 0 0 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+
+  @media (min-width: $tab) {
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desk) {
+    margin: 0 0 15px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.adv__card--leaf h3 {
+  padding: 0 20px 0 16px;
+
+  @media (min-width: $desk) {
+    padding: 0;
+  }
+}
+
+.adv__card--shield span:nth-of-type(1) {
+  @media (min-width: $tab) {
+    position: relative;
+    left: -2px;
+  }
+}
+
+.adv__card--shield span:nth-of-type(2) {
+  @media (min-width: $desk) {
+    margin: 0 4px 0 0;
+  }
+}
+
+.adv__card--shield span:nth-of-type(3) {
+  @media (min-width: $desk) {
+    margin: 0 4px 0 0;
+  }
+}
+
+.adv__card--crown span {
+  white-space: nowrap;
+
+  @media (min-width: $tab) {
+    white-space: normal;
+  }
+}
+
+.adv__card--crown span:nth-of-type(2) {
+  @media (min-width: $desk) {
+    margin: 0 4px 0 0;
+  }
+}
+
+.adv__card--leaf span {
+  position: relative;
+  left: 2px;
+}
+
+.adv__card p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+
+  @media (min-width: $tab) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.adv__button {
+  @include btn;
+  display: none;
+  width: 37px;
+  height: 35px;
+
+  @media (min-width: $desk) {
+    grid-area: 3/2/4/3;
+    display: block;
+    margin: 50px auto 0;
+    z-index: 1;
+  }
+}
+
+.adv__button--prev {
+  @media (min-width: $desk) {
+    position: relative;
+    left: -21px;
+  }
+}
+
+.adv__button--next {
+  @media (min-width: $desk) {
+    position: relative;
+    left: 20px;
+  }
+}
+
+.adv__button::before {
+  @media (min-width: $tab) {
+    @include pseudo;
+    position: relative;
+    width: 20px;
+    height: 9px;
+    background-color: var(--light);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
+
+.adv__button--prev::before {
+  @media (min-width: $tab) {
+    left: 1px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    transform: rotate(180deg);
+  }
+}
+
+.adv__button--next::before {
+  @media (min-width: $tab) {
+    left: 2px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+  }
+}
+
+.adv__button:hover::before {
+  background-color: var(--dark-bright);
+}
+
+.adv__button:focus::before {
+  background-color: var(--dark-bright);
+}
+
+.adv__button:active::before {
+  background-color: var(--light);
+}
+
+.adv__button:disabled::before,
+.adv__button--disabled::before {
+  background-color: var(--light);
+}
