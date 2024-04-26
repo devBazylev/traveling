@@ -4,10 +4,6 @@ import { Navigation } from 'swiper/modules';
 new Swiper('.tours', {
   modules: [Navigation],
 
-  watchSlidesProgress: true,
-  slideActiveClass: 'card--active',
-  slideFullyVisibleClass: 'card--visible',
-
   slidesPerView: 'auto',
   slidesPerGroup: 1,
 
@@ -18,14 +14,17 @@ new Swiper('.tours', {
 
   breakpoints: {
     320: {
+      width: 290,
       initialSlide: 0,
       spaceBetween: 15,
     },
     768: {
+      width: 330,
       initialSlide: 0,
       spaceBetween: 18,
     },
     1440: {
+      width: 380,
       initialSlide: 0,
       spaceBetween: 30,
       simulateTouch: false,
