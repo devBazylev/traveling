@@ -1,0 +1,204 @@
+@import "../global/mixins";
+@import "../global/variables";
+
+.form {
+  @include grid(1fr 258px 1fr);
+  padding: 175px 0 174px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: image-set(
+    url("../../img/form-mob@2x.webp") type("image/webp") 2x,
+    url("../../img/form-mob@1x.webp") type("image/webp") 1x,
+    url("../../img/form-mob@2x.jpg") type("image/jpg") 2x,
+    url("../../img/form-mob@1x.jpg") type("image/jpg") 1x
+  );
+
+  @media (min-width: $tab) {
+    grid-template-columns: 1fr 678px 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(54px, auto) minmax(71px, auto) minmax(325px, auto));
+    // min-height: 680px;
+    padding: 190px 0 40px;
+    background-image: image-set(
+      url("../../img/form-tab@2x.webp") type("image/webp") 2x,
+      url("../../img/form-tab@1x.webp") type("image/webp") 1x,
+      url("../../img/form-tab@2x.jpg") type("image/jpg") 2x,
+      url("../../img/form-tab@1x.jpg") type("image/jpg") 1x
+    );
+  }
+
+  @media (min-width: $desk) {
+    grid-template-columns: 1fr 1360px 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(53px, auto) minmax(63px, auto) minmax(308px, auto));
+    padding: 296px 0 40px;
+    background-image: image-set(
+      url("../../img/form-desk@2x.webp") type("image/webp") 2x,
+      url("../../img/form-desk@1x.webp") type("image/webp") 1x,
+      url("../../img/form-desk@2x.jpg") type("image/jpg") 2x,
+      url("../../img/form-desk@1x.jpg") type("image/jpg") 1x
+    );
+  }
+}
+
+.form h2 {
+  grid-area: 1/2/2/3;
+  width: auto;
+  margin: 0 auto 19px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 22px;
+  color: var(--light);
+  text-align: center;
+
+  @media (min-width: $tab) {
+    // align-self: end;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 0 5px 0 0;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desk) {
+    padding: 0;
+    font-size: 35px;
+    line-height: 100%;
+  }
+}
+
+.form p {
+  grid-area: 2/2/3/3;
+  width: auto;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--light);
+  text-align: center;
+
+  @media (min-width: $tab) {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 0 65px 0 65px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.form span:nth-of-type(1) {
+  @media (min-width: $tab) {
+    margin: 0 4px 0 0;
+  }
+
+  @media (min-width: $desk) {
+    margin: 0;
+  }
+}
+
+.form span:nth-of-type(2) {
+  white-space: nowrap;
+  margin: 0 0 0 3px;
+
+  @media (min-width: $tab) {
+    margin: 0;
+  }
+
+  @media (min-width: $desk) {
+    margin: 0;
+  }
+}
+
+.form__template {
+  @include flex;
+  grid-area: 3/2/4/3;
+  gap: 8px;
+  margin: 0 auto;
+
+  @media (min-width: $tab) {
+    width: 270.8px;
+    gap: 11px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  @media (min-width: $desk) {
+    width: auto;
+    min-width: 70%;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.form__tel,
+.form__mail {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  padding: 14px;
+  color: var(--main-trans-50);
+  background-color: var(--light);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  border: 1px solid var(--bright-trans-10);
+
+  @media (min-width: $desk) {
+    width: auto;
+    min-width: 360px;
+    min-height: 56px;;
+    padding: 14px 29px;
+  }
+}
+
+.form__tel {
+  appearance: textfield;
+}
+
+.form__tel:hover,
+.form__mail:hover {
+  border: 1px solid var(--bright);
+}
+
+.form__tel:focus,
+.form__mail:focus {
+  border: 1px solid var(--main);
+}
+
+.form__tel:disabled,
+.form__mail:disabled {
+  color: var(--stormy-trans-50);
+  border: 1px solid var(--stormy);
+}
+
+.form__tel--error,
+.form__mail--error {
+  border: 1px solid var(--alert);
+}
+
+// .form__tel::placeholder,
+// .form__mail::placeholder {
+//   color: var(--bright);
+//   border: 1px solid var(--bright);
+// }
+
+.form__button {
+  @include btn;
+  min-height: 58px;
+  width: 100%;
+  padding: 11px 20px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--light);
+
+  @media (min-width: $tab) {
+    min-height: 56px;
+    margin: 0 auto auto;
+  }
+
+  @media (min-width: $desk) {
+    width: auto;
+    min-width: 180px;
+  }
+}
