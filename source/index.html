@@ -388,7 +388,7 @@
                 <source type="image/webp" srcset="img/reviews-1-mob@1x.webp 1x, img/reviews-1-mob@2x.webp 2x" width="250" height="169">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-1-desk@1x.jpg 1x, img/reviews-1-desk@2x.jpg 2x" width="258" height="253">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-1-tab@1x.jpg 1x, img/reviews-1-tab@2x.jpg 2x" width="186" height="237">
-                <img class="reviews__image reviews__image--first" src="img/reviews-1-mob@1x.jpg" srcset="img/reviews-1-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователся." loading="lazy">
+                <img class="reviews__image reviews__image--first" src="img/reviews-1-mob@1x.jpg" srcset="img/reviews-1-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователя." loading="lazy">
               </picture>
             </div>
             <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
@@ -404,7 +404,7 @@
                 <source type="image/webp" srcset="img/reviews-2-mob@1x.webp 1x, img/reviews-2-mob@2x.webp 2x" width="250" height="169">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-2-desk@1x.jpg 1x, img/reviews-2-desk@2x.jpg 2x" width="258" height="253">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-2-tab@1x.jpg 1x, img/reviews-2-tab@2x.jpg 2x" width="186" height="237">
-                <img class="reviews__image reviews__image--second" src="img/reviews-2-mob@1x.jpg" srcset="img/reviews-2-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователся." loading="lazy">
+                <img class="reviews__image reviews__image--second" src="img/reviews-2-mob@1x.jpg" srcset="img/reviews-2-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователя." loading="lazy">
               </picture>
             </div>
             <p>Хороший полноценный поход<br>с разнообразными локациями. В начале<br>дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно!</p>
@@ -420,7 +420,7 @@
                 <source type="image/webp" srcset="img/reviews-3-mob@1x.webp 1x, img/reviews-3-mob@2x.webp 2x" width="250" height="169">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-3-desk@1x.jpg 1x, img/reviews-3-desk@2x.jpg 2x" width="258" height="253">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-3-tab@1x.jpg 1x, img/reviews-3-tab@2x.jpg 2x" width="186" height="237">
-                <img class="reviews__image reviews__image--third" src="img/reviews-3-mob@1x.jpg" srcset="img/reviews-3-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователся." loading="lazy">
+                <img class="reviews__image reviews__image--third" src="img/reviews-3-mob@1x.jpg" srcset="img/reviews-3-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователя." loading="lazy">
               </picture>
             </div>
             <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
@@ -436,7 +436,7 @@
                 <source type="image/webp" srcset="img/reviews-4-mob@1x.webp 1x, img/reviews-4-mob@2x.webp 2x" width="250" height="169">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/reviews-4-desk@1x.jpg 1x, img/reviews-4-desk@2x.jpg 2x" width="258" height="253">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews-4-tab@1x.jpg 1x, img/reviews-4-tab@2x.jpg 2x" width="186" height="237">
-                <img class="reviews__image reviews__image--fourth" src="img/reviews-4-mob@1x.jpg" srcset="img/reviews-4-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователся." loading="lazy">
+                <img class="reviews__image reviews__image--fourth" src="img/reviews-4-mob@1x.jpg" srcset="img/reviews-4-mob@2x.jpg 2x" width="250" height="169" alt="Фото пользователя." loading="lazy">
               </picture>
             </div>
             <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину. </p>
@@ -480,8 +480,86 @@
         </button>
       </section>
 
-      <section class="gallery" id="gallery" data-test="gallery">
-        <h2>gallery</h2>
+      <section class="gallery swiper" id="gallery" data-test="gallery">
+        <h2 class="gallery__title page__title">Фотогалерея</h2>
+        <div class="gallery__headline page__headline" aria-hidden="true">Фотогалерея</div>
+        <p>Добавляйте фото в с хэштегом #лайфтур, <span>а также отмечайте нас на фото.</span> Лучшие фотографии украсят этот раздел нашего сайта.</p>
+        <div class="gallery__container swiper-wrapper">
+          <div class="gallery__slide swiper-slide">
+            <div class="gallery__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-1-desk@1x.webp 1x, img/gallery-1-desk@2x.webp 2x" width="284" height="463">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery-1-tab@1x.webp 1x, img/gallery-1-tab@2x.webp 2x" width="253" height="418">
+                <source type="image/webp" srcset="img/gallery-1-mob@1x.webp 1x, img/gallery-1-mob@2x.webp 2x" width="158" height="266">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-1-desk@1x.jpg 1x, img/gallery-1-desk@2x.jpg 2x" width="284" height="463">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery-1-tab@1x.jpg 1x, img/gallery-1-tab@2x.jpg 2x" width="253" height="418">
+                <img class="gallery__image" src="img/gallery-1-mob@1x.jpg" srcset="img/gallery-1-mob@2x.jpg 2x" width="158" height="266" alt="Человек на фоне гор." loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="gallery__slide swiper-slide">
+            <div class="gallery__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-2-1-desk@1x.webp 1x, img/gallery-2-1-desk@2x.webp 2x" width="284" height="233">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery-2-1-tab@1x.webp 1x, img/gallery-2-1-tab@2x.webp 2x" width="252" height="210">
+                <source type="image/webp" srcset="img/gallery-2-1-mob@1x.webp 1x, img/gallery-2-1-mob@2x.webp 2x" width="157" height="134">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-2-1-desk@1x.jpg 1x, img/gallery-2-1-desk@2x.jpg 2x" width="284" height="233">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery-2-1-tab@1x.jpg 1x, img/gallery-2-1-tab@2x.jpg 2x" width="252" height="210">
+                <img class="gallery__image gallery__image--fire" src="img/gallery-2-1-mob@1x.jpg" srcset="img/gallery-2-1-mob@2x.jpg 2x" width="157" height="134" alt="Люди ночью у костра." loading="lazy">
+              </picture>
+            </div>
+            <div class="gallery__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-2-2-desk@1x.webp 1x, img/gallery-2-2-desk@2x.webp 2x" width="284" height="233">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery-2-2-tab@1x.webp 1x, img/gallery-2-2-tab@2x.webp 2x" width="252" height="202">
+                <source type="image/webp" srcset="img/gallery-2-2-mob@1x.webp 1x, img/gallery-2-2-mob@2x.webp 2x" width="157" height="125">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-2-2-desk@1x.jpg 1x, img/gallery-2-2-desk@2x.jpg 2x" width="284" height="233">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery-2-2-tab@1x.jpg 1x, img/gallery-2-2-tab@2x.jpg 2x" width="252" height="202">
+                <img class="gallery__image gallery__image--compass" src="img/gallery-2-2-mob@1x.jpg" srcset="img/gallery-2-2-mob@2x.jpg 2x" width="157" height="125" alt="Компас." loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="gallery__slide swiper-slide">
+            <div class="gallery__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-3-desk@1x.webp 1x, img/gallery-3-desk@2x.webp 2x" width="284" height="463">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery-3-tab@1x.webp 1x, img/gallery-3-tab@2x.webp 2x" width="253" height="418">
+                <source type="image/webp" srcset="img/gallery-3-desk@1x.webp 1x, img/gallery-3-desk@2x.webp 2x" width="158" height="266">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-3-desk@1x.jpg 1x, img/gallery-3-desk@2x.jpg 2x" width="284" height="463">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery-3-tab@1x.jpg 1x, img/gallery-3-tab@2x.jpg 2x" width="253" height="418">
+                <img class="gallery__image gallery__image--rope" src="img/gallery-3-desk@1x.jpg" srcset="img/gallery-3-desk@2x.jpg 2x" width="158" height="266" alt="Группа идет вдоль веревки." loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="gallery__slide swiper-slide">
+            <div class="gallery__picture">
+              <picture>
+                <source type="image/webp" srcset="img/gallery-4-1-desk@1x.webp 1x, img/gallery-4-1-desk@2x.webp 2x" width="157" height="134">
+                <img class="gallery__image gallery__image--snow" src="img/gallery-4-1-desk@1x.jpg" srcset="img/gallery-4-1-desk@2x.jpg 2x" width="157" height="134" alt="Группа идет по снегу." loading="lazy">
+              </picture>
+            </div>
+            <div class="gallery__picture">
+              <picture>
+                <source type="image/webp" srcset="img/gallery-4-2-desk@1x.webp 1x, img/gallery-4-2-desk@2x.webp 2x" width="157" height="125">
+                <img class="gallery__image gallery__image--tent" src="img/gallery-4-2-desk@1x.jpg" srcset="img/gallery-4-2-desk@2x.jpg 2x" width="157" height="125" alt="Палатка под ночным небом." loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="gallery__slide swiper-slide">
+            <div class="gallery__picture">
+              <picture>
+                <source type="image/webp" srcset="img/gallery-5-desk@1x.webp 1x, img/gallery-5-desk@2x.webp 2x" width="158" height="266">
+                <img class="gallery__image gallery__image--campfire" src="img/gallery-5-desk@1x.jpg" srcset="img/gallery-5-desk@2x.jpg 2x" width="158" height="266" alt="Группа на привале разводит костер." loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <button class="gallery__button gallery__button--prev swiper-button-prev" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="gallery__button gallery__button--next swiper-button-next" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
       </section>
 
       <section class="form" data-test="form">

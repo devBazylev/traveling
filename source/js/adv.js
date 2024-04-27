@@ -17,7 +17,7 @@ const swiper = new Swiper('.adv', {
 
   breakpoints: {
     1440: {
-      width: 380,
+      // width: 380,
       spaceBetween: 30,
       simulateTouch: false,
     },

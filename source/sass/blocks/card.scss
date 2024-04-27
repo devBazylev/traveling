@@ -3,12 +3,9 @@
 
 .card {
   @include grid;
-
   width: 290px;
   min-height: 416px;
-  visibility: hidden;
-
-  // overflow: auto;
+ // overflow: auto;
 
   @media (min-width: $tab) {
     width: 330px;
@@ -18,35 +15,6 @@
     width: 380px;
   }
 }
-
-.card--active {
-  margin-left: calc((100vw - 320px) / 2);
-
-  @media (width >= 625px) {
-    margin-left: calc((100vw - 595px) / 2);
-  }
-
-  @media (min-width: $tab) {
-    margin-left: calc((100vw - 678px) / 2);
-  }
-
-  @media (width >= 1116px) {
-    margin-left: calc((100vw - 1026px) / 2);
-  }
-
-  @media (min-width: $desk) {
-    margin-left: 120px;
-  }
-}
-
-.card--active,
-.card--visible {
-  visibility: visible;
-}
-
-// .card--prev {
-//   visibility: hidden;
-// }
 
 .card__picture {
   grid-area: 1/1/2/2;
