@@ -10,7 +10,6 @@ new Swiper('.training__slider', {
 
   slidesPerView: 'auto',
   slidesPerGroup: 1,
-  // loop: true,
 
   navigation: {
     nextEl: '.training__button--next',

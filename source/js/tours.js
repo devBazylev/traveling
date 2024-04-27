@@ -14,15 +14,12 @@ new Swiper('.tours', {
 
   breakpoints: {
     320: {
-      initialSlide: 0,
       spaceBetween: 15,
     },
     768: {
-      initialSlide: 0,
       spaceBetween: 18,
     },
     1440: {
-      initialSlide: 0,
       spaceBetween: 30,
       simulateTouch: false,
     },
