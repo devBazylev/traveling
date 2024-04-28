@@ -566,24 +566,61 @@
         <h2>Остались вопросы?</h2>
         <p>Заполните форму <span>и наш оператор</span> свяжется <span>с вами для консультации.</span></p>
         <form class="form__template" action="https://echo.htmlacademy.ru/" autocomplete="on">
-
           <label class="visually-hidden" for="tel">Введите ваш номер телефона</label>
-          <input class="form__tel" type="tel" name="tel" placeholder="Телефон" id="tel" required>
-
+          <input class="form__tel" type="tel" name="phone" placeholder="Телефон" id="tel" required>
           <label class="visually-hidden" for="mail">Введите вашу почту</label>
-          <input class="form__mail" type="text" name="mail" placeholder="Email" id="mail" required>
-
+          <input class="form__mail" type="text" name="email" placeholder="Email" id="mail" required>
           <button class="form__button" type="submit">Отправить</button>
         </form>
-
       </section>
     </main>
 
     <footer class="footer" data-test="footer">
-      <aside id="contacts">
-        <h2>contacts</h2>
+      <aside class="footer__contacts" id="contacts">
+        <h2>Контакты</h2>
+        <div>Контакты</div>
+        <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+        <div class="footer__wrapper">
+          <label class="footer__label" for="footer-tel">Телефон</label>
+          <a class="footer__contact" href="tel:+79837454545" id="footer-tel">+7 983 745-45-45</a>
+          <label class="footer__label" for="footer-email">Email</label>
+          <a class="footer__contact" href="mailto:info@lifetour.com&body=привет?subject=вопрос" id="footer-email">info@lifetour.com</a>
+          <label class="footer__label" for="footer-address">Адрес</label>
+          <address class="footer__contact" id="footer-address">г. Москва, пр-т Мира, д. 14, офис 101</address>
+        </div>
+        <div class="footer__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desk@1x.webp 1x, img/map-desk@2x.webp 2x" width="600" height="324">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tab@1x.webp 1x, img/map-tab@2x.webp 2x" width="768" height="340">
+            <source type="image/webp" srcset="img/map-mob@1x.webp 1x, img/map-mob@2x.webp 2x" width="320" height="343">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desk@1x.jpg 1x, img/map-desk@2x.jpg 2x" width="600" height="324">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tab@1x.jpg 1x, img/map-tab@2x.jpg 2x" width="768" height="340">
+            <img class="footer__image" src="img/map-mob@1x.jpg" srcset="img/map-mob@2x.jpg 2x" width="320" height="343" alt="Карта нашего месторасположения." loading="lazy">
+          </picture>
+        </div>
       </aside>
-      footer
+      <div class="footer__true">
+        <a class="footer__logo" href="index.html">
+          <img class="footer__logo-icon" src="img/logo.svg" alt="Логотип lifetour." width="142" height="42">
+        </a>
+        <nav class="footer__navigation">
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#tours">Туры</a></li>
+            <li><a class="footer__link" href="#training">Обучение</a></li>
+            <li><a class="footer__link" href="#about">О нас</a></li>
+            <li><a class="footer__link" href="#reviews">Отзывы</a></li>
+            <li><a class="footer__link" href="#gallery">Фотографии</a></li>
+            <li><a class="footer__link" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <a class="footer__phone" href="#">8 800 725-32-32</a>
+        <ul class="footer__socials">
+          <li><a class="footer__social footer__social--vk" href="https://vk.com/htmlacademy" aria-label="Вконтакте"></a></li>
+          <li><a class="footer__social footer__social--ok" href="https://ok.ru/htmlacademy/" aria-label="Одноклассники"></a></li>
+          <li><a class="footer__social footer__social--reddit" href="https://www.reddit.com/" aria-label="Реддит"></a></li>
+        </ul>
+        <p class="footer__policy">Политика конфиденциальности</p>
+      </div>
     </footer>
 
     <script type="module" src="js/main.js"></script>
