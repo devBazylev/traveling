@@ -19,9 +19,9 @@
   display: $display;
 }
 
-@mixin flex($wrap: wrap) {
+@mixin flex($wrap: wrap, $justify: space-between) {
   display: flex;
-  justify-content: space-between;
+  justify-content: $justify;
   flex-wrap: $wrap;
 }
 

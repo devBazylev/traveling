@@ -151,7 +151,6 @@
 
   @media (min-width: $desk) {
     @include flex;
-
     align-self: start;
     gap: 10px;
     width: fit-content;
@@ -169,7 +168,6 @@
 
   &::before {
     @include pseudo;
-
     position: relative;
     background-color: var(--light);
     mask-repeat: no-repeat;

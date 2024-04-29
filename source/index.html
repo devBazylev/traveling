@@ -118,7 +118,7 @@
           <span class="visually-hidden">Следующий слайд</span>
         </button>
         <div class="tours__slider swiper-wrapper">
-          <article class="card card--first swiper-slide" lazy="true">
+          <article class="card card--first swiper-slide">
             <div class="card__picture">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/tours-1-desk@1x.webp 1x, img/tours-1-desk@2x.webp 2x" width="380" height="416">
@@ -287,10 +287,10 @@
               <div class="training__picture">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-1-desk@1x.webp 1x, img/instructor-1-desk@2x.webp 2x" width="255" height="200">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-1-tab@1x.webp 1x, img/instructor-1-tab@2x.webp 2x" width="182.6" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-1-tab@1x.webp 1x, img/instructor-1-tab@2x.webp 2x" width="183" height="200">
                   <source type="image/webp" srcset="img/instructor-1-mob@1x.webp 1x, img/instructor-1-mob@2x.webp 2x" width="260" height="200">
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-1-desk@1x.jpg 1x, img/instructor-1-desk@2x.jpg 2x" width="255" height="200">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-1-tab@1x.jpg 1x, img/instructor-1-tab@2x.jpg 2x" width="182.6" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-1-tab@1x.jpg 1x, img/instructor-1-tab@2x.jpg 2x" width="183" height="200">
                   <img class="training__image training__image--first" src="img/instructor-1-mob@1x.jpg" srcset="img/instructor-1-mob@2x.jpg 2x" width="260" height="200" alt="Фото инструктора." loading="lazy">
                 </picture>
               </div>
@@ -302,10 +302,10 @@
               <div class="training__picture">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-2-desk@1x.webp 1x, img/instructor-2-desk@2x.webp 2x" width="255" height="200">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-2-tab@1x.webp 1x, img/instructor-2-tab@2x.webp 2x" width="182.6" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-2-tab@1x.webp 1x, img/instructor-2-tab@2x.webp 2x" width="183" height="200">
                   <source type="image/webp" srcset="img/instructor-2-desk@1x.webp 1x, img/instructor-2-desk@2x.webp 2x" width="260" height="200">
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-2-desk@1x.jpg 1x, img/instructor-2-desk@2x.jpg 2x" width="255" height="200">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-2-tab@1x.jpg 1x, img/instructor-2-tab@2x.jpg 2x" width="182.6" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-2-tab@1x.jpg 1x, img/instructor-2-tab@2x.jpg 2x" width="183" height="200">
                   <img class="training__image training__image--second" src="img/instructor-2-desk@1x.jpg" srcset="img/instructor-2-desk@2x.jpg 2x" width="260" height="200" alt="Фото инструктора." loading="lazy">
                 </picture>
               </div>
@@ -317,10 +317,10 @@
               <div class="training__picture">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-3-desk@1x.webp 1x, img/instructor-3-desk@2x.webp 2x" width="255" height="200">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-3-tab@1x.webp 1x, img/instructor-3-tab@2x.webp 2x" width="182.6" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-3-tab@1x.webp 1x, img/instructor-3-tab@2x.webp 2x" width="183" height="200">
                   <source type="image/webp" srcset="img/instructor-3-mob@1x.webp 1x, img/instructor-3-mob@2x.webp 2x" width="260" height="200">
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-3-desk@1x.jpg 1x, img/instructor-3-desk@2x.jpg 2x" width="255" height="200">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-3-tab@1x.jpg 1x, img/instructor-3-tab@2x.jpg 2x" width="182.6" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructor-3-tab@1x.jpg 1x, img/instructor-3-tab@2x.jpg 2x" width="183" height="200">
                   <img class="training__image training__image--third" src="img/instructor-3-mob@1x.jpg" srcset="img/instructor-3-mob@2x.jpg 2x" width="260" height="200" alt="Фото инструктора." loading="lazy">
                 </picture>
               </div>
@@ -577,16 +577,22 @@
 
     <footer class="footer" data-test="footer">
       <aside class="footer__contacts" id="contacts">
-        <h2>Контакты</h2>
-        <div>Контакты</div>
+        <h2 class="footer__title page__title">Контакты</h2>
+        <div class="footer__headline page__headline">Контакты</div>
         <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
         <div class="footer__wrapper">
-          <label class="footer__label" for="footer-tel">Телефон</label>
-          <a class="footer__contact" href="tel:+79837454545" id="footer-tel">+7 983 745-45-45</a>
-          <label class="footer__label" for="footer-email">Email</label>
-          <a class="footer__contact" href="mailto:info@lifetour.com&body=привет?subject=вопрос" id="footer-email">info@lifetour.com</a>
-          <label class="footer__label" for="footer-address">Адрес</label>
-          <address class="footer__contact" id="footer-address">г. Москва, пр-т Мира, д. 14, офис 101</address>
+          <div class="footer__subwrapper">
+            <span class="footer__sign footer__sign--tel">Телефон</span>
+            <a class="footer__contact" href="tel:+79837454545">+7 983 745-45-45</a>
+          </div>
+          <div class="footer__subwrapper">
+            <span class="footer__sign footer__sign--mail">Email</span>
+            <a class="footer__contact" href="mailto:info@lifetour.com&body=привет?subject=вопрос">info@lifetour.com</a>
+          </div>
+          <div class="footer__subwrapper">
+            <span class="footer__sign footer__sign--loc">Адрес</span>
+            <a class="footer__contact" href="#"><address>г. Москва, пр-т Мира, д. 14, офис 101</address></a>
+          </div>
         </div>
         <div class="footer__map">
           <picture>
@@ -600,9 +606,7 @@
         </div>
       </aside>
       <div class="footer__true">
-        <a class="footer__logo" href="index.html">
-          <img class="footer__logo-icon" src="img/logo.svg" alt="Логотип lifetour." width="142" height="42">
-        </a>
+        <a class="footer__logo" href="index.html" aria-label="Логотип lifetour"></a>
         <nav class="footer__navigation">
           <ul class="footer__list">
             <li><a class="footer__link" href="#tours">Туры</a></li>
@@ -613,7 +617,7 @@
             <li><a class="footer__link" href="#contacts">Контакты</a></li>
           </ul>
         </nav>
-        <a class="footer__phone" href="#">8 800 725-32-32</a>
+        <a class="footer__phone" href="tel:+78007253232">8 800 725-32-32</a>
         <ul class="footer__socials">
           <li><a class="footer__social footer__social--vk" href="https://vk.com/htmlacademy" aria-label="Вконтакте"></a></li>
           <li><a class="footer__social footer__social--ok" href="https://ok.ru/htmlacademy/" aria-label="Одноклассники"></a></li>
