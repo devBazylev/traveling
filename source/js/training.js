@@ -6,7 +6,7 @@ new Swiper('.training__slider', {
 
   watchSlidesProgress: true,
   slideActiveClass: 'training__instructor--active',
-  slideFullyVisibleClass: 'training__instructor--visible',
+  slideVisibleClass: 'training__instructor--part',
 
   slidesPerView: 'auto',
   slidesPerGroup: 1,

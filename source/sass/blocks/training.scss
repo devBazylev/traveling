@@ -57,27 +57,29 @@
 }
 
 .training__slider {
-  @include grid(1fr 290px 1fr);
+  @include grid;
   grid-area: 3/1/4/4;
+  width: calc(100vw - 30px);
+  margin: 0 auto;
 
   @media (min-width: $tab) {
-    grid-template-columns: 1fr 678px 1fr;
+    width: calc(100vw - 90px)
   }
 
   @media (min-width: $desk) {
-    grid-template-columns: 1fr 1200px 1fr;
+    width: calc(100vw - 240px)
   }
 }
 
 .training__slider-title {
-  grid-area: 1/2/2/3;
+  grid-area: 1/1/2/2;
 
   @media (min-width: $tab) {
-    margin: 23px 0 37px;
+    margin: 23px 0 37px calc((100vw - 768px) / 2);
   }
 
   @media (min-width: $desk) {
-    margin: 55px 0 16px;
+    margin: 55px 0 16px calc((100vw - 1440px) / 2);
   }
 }
 
@@ -88,7 +90,7 @@
   height: 35px;
 
   @media (min-width: $tab) {
-    grid-area: 1/2/2/3;
+    grid-area: 1/1/2/2;
     display: block;
     z-index: 1;
   }
@@ -96,21 +98,21 @@
 
 .training__button--prev {
   @media (min-width: $tab) {
-    margin: 20px 41px 0 auto;
+    margin: 20px 0 0 calc((100vw - 90px + 521px) / 2);
   }
 
   @media (min-width: $desk) {
-    margin: 51px 41px 0 auto;
+    margin: 51px 0 0 calc((100vw - 240px + 1043px) / 2);
   }
 }
 
 .training__button--next {
   @media (min-width: $tab) {
-    margin: 20px 0 0 auto;
+    margin: 20px 0 0 calc((100vw - 90px + 603px) / 2);
   }
 
   @media (min-width: $desk) {
-    margin: 51px 0 0 auto;
+    margin: 51px 0 0 calc((100vw - 240px + 1125px) / 2);
   }
 }
 
@@ -161,7 +163,7 @@
 
 .training__container {
   @include flex(nowrap);
-  grid-area: 2/2/3/3;
+  grid-area: 2/1/3/2;
   gap: 20px 0;
 }
 
@@ -189,7 +191,7 @@
 }
 
 .training__instructor--active,
-.training__instructor--visible {
+.training__instructor--part {
   visibility: visible;
 }
 
