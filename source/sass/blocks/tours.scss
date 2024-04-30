@@ -10,16 +10,17 @@
   overflow: hidden;
 
   @media (min-width: $tab) {
+    grid-template-columns: 1fr 678px 1fr;
     padding: 40px 0;
   }
 
   @media (min-width: $desk) {
-    gap: 42px;
+    grid-template-columns: 1fr 1200px 1fr;
+    gap: 42px 0;
     padding: 100px 0;
   }
 }
 
-.tours__button,
 .tours__title,
 .tours__headline {
   grid-area: 1/2/2/3;
@@ -52,7 +53,35 @@
 }
 
 .tours__slider {
-  grid-area: 2/2/3/3;
+  grid-area: 2/1/3/4;
+  width: calc(100vw - 30px);
+  margin: 0 auto;
+  overflow: hidden;
+
+  @media (min-width: $tab) {
+    @include grid;
+    grid-template-rows: repeat(auto-fit, minmax(79px, auto));
+    grid-area: 1/1/3/4;
+    width: calc(100vw - 90px);
+  }
+
+  @media (min-width: $desk) {
+    grid-template-rows: repeat(auto-fit, minmax(107px, auto));
+    width: calc(100vw - 240px);
+  }
+}
+
+.tours__wrapper {
+  @include flex(nowrap);
+}
+
+.tours__slide {
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.tours__slide--visible {
+  visibility: visible;
 }
 
 .tours__button {
@@ -62,6 +91,7 @@
   height: 35px;
 
   @media (min-width: $tab) {
+    grid-area: 1/1/2/2;
     display: block;
     z-index: 1;
   }
@@ -69,21 +99,21 @@
 
 .tours__button--prev {
   @media (min-width: $tab) {
-    margin: 20px 41px 0 auto;
+    margin: 20px 0 0 calc((100vw + 431px) / 2);
   }
 
   @media (min-width: $desk) {
-    margin: 20px 41px 0 auto;
+    margin: 20px 0 0 calc((100vw + 804px) / 2);
   }
 }
 
 .tours__button--next {
   @media (min-width: $tab) {
-    margin: 20px 0 0 auto;
+    margin: 20px 0 0 calc((100vw + 513px) / 2);
   }
 
   @media (min-width: $desk) {
-    margin: 20px 0 0 auto;
+    margin: 20px 0 0 calc((100vw + 885px) / 2);
   }
 }
 
@@ -159,7 +189,6 @@
 
 .tours__link::after {
   @include pseudo;
-
   width: 12px;
   height: 14px;
   position: relative;

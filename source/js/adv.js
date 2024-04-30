@@ -27,3 +27,7 @@ const swiper = new Swiper('.adv', {
 if (window.innerWidth < 1440) {
   swiper.destroy();
 }
+
+// watchOverflow: true,
+// centeredSlides: true,
+// loopAdditionalSlides: 2,
