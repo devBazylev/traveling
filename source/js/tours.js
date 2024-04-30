@@ -14,6 +14,7 @@ new Swiper('.tours', {
 
   breakpoints: {
     320: {
+      // width: 290,
       spaceBetween: 15,
     },
     768: {
