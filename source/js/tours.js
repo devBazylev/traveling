@@ -1,8 +1,11 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
-new Swiper('.tours', {
+new Swiper('.tours__slider', {
   modules: [Navigation],
+
+  watchSlidesProgress: true,
+  slideVisibleClass: 'tours__slide--visible',
 
   slidesPerView: 'auto',
   slidesPerGroup: 1,
@@ -14,7 +17,6 @@ new Swiper('.tours', {
 
   breakpoints: {
     320: {
-      // width: 290,
       spaceBetween: 15,
     },
     768: {
@@ -26,8 +28,3 @@ new Swiper('.tours', {
     },
   }
 });
-
-// watchOverflow: true,
-// centeredSlides: true,
-// loopAdditionalSlides: 2,
-// slideVisibleClass: 'card--part',
