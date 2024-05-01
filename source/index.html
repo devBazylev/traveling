@@ -21,7 +21,7 @@
       <a class="header__logo" href="index.html">
         <img class="header__logo-icon" src="img/logo.svg" alt="Логотип lifetour." width="142" height="42">
       </a>
-      <nav class="header__navigation header__navigation--no-js">
+      <nav class="header__navigation header__navigation--closed">
         <ul class="header__list">
           <li><a class="header__link" href="#tours">Туры</a></li>
           <li><a class="header__link" href="#training">Обучение</a></li>
@@ -108,10 +108,10 @@
         <div class="hero__pagination swiper-pagination"></div>
       </section>
 
-      <section class="tours swiper" id="tours" data-test="tours">
+      <section class="tours" id="tours" data-test="tours">
         <h2 class="tours__title page__title">Ближайшие туры</h2>
         <div class="tours__headline page__headline" aria-hidden="true">Ближайшие туры</div>
-        <div class="tours__slider">
+        <div class="tours__slider swiper">
           <button class="tours__button tours__button--prev swiper-button-prev" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
@@ -625,7 +625,7 @@
           <li><a class="footer__social footer__social--ok" href="https://ok.ru/htmlacademy/" aria-label="Одноклассники"></a></li>
           <li><a class="footer__social footer__social--reddit" href="https://www.reddit.com/" aria-label="Реддит"></a></li>
         </ul>
-        <p class="footer__policy">Политика конфиденциальности</p>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
       </div>
     </footer>
 
