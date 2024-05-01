@@ -568,10 +568,11 @@
         <h2>Остались вопросы?</h2>
         <p>Заполните форму <span>и наш оператор</span> свяжется <span>с вами для консультации.</span></p>
         <form class="form__template" action="https://echo.htmlacademy.ru/" autocomplete="on">
-          <label class="visually-hidden" for="tel">Введите ваш номер телефона</label>
-          <input class="form__tel" type="tel" name="phone" placeholder="Телефон" id="tel" required>
-          <label class="visually-hidden" for="mail">Введите вашу почту</label>
-          <input class="form__mail" type="text" name="email" placeholder="Email" id="mail" required>
+          <input class="form__tel" type="tel" name="phone" id="tel" spellcheck="true" required>
+          <label class="form__tel-sign" for="tel">Телефон</label>
+          <!-- <input class="form__mail" type="text" name="email" id="mail" required> -->
+          <input class="form__mail" type="text" name="email" id="mail" spellcheck="true" placeholder="stgdfj" required>
+          <label class="form__mail-sign" for="mail">Email</label>
           <button class="form__button" type="submit">Отправить</button>
         </form>
       </section>
