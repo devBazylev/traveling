@@ -172,7 +172,6 @@
     background-color: var(--light);
     mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: contain;
   }
 }
 
@@ -189,6 +188,7 @@
   left: 1px;
   width: 12px;
   height: 16px;
+  mask-size: 12px 12px;
   mask-image: url("/__spritemap#sprite-moon-view");
 }
 
@@ -197,6 +197,7 @@
   left: 1px;
   width: 12px;
   height: 16px;
+  mask-size: 12px 12px;
   mask-image: url("/__spritemap#sprite-level-view");
 }
 
