@@ -206,7 +206,7 @@
 
 .form__tel::placeholder,
 .form__mail::placeholder {
-  color: var(--bright);
+  color: var(--bright-trans-50);
   border: 1px solid var(--bright);
 }
 
@@ -218,6 +218,11 @@
 .form__mail:valid + .form__mail-sign {
   opacity: 0;
 }
+
+// .form__tel:focus.form__tel::placeholder,
+// .form__mail:focus.form__mail::placeholder {
+//   color: transparent;
+// }
 
 .form__button {
   @include btn;
