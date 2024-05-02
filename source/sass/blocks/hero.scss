@@ -33,9 +33,9 @@
 
 .hero__slide {
   @include grid;
-
   gap: 5px;
   width: 320px;
+  background-color: var(--bright-trans-50);
   visibility: hidden;
 
   @media (min-width: $tab) {
