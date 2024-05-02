@@ -17,7 +17,6 @@
   @media (min-width: $tab) {
     grid-template-columns: 1fr 678px 1fr;
     grid-template-rows: repeat(auto-fit, minmax(54px, auto) minmax(71px, auto) minmax(325px, auto));
-    // min-height: 680px;
     padding: 190px 0 40px;
     background-image: image-set(
       url("../../img/form-tab@2x.webp") type("image/webp") 2x,
@@ -51,7 +50,6 @@
   text-align: center;
 
   @media (min-width: $tab) {
-    // align-self: end;
     max-width: 70%;
     margin: 0 auto;
     padding: 0 5px 0 0;
@@ -148,6 +146,7 @@
     min-width: 360px;
     min-height: 56px;;
     padding: 14px 29px;
+    border-radius: 2px;
   }
 }
 
@@ -186,28 +185,33 @@
 .form__tel:hover,
 .form__mail:hover {
   border: 1px solid var(--bright);
+  border-radius: 2px;
 }
 
 .form__tel:focus,
 .form__mail:focus {
   border: 1px solid var(--main);
+  border-radius: 2px;
 }
 
 .form__tel:disabled,
 .form__mail:disabled {
   color: var(--stormy-trans-50);
   border: 1px solid var(--stormy);
+  border-radius: 2px;
 }
 
 .form__tel--error,
 .form__mail--error {
   border: 1px solid var(--alert);
+  border-radius: 2px;
 }
 
 .form__tel::placeholder,
 .form__mail::placeholder {
   color: var(--bright-trans-50);
   border: 1px solid var(--bright);
+  border-radius: 2px;
 }
 
 .form__tel:placeholder-shown + .form__tel-sign,
@@ -218,11 +222,6 @@
 .form__mail:valid + .form__mail-sign {
   opacity: 0;
 }
-
-// .form__tel:focus.form__tel::placeholder,
-// .form__mail:focus.form__mail::placeholder {
-//   color: transparent;
-// }
 
 .form__button {
   @include btn;
@@ -237,6 +236,7 @@
   @media (min-width: $tab) {
     min-height: 56px;
     margin: 0 auto auto;
+    border-radius: 6px;
   }
 
   @media (min-width: $desk) {
@@ -244,5 +244,6 @@
     width: auto;
     min-width: 180px;
     margin: 0;
+    border-radius: 0;
   }
 }
