@@ -5,6 +5,7 @@ new Swiper('.tours__slider', {
   modules: [Navigation],
 
   watchSlidesProgress: true,
+  slideActiveClass: 'tours__slide--active',
   slideVisibleClass: 'tours__slide--visible',
 
   slidesPerView: 'auto',

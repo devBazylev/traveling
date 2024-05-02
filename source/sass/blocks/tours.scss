@@ -73,6 +73,7 @@
 
 .tours__wrapper {
   @include flex(nowrap);
+  // margin: 0 calc((100vw - 320px) / 2);
 }
 
 .tours__slide {
@@ -80,6 +81,7 @@
   transition: 0.5s;
 }
 
+.tours__slide--active,
 .tours__slide--visible {
   visibility: visible;
 }

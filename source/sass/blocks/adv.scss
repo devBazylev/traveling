@@ -66,6 +66,7 @@
   height: fit-content;
   padding: 19px 9px;
   border: 1px solid var(--bright-trans-10);
+  background-color: var(--light);
   overflow: auto;
 
   @media (min-width: $tab) {
