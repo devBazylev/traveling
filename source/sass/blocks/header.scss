@@ -151,6 +151,24 @@
   }
 }
 
+.header__phone:hover {
+  color: var(--light-trans-50);
+}
+
+.header__phone:focus {
+  color: var(--main);
+}
+
+.header__phone:active {
+  color: var(--dark-bright);
+}
+
+.header__phone:disabled,
+.header__phone--disabled,
+.header__phone:not([href]) {
+  color: var(--stormy);
+}
+
 .header__button {
   grid-area: 1/2/2/3;
   width: 56px;

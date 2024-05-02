@@ -33,9 +33,9 @@
 
 .hero__slide {
   @include grid;
-
   gap: 5px;
   width: 320px;
+  background-color: var(--bright-trans-50);
   visibility: hidden;
 
   @media (min-width: $tab) {
@@ -172,7 +172,6 @@
     background-color: var(--light);
     mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: contain;
   }
 }
 
@@ -189,6 +188,7 @@
   left: 1px;
   width: 12px;
   height: 16px;
+  mask-size: 12px 12px;
   mask-image: url("/__spritemap#sprite-moon-view");
 }
 
@@ -197,6 +197,7 @@
   left: 1px;
   width: 12px;
   height: 16px;
+  mask-size: 12px 12px;
   mask-image: url("/__spritemap#sprite-level-view");
 }
 
@@ -234,6 +235,14 @@
 }
 
 .hero .swiper-pagination-bullet:hover {
-  border: 1px solid var(--cloudy);
   background-color: var(--cloudy);
+}
+
+.hero .swiper-pagination-bullet:focus {
+  outline: 1px solid var(--light-trans-50);
+  outline-offset: 1px;
+}
+
+.hero .swiper-pagination-bullet:active {
+  background-color: var(--light-trans-50);
 }
