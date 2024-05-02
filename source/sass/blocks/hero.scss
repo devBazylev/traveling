@@ -235,6 +235,14 @@
 }
 
 .hero .swiper-pagination-bullet:hover {
-  border: 1px solid var(--cloudy);
   background-color: var(--cloudy);
+}
+
+.hero .swiper-pagination-bullet:focus {
+  outline: 1px solid var(--light-trans-50);
+  outline-offset: 1px;
+}
+
+.hero .swiper-pagination-bullet:active {
+  background-color: var(--light-trans-50);
 }
