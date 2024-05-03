@@ -1,7 +1,7 @@
 const form = document.querySelector('.form');
 const inputMail = form.querySelector('.form__mail');
 const inputTel = form.querySelector('.form__tel');
-const submitButton = form.querySelector('.form__button');
+const submitButton = form.querySelector('.form__button');form__mail--error
 
 const MAX_LETTERS_COUNT = 100;
 
