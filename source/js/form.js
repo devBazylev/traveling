@@ -1,13 +1,13 @@
 const form = document.querySelector('.form');
 const inputMail = form.querySelector('.form__mail');
 const inputTel = form.querySelector('.form__tel');
-const submitButton = form.querySelector('.form__button');form__mail--error
+// const submitButton = form.querySelector('.form__button');
 
 const MAX_LETTERS_COUNT = 100;
 
-const toggleSubmitButton = (isDisabled) => {
-  submitButton.disabled = isDisabled;
-};
+// const toggleSubmitButton = (isDisabled) => {
+//   submitButton.disabled = isDisabled;
+// };
 
 const validateLetters = (mail) => {
   const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -24,24 +24,16 @@ const validateMail = () => {
 
   if (!validateLetters(mailValue)) {
     inputMail.classList.add('form__mail--error');
-    toggleSubmitButton(true);
     return false;
   } else {
     inputMail.classList.remove('form__mail--error');
-    if (!inputTel.classList.contains('form__mail--error')){
-      toggleSubmitButton(false);
-    }
   }
 
   if (mailValue.length > MAX_LETTERS_COUNT) {
     inputMail.classList.add('form__mail--error');
-    toggleSubmitButton(true);
     return false;
   } else {
     inputMail.classList.remove('form__mail--error');
-    if (!inputTel.classList.contains('form__mail--error')){
-      toggleSubmitButton(false);
-    }
   }
 };
 
@@ -50,35 +42,25 @@ const validateTel = () => {
 
   if (!validateNumbers(telValue)) {
     inputTel.classList.add('form__tel--error');
-    toggleSubmitButton(true);
     return false;
   } else {
     inputTel.classList.remove('form__tel--error');
-    if (!inputMail.classList.contains('form__tel--error')) {
-      toggleSubmitButton(false);
-    }
   }
 
   if (telValue.length > MAX_LETTERS_COUNT) {
     inputTel.classList.add('form__tel--error');
-    toggleSubmitButton(true);
     return false;
   } else {
     inputTel.classList.remove('form__tel--error');
-    if (!inputMail.classList.contains('form__tel--error')) {
-      toggleSubmitButton(false);
-    }
   }
 };
 
-const onSubmitButton = () => {
-  // evt.preventDefault();
-  toggleSubmitButton(true);
-  form.submit();
-  form.reset();
-  toggleSubmitButton(false);
-};
+// form.reset();
 
-inputMail.addEventListener('input', validateMail);
-inputTel.addEventListener('input', validateTel);
-form.addEventListener('submit', onSubmitButton);
+form.addEventListener('submit', (evt) => {
+  if (validateTel()) {
+    evt.preventDefault();
+    console.log('Вы не Кекс!');
+  }
+});
+
