@@ -30,6 +30,10 @@ const validateTel = (evt) => {
     evt.preventDefault();
     inputTel.classList.add('form__tel--error');
   }
+  if (telValue.length === 0) {
+    evt.preventDefault();
+    inputTel.classList.add('form__tel--error');
+  }
 };
 
 const validateMail = (evt) => {
@@ -40,6 +44,10 @@ const validateMail = (evt) => {
     inputMail.classList.add('form__mail--error');
   }
   if (mailValue.length > MAX_LETTERS_COUNT) {
+    evt.preventDefault();
+    inputMail.classList.add('form__mail--error');
+  }
+  if (mailValue.length === 0) {
     evt.preventDefault();
     inputMail.classList.add('form__mail--error');
   }
