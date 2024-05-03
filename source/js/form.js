@@ -3,15 +3,10 @@ const inputMail = form.querySelector('.form__mail');
 const inputTel = form.querySelector('.form__tel');
 const submitButton = form.querySelector('.form__button');
 
-const MAX_LETTERS_COUNT = 100;
+const MAX_LETTERS_COUNT = 50;
 
 const toggleSubmitButton = (isDisabled) => {
   submitButton.disabled = isDisabled;
-};
-
-const validateLetters = (mail) => {
-  const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return reg.test(String(mail));
 };
 
 const validateNumbers = (phone) => {
@@ -19,66 +14,56 @@ const validateNumbers = (phone) => {
   return reg.test(String(phone));
 };
 
-const validateMail = () => {
-  const mailValue = inputMail.value;
-
-  if (!validateLetters(mailValue)) {
-    inputMail.classList.add('form__mail--error');
-    toggleSubmitButton(true);
-    return false;
-  } else {
-    inputMail.classList.remove('form__mail--error');
-    if (!inputTel.classList.contains('form__mail--error')){
-      toggleSubmitButton(false);
-    }
-  }
-
-  if (mailValue.length > MAX_LETTERS_COUNT) {
-    inputMail.classList.add('form__mail--error');
-    toggleSubmitButton(true);
-    return false;
-  } else {
-    inputMail.classList.remove('form__mail--error');
-    if (!inputTel.classList.contains('form__mail--error')){
-      toggleSubmitButton(false);
-    }
-  }
+const validateLetters = (mail) => {
+  const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return reg.test(String(mail));
 };
 
-const validateTel = () => {
+const validateTel = (evt) => {
   const telValue = inputTel.value;
 
   if (!validateNumbers(telValue)) {
+    evt.preventDefault();
     inputTel.classList.add('form__tel--error');
-    toggleSubmitButton(true);
-    return false;
-  } else {
-    inputTel.classList.remove('form__tel--error');
-    if (!inputMail.classList.contains('form__tel--error')) {
-      toggleSubmitButton(false);
-    }
   }
-
   if (telValue.length > MAX_LETTERS_COUNT) {
+    evt.preventDefault();
     inputTel.classList.add('form__tel--error');
-    toggleSubmitButton(true);
-    return false;
-  } else {
-    inputTel.classList.remove('form__tel--error');
-    if (!inputMail.classList.contains('form__tel--error')) {
-      toggleSubmitButton(false);
-    }
+  }
+  if (telValue.length === 0) {
+    evt.preventDefault();
+    inputTel.classList.add('form__tel--error');
   }
 };
 
-const onSubmitButton = () => {
-  // evt.preventDefault();
-  toggleSubmitButton(true);
-  form.submit();
-  form.reset();
-  toggleSubmitButton(false);
+const validateMail = (evt) => {
+  const mailValue = inputMail.value;
+
+  if (!validateLetters(mailValue)) {
+    evt.preventDefault();
+    inputMail.classList.add('form__mail--error');
+  }
+  if (mailValue.length > MAX_LETTERS_COUNT) {
+    evt.preventDefault();
+    inputMail.classList.add('form__mail--error');
+  }
+  if (mailValue.length === 0) {
+    evt.preventDefault();
+    inputMail.classList.add('form__mail--error');
+  }
 };
 
-inputMail.addEventListener('input', validateMail);
-inputTel.addEventListener('input', validateTel);
-form.addEventListener('submit', onSubmitButton);
+form.addEventListener('submit', (evt) => {
+  if (inputTel.classList.contains('form__tel--error')) {
+    inputTel.classList.remove('form__tel--error');
+  }
+  if (inputMail.classList.contains('form__mail--error')) {
+    inputMail.classList.remove('form__mail--error');
+  }
+  toggleSubmitButton(true);
+  validateTel(evt);
+  validateMail(evt);
+  setTimeout(() => {
+    toggleSubmitButton(false);
+  }, 1000);
+});
