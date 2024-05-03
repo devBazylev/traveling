@@ -13,6 +13,7 @@ new Swiper('.hero', {
     el: '.swiper-pagination',
     // type: 'bullets',
     clickable: true,
+    // bulletElement: 'button',
   },
 
   breakpoints: {
