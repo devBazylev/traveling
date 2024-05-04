@@ -120,6 +120,10 @@
   }
 }
 
+.gallery__image {
+  background-color: var(--lightgray-trans-50);
+}
+
 // .gallery__image--fire {
 //   width: 157px;
 //   height: 134px;
@@ -207,14 +211,6 @@
     object-fit: contain;
   }
 }
-
-
-
-
-
-
-
-
 
 .gallery__button {
   @include btn;
