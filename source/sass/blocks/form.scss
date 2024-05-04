@@ -171,6 +171,7 @@
   line-height: 16px;
   opacity: 0.5;
   padding: 18px 15px 16px;
+  cursor: pointer;
 
   @media (min-width: $desk) {
     padding: 20px 30px 19px;
@@ -224,8 +225,6 @@
 .form__tel::placeholder,
 .form__mail::placeholder {
   color: var(--bright-trans-50);
-  border: 1px solid var(--bright);
-  border-radius: 2px;
 }
 
 .form__tel:placeholder-shown + .form__tel-sign,
@@ -234,7 +233,13 @@
 .form__mail:focus + .form__mail-sign,
 .form__tel:valid + .form__tel-sign,
 .form__mail:valid + .form__mail-sign {
-  opacity: 0;
+  font-size: 0;
+}
+
+.form__tel:placeholder-shown + .form__tel-sign,
+.form__mail:placeholder-shown + .form__mail-sign {
+  border: 1px solid var(--bright);
+  border-radius: 2px;
 }
 
 .form__button {
