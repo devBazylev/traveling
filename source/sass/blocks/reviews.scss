@@ -20,7 +20,7 @@
   margin: 38px 0 31px;
 
   @media (min-width: $tab) {
-    margin: 72px 0 25px;
+    margin: 62px 0 35px;
   }
 
   @media (min-width: $desk) {
@@ -152,14 +152,6 @@
   }
 }
 
-// .reviews__slide--active {
-//   visibility: visible;
-// }
-
-// .reviews__slide--prev {
-//   visibility: hidden;
-// }
-
 .reviews__picture {
   margin: 0 0 14px;
 
@@ -173,15 +165,9 @@
   }
 }
 
-// .reviews__image--second {
-//   height: 169px;
-//   object-fit: cover;
-
-//   @media (min-width: $tab) {
-//     height: auto;
-//     object-fit: contain;
-//   }
-// }
+.reviews__image {
+  background-color: var(--lightgray-trans-50);
+}
 
 .reviews p {
   margin: 0 0 10px;

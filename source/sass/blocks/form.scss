@@ -3,7 +3,9 @@
 
 .form {
   @include grid(1fr 258px 1fr);
+  position: relative;
   padding: 175px 0 174px;
+  background-color: var(--malevich-trans-20);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,7 +19,7 @@
   @media (min-width: $tab) {
     grid-template-columns: 1fr 678px 1fr;
     grid-template-rows: repeat(auto-fit, minmax(54px, auto) minmax(71px, auto) minmax(325px, auto));
-    padding: 190px 0 40px;
+    padding: 184px 0 34px;
     background-image: image-set(
       url("../../img/form-tab@2x.webp") type("image/webp") 2x,
       url("../../img/form-tab@1x.webp") type("image/webp") 1x,
@@ -41,6 +43,7 @@
 
 .form h2 {
   grid-area: 1/2/2/3;
+  z-index: 1;
   width: auto;
   margin: 0 auto 19px;
   font-size: 22px;
@@ -66,6 +69,7 @@
 
 .form p {
   grid-area: 2/2/3/3;
+  z-index: 1;
   width: auto;
   margin: 0 auto 20px;
   padding: 0 20px;
@@ -109,6 +113,7 @@
 
 .form__template {
   @include grid;
+  z-index: 1;
   width: 100%;
   grid-area: 3/2/4/3;
   gap: 8px;
@@ -116,7 +121,7 @@
 
   @media (min-width: $tab) {
     grid-template-rows: repeat(auto-fit, minmax(50px, auto) minmax(50px, auto) minmax(203px, auto));
-    width: 270.8px;
+    width: 360px;
     gap: 11px;
     align-items: start;
   }
@@ -141,6 +146,11 @@
   line-height: 16px;
   border: 1px solid var(--bright-trans-10);
 
+  @media (min-width: $tab) {
+    width: auto;
+    min-height: 56px;;
+  }
+
   @media (min-width: $desk) {
     width: auto;
     min-width: 360px;
@@ -157,6 +167,11 @@
   line-height: 16px;
   opacity: 0.5;
   padding: 18px 15px 16px;
+  cursor: pointer;
+
+  @media (min-width: $tab) {
+    padding: 21px 30px 16px;
+  }
 
   @media (min-width: $desk) {
     padding: 20px 30px 19px;
@@ -210,8 +225,6 @@
 .form__tel::placeholder,
 .form__mail::placeholder {
   color: var(--bright-trans-50);
-  border: 1px solid var(--bright);
-  border-radius: 2px;
 }
 
 .form__tel:placeholder-shown + .form__tel-sign,
@@ -220,7 +233,13 @@
 .form__mail:focus + .form__mail-sign,
 .form__tel:valid + .form__tel-sign,
 .form__mail:valid + .form__mail-sign {
-  opacity: 0;
+  font-size: 0;
+}
+
+.form__tel:placeholder-shown + .form__tel-sign,
+.form__mail:placeholder-shown + .form__mail-sign {
+  border: 1px solid var(--bright);
+  border-radius: 2px;
 }
 
 .form__button {

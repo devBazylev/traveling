@@ -30,7 +30,7 @@
   margin: 19px 0 19px;
 
   @media (min-width: $tab) {
-    margin: 30px 0 5px;
+    margin: 20px 0 15px;
     padding: 0 200px 0 0;
   }
 
@@ -73,12 +73,11 @@
 
 .tours__wrapper {
   @include flex(nowrap);
-  // margin: 0 calc((100vw - 320px) / 2);
 }
 
 .tours__slide {
   visibility: hidden;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .tours__slide--active,

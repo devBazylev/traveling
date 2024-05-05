@@ -5,7 +5,7 @@
   @include grid;
   width: 290px;
   min-height: 416px;
-  background-color: var(--bright-trans-50);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
   overflow: auto;
 
   @media (min-width: $tab) {
@@ -16,6 +16,7 @@
     width: 380px;
   }
 }
+
 
 .card__picture {
   grid-area: 1/1/2/2;

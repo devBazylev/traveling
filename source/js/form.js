@@ -4,6 +4,7 @@ const inputTel = form.querySelector('.form__tel');
 const submitButton = form.querySelector('.form__button');
 
 const MAX_LETTERS_COUNT = 50;
+let fixedPhoneValue;
 
 const toggleSubmitButton = (isDisabled) => {
   submitButton.disabled = isDisabled;
@@ -17,6 +18,11 @@ const validateNumbers = (phone) => {
 const validateLetters = (mail) => {
   const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return reg.test(String(mail));
+};
+
+const fixPhone = (phone) => {
+  fixedPhoneValue = phone.toString().replace(/[\D]/g, '');
+  return fixedPhoneValue;
 };
 
 const validateTel = (evt) => {
@@ -34,6 +40,7 @@ const validateTel = (evt) => {
     evt.preventDefault();
     inputTel.classList.add('form__tel--error');
   }
+  fixPhone(telValue);
 };
 
 const validateMail = (evt) => {
@@ -53,7 +60,7 @@ const validateMail = (evt) => {
   }
 };
 
-form.addEventListener('submit', (evt) => {
+const onSubmit = async (evt) => {
   if (inputTel.classList.contains('form__tel--error')) {
     inputTel.classList.remove('form__tel--error');
   }
@@ -63,7 +70,10 @@ form.addEventListener('submit', (evt) => {
   toggleSubmitButton(true);
   validateTel(evt);
   validateMail(evt);
+  inputTel.value = fixedPhoneValue;
   setTimeout(() => {
     toggleSubmitButton(false);
   }, 1000);
-});
+};
+
+form.addEventListener('submit', onSubmit);
