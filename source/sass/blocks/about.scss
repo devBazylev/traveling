@@ -3,9 +3,9 @@
 
 .about {
   @include grid(1fr 290px 1fr);
-  grid-template-rows: repeat(auto-fit, minmax(82px, auto) minmax(29px, auto) minmax(187px, auto) minmax(29px, auto));
-  padding: 420px 0 20px;
-  background-position: left 21px;
+  grid-template-rows: repeat(auto-fit, minmax(81px, auto) minmax(29px, auto) minmax(187px, auto) minmax(29px, auto));
+  padding: 420px 0 21px;
+  background-position: left 20px;
   background-repeat: no-repeat;
   background-image: image-set(
     url("../../img/about-mob@2x.webp") type("image/webp") 2x,
@@ -16,9 +16,9 @@
 
   @media (min-width: $tab) {
     grid-template-columns: 1fr 270px 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(115px, auto) minmax(29px, auto) minmax(269px, auto) minmax(29px, auto));
-    padding: 40px 48px 40px 450px;
-    background-position: left 196px;
+    grid-template-rows: repeat(auto-fit, minmax(93px, auto) minmax(29px, auto) minmax(269px, auto) minmax(29px, auto));
+    padding: 40px 48px 42px 450px;
+    background-position: left 174px;
     background-repeat: no-repeat;
     background-image: image-set(
       url("../../img/about-tab@2x.webp") type("image/webp") 2x,
@@ -31,8 +31,8 @@
   @media (min-width: $desk) {
     grid-template-columns: 1fr 660px 1fr;
     grid-template-rows: repeat(auto-fit, minmax(173px, auto) minmax(37px, auto) minmax(117px, auto) minmax(37px, auto));
-    padding: 100px 120px 100px 660px;
-    background-position: left 134px;
+    padding: 66px 120px 180px 660px;
+    background-position: left 100px;
     background-repeat: no-repeat;
     background-image: image-set(
       url("../../img/about-desk@2x.webp") type("image/webp") 2x,
@@ -45,10 +45,10 @@
 
 .about__title {
   grid-area: 1/2/2/3;
-  margin: 18px 0 0;
+  margin: 17px 0 0;
 
   @media (min-width: $tab) {
-    margin: 42px 0 0;
+    margin: 20px 0 0;
   }
 
   @media (min-width: $desk) {
@@ -58,10 +58,10 @@
 
 .about__headline {
   grid-area: 1/2/2/3;
-  margin: 4px 0 0;
+  margin: 3px 0 0;
 
   @media (min-width: $tab) {
-    margin: 27px 0 0;
+    margin: 5px 0 0;
   }
 
   @media (min-width: $desk) {
