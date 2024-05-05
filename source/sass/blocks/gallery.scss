@@ -22,7 +22,7 @@
 
   @media (min-width: $tab) {
     width: 678px;
-    margin: 60px auto 21px;
+    margin: 50px auto 30px;
   }
 
   @media (min-width: $desk) {
@@ -57,7 +57,7 @@
 
   @media (min-width: $tab) {
     width: 678px;
-    margin: 0 auto 20px;
+    margin: 0 auto 21px;
     padding: 0 270px 0 0;
     font-size: 14px;
     line-height: 22px;
@@ -87,6 +87,7 @@
 .gallery__slide:nth-of-type(2n + 1) {
   width: 158px;
   height: 266px;
+  overflow: hidden;
 
   @media (min-width: $tab) {
     width: 253px;
@@ -105,6 +106,7 @@
   gap: 7px;
   width: 157px;
   height: 266px;
+  overflow: hidden;
 
   @media (min-width: $tab) {
     grid-template-rows: 209px 1fr;
@@ -118,10 +120,6 @@
     width: 284px;
     height: 463px;
   }
-}
-
-.gallery__image {
-  background-color: var(--lightgray-trans-50);
 }
 
 // .gallery__image--fire {
@@ -231,13 +229,13 @@
 
 .gallery__button--prev {
   @media (min-width: $tab) {
-    margin: 30px 86px 0 auto;
+    margin: 31px 86px 0 auto;
   }
 }
 
 .gallery__button--next {
   @media (min-width: $tab) {
-    margin: 30px 45px 0 auto;
+    margin: 31px 45px 0 auto;
   }
 }
 

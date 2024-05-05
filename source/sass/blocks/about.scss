@@ -16,9 +16,9 @@
 
   @media (min-width: $tab) {
     grid-template-columns: 1fr 270px 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(125px, auto) minmax(29px, auto) minmax(269px, auto) minmax(29px, auto));
+    grid-template-rows: repeat(auto-fit, minmax(115px, auto) minmax(29px, auto) minmax(269px, auto) minmax(29px, auto));
     padding: 40px 48px 40px 450px;
-    background-position: left 206px;
+    background-position: left 196px;
     background-repeat: no-repeat;
     background-image: image-set(
       url("../../img/about-tab@2x.webp") type("image/webp") 2x,
@@ -48,7 +48,7 @@
   margin: 18px 0 0;
 
   @media (min-width: $tab) {
-    margin: 62px 0 0;
+    margin: 42px 0 0;
   }
 
   @media (min-width: $desk) {
@@ -61,7 +61,7 @@
   margin: 4px 0 0;
 
   @media (min-width: $tab) {
-    margin: 37px 0 0;
+    margin: 27px 0 0;
   }
 
   @media (min-width: $desk) {
