@@ -31,6 +31,7 @@
 }
 
 .page__main {
+  // outline: 1px solid red;
   width: 100%;
   background-position: right 578px;
   background-repeat: no-repeat;
@@ -42,7 +43,7 @@
   );
 
   @media (min-width: $tab) {
-    background-position: right 2282px, right 942px, left 4165px, right 4665px;
+    background-position: right 2282px, right 942px, left 4144px, right 4643px;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-image: image-set(
       url("../../img/clouds-2-tab@2x.webp") type("image/webp") 2x,

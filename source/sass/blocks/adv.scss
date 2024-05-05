@@ -10,11 +10,13 @@
 
   @media (min-width: $tab) {
     grid-template-columns: 1fr 678px 1fr;
+    padding: 0 0 10px;
   }
 
   @media (min-width: $desk) {
     grid-template-columns: 1fr 1200px 1fr;
     margin: 0 auto;
+    padding: 0 0 100px;
   }
 }
 
@@ -23,11 +25,11 @@
   margin: 37px 0 36px;
 
   @media (min-width: $tab) {
-    margin: 80px 0 60px;
+    margin: 60px 0 60px;
   }
 
   @media (min-width: $desk) {
-    margin: 202px 0 50px;
+    margin: 135px 0 50px;
   }
 }
 
@@ -36,11 +38,11 @@
   margin: 23px 0 0;
 
   @media (min-width: $tab) {
-    margin: 65px 0 0;
+    margin: 45px 0 0;
   }
 
   @media (min-width: $desk) {
-    margin: 173px 0 0;
+    margin: 106px 0 0;
   }
 }
 

@@ -18,32 +18,32 @@
 .gallery__title {
   grid-area: 1/2/2/3;
   width: 290px;
-  margin: 22px auto 26px;
+  margin: 37px auto 26px;
 
   @media (min-width: $tab) {
     width: 678px;
-    margin: 50px auto 30px;
+    margin: 60px auto 30px;
   }
 
   @media (min-width: $desk) {
     width: 1200px;
-    margin: 203px auto 24px;
+    margin: 123px auto 24px;
   }
 }
 
 .gallery__headline {
   grid-area: 1/2/2/3;
   width: 290px;
-  margin: 8px auto 0;
+  margin: 23px auto 0;
 
   @media (min-width: $tab) {
     width: 678px;
-    margin: 35px auto 0;
+    margin: 45px auto 0;
   }
 
   @media (min-width: $desk) {
     width: 1200px;
-    margin: 186px auto 0;
+    margin: 106px auto 0;
   }
 }
 
@@ -254,6 +254,7 @@
 
 .gallery__button--prev::before {
   @media (min-width: $tab) {
+    top: 0.5px;
     left: 1px;
     mask-image: url("/__spritemap#sprite-arrow-view");
     transform: rotate(180deg);
@@ -262,6 +263,7 @@
 
 .gallery__button--next::before {
   @media (min-width: $tab) {
+    top: 0.5px;
     left: 2px;
     mask-image: url("/__spritemap#sprite-arrow-view");
   }
