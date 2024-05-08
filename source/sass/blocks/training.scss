@@ -123,7 +123,7 @@
     position: relative;
     width: 20px;
     height: 9px;
-    background-color: var(--light);
+    background-color: $light;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -146,20 +146,20 @@
 }
 
 .training__button:hover::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .training__button:focus::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .training__button:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .training__button:disabled::before,
 .training__button--disabled::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .training__container {
@@ -173,8 +173,8 @@
   width: 290px;
   min-height: 356px;
   padding: 14px;
-  background-color: var(--light);
-  border: 1px solid var(--bright-trans-10);
+  background-color: $light;
+  border: 1px solid $bright-trans-10;
   overflow: auto;
   visibility: hidden;
   transition: visibility 0.5s;
@@ -245,7 +245,7 @@
   width: 24px;
   height: 24px;
   margin: 0 0 0 auto;
-  border: 1px solid var(--main-trans-30);
+  border: 1px solid $main-trans-30;
 }
 
 .training__social::before {
@@ -255,7 +255,7 @@
   left: 4px;
   width: 14px;
   height: 8px;
-  background-color: var(--main);
+  background-color: $main;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -263,7 +263,7 @@
 }
 
 .training__social:hover {
-  border: 1px solid var(--main);
+  border: 1px solid $main;
 }
 
 .training__social:focus {
@@ -271,33 +271,33 @@
 }
 
 .training__social:active {
-  border: 1px solid var(--bright);
-  background-color: var(--bright);
+  border: 1px solid $bright;
+  background-color: $bright;
 }
 
 .training__social:disabled,
 .training__social--disabled,
 .training__social:not([href]) {
-  border: 1px solid var(--main-trans-30);
+  border: 1px solid $main-trans-30;
   cursor: default;
 }
 
 .training__social:hover::before {
-  background-color: var(--main);
+  background-color: $main;
 }
 
 .training__social:focus::before {
-  background-color: var(--main);
+  background-color: $main;
 }
 
 .training__social:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .training__social:disabled::before,
 .training__social--disabled::before,
 .training__social:not([href])::before {
-  background-color: var(--main-trans-30);
+  background-color: $main-trans-30;
 }
 
 .training__instructor p {
@@ -348,7 +348,7 @@
     grid-template-rows: minmax(97.9px, auto);
     gap: 0 8px;
     padding: 0;
-    border-bottom: 2px solid var(--bright);
+    border-bottom: 2px solid $bright;
   }
 }
 
@@ -360,7 +360,7 @@
   align-self: start;
   width: 2px;
   height: 101%;
-  background-color: var(--bright);
+  background-color: $bright;
 
   @media (min-width: $tab) {
     display: none;
@@ -374,7 +374,7 @@
     width: 20px;
     bottom: -4px;
     height: 6px;
-    background-color: var(--light);
+    background-color: $light;
   }
 }
 
@@ -554,7 +554,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: var(--bright);
+  background-color: $bright;
 
   @media (min-width: $tab) {
     display: none;

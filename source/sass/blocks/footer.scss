@@ -137,7 +137,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: var(--main);
+  background-color: $main;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -218,7 +218,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: var(--main);
+  color: $main;
   font-style: normal;
   border: 1px solid transparent;
 
@@ -233,22 +233,22 @@
 }
 
 .footer__contact--interactive:hover {
-  border-bottom: 1px solid var(--main);
+  border-bottom: 1px solid $main;
 }
 
 .footer__contact--interactive:focus {
-  color: var(--main);
-  border: 1px solid var(--main);
+  color: $main;
+  border: 1px solid $main;
 }
 
 .footer__contact--interactive:active {
-  color: var(--bright);
+  color: $bright;
 }
 
 .footer__contact--interactive:disabled,
 .footer__contact--interactive-disabled,
 .footer__contact--interactive:not([href]) {
-  color: var(--stormy);
+  color: $stormy;
 }
 
 .footer__map {
@@ -269,14 +269,14 @@
 
 .footer__image {
   display: block;
-  background-color: var(--lightgray-trans-50);
+  // background-color: $lightgray-trans-50;
 }
 
 .footer__true {
   @include grid;
   gap: 16px;
   padding: 23px calc((100vw - 290px) / 2) 20px;
-  border-top: 1px solid var(--main-trans-20);
+  border-top: 1px solid $main-trans-20;
 
   @media (min-width: $tab) {
     grid-template-columns: 142px 1fr;
@@ -294,7 +294,7 @@
 .footer__logo {
   display: block;
   margin: 0 auto;
-  background-color: var(--main);
+  background-color: $main;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -335,7 +335,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-  color: var(--main);
+  color: $main;
   border: 1px solid transparent;
   text-align: center;
 
@@ -375,22 +375,22 @@ li:nth-of-type(6) .footer__link {
 }
 
 .footer__link:hover {
-  border-bottom: 1px solid var(--main);
+  border-bottom: 1px solid $main;
 }
 
 .footer__link:focus {
-  color: var(--main);
-  border: 1px solid var(--main);
+  color: $main;
+  border: 1px solid $main;
 }
 
 .footer__link:active {
-  color: var(--bright);
+  color: $bright;
 }
 
 .footer__link:disabled,
 .footer__link--disabled,
 .footer__link:not([href])::before {
-  color: var(--stormy);
+  color: $stormy;
 }
 
 .footer__list li:nth-of-type(2),
@@ -407,26 +407,26 @@ li:nth-of-type(6) .footer__link {
     font-size: 18px;
     font-weight: 600;
     line-height: 18px;
-    color: var(--main);
+    color: $main;
   }
 }
 
 .footer__phone:hover {
-  color: var(--bright-trans-10);
+  color: $bright-trans-10;
 }
 
 .footer__phone:focus {
-  color: var(--bright);
+  color: $bright;
 }
 
 .footer__phone:active {
-  color: var(--dark-bright);
+  color: $dark-bright;
 }
 
 .footer__phone:disabled,
 .footer__phone--disabled,
 .footer__phone:not([href]) {
-  color: var(--stormy);
+  color: $stormy;
 }
 
 .footer__socials {
@@ -449,7 +449,7 @@ li:nth-of-type(6) .footer__link {
   display: block;
   width: 31.8px;
   height: 30px;
-  border: 1px solid var(--main-trans-30);
+  border: 1px solid $main-trans-30;
 
   @media (min-width: $desk) {
     width: 30px;
@@ -461,7 +461,7 @@ li:nth-of-type(6) .footer__link {
   position: relative;
   width: 10px;
   height: 10px;
-  background-color: var(--main);
+  background-color: $main;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -506,7 +506,7 @@ li:nth-of-type(6) .footer__link {
 }
 
 .footer__social:hover {
-  border: 1px solid var(--main);
+  border: 1px solid $main;
 }
 
 .footer__social:focus {
@@ -514,33 +514,33 @@ li:nth-of-type(6) .footer__link {
 }
 
 .footer__social:active {
-  border: 1px solid var(--bright);
-  background-color: var(--bright);
+  border: 1px solid $bright;
+  background-color: $bright;
 }
 
 .footer__social:disabled,
 .footer__social--disabled,
 .footer__social:not([href]) {
-  border: 1px solid var(--main-trans-30);
+  border: 1px solid $main-trans-30;
   cursor: default;
 }
 
 .footer__social:hover::before {
-  background-color: var(--main);
+  background-color: $main;
 }
 
 .footer__social:focus::before {
-  background-color: var(--main);
+  background-color: $main;
 }
 
 .footer__social:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .footer__social:disabled::before,
 .footer__social--disabled::before,
 .footer__social:not([href])::before {
-  background-color: var(--main-trans-30);
+  background-color: $main-trans-30;
 }
 
 .footer__policy {
@@ -548,7 +548,7 @@ li:nth-of-type(6) .footer__link {
   font-size: 12px;
   font-weight: 300;
   line-height: 12px;
-  color: var(--main);
+  color: $main;
   text-align: center;
 
   @media (min-width: $tab) {

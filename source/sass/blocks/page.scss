@@ -13,8 +13,8 @@
   line-height: 18px;
   font-weight: 400;
   font-style: normal;
-  color: var(--main);
-  background-color: var(--light);
+  color: $main;
+  background-color: $light;
   min-width: $mob;
   max-width: 100%;
   min-height: 100%;
@@ -31,7 +31,6 @@
 }
 
 .page__main {
-  // outline: 1px solid red;
   width: 100%;
   background-position: right 578px;
   background-repeat: no-repeat;

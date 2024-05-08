@@ -67,8 +67,8 @@
   width: 290px;
   height: fit-content;
   padding: 19px 9px;
-  border: 1px solid var(--bright-trans-10);
-  background-color: var(--light);
+  border: 1px solid $bright-trans-10;
+  background-color: $light;
   overflow: auto;
 
   @media (min-width: $tab) {
@@ -101,7 +101,7 @@
   width: 42px;
   height: 42px;
   margin: 0 auto 20px;
-  border: 1px solid var(--bright);
+  border: 1px solid $bright;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 24px 24px;
@@ -250,7 +250,7 @@
     position: relative;
     width: 20px;
     height: 9px;
-    background-color: var(--light);
+    background-color: $light;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -273,18 +273,18 @@
 }
 
 .adv__button:hover::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .adv__button:focus::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .adv__button:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .adv__button:disabled::before,
 .adv__button--disabled::before {
-  background-color: var(--light);
+  background-color: $light;
 }

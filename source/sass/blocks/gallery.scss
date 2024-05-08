@@ -122,36 +122,6 @@
   }
 }
 
-// .gallery__image--fire {
-//   width: 157px;
-//   height: 134px;
-
-//   @media (min-width: $tab) {
-//     width: 252px;
-//     height: 210px;
-//   }
-
-//   @media (min-width: $desk) {
-//     width: 284px;
-//     height: 233px;
-//   }
-// }
-
-// .gallery__image--compass {
-//   width: 157px;
-//   height: 134px;
-
-//   @media (min-width: $tab) {
-//     width: 252px;
-//     height: 202px;
-//   }
-
-//   @media (min-width: $desk) {
-//     width: 284px;
-//     height: 233px;
-//   }
-// }
-
 .gallery__image--rope {
   height: 266px;
   object-fit: cover;
@@ -245,7 +215,7 @@
     position: relative;
     width: 20px;
     height: 9px;
-    background-color: var(--light);
+    background-color: $light;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -270,18 +240,18 @@
 }
 
 .gallery__button:hover::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .gallery__button:focus::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .gallery__button:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .gallery__button:disabled::before,
 .gallery__button--disabled::before {
-  background-color: var(--light);
+  background-color: $light;
 }

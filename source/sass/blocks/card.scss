@@ -33,7 +33,7 @@
   gap: 14px;
   flex-direction: column;
   padding: 30px 20px 27px;
-  color: var(--light);
+  color: $light;
 }
 
 .card__description:nth-of-type(1) {
@@ -76,21 +76,21 @@
 }
 
 .card__link:hover::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .card__link:focus::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .card__link:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .card__link:disabled::before,
 .card__link--disabled::before,
 .card__link:not([href])::before {
-  background-color: var(--stormy);
+  background-color: $stormy;
 }
 
 .card__time {
@@ -113,7 +113,7 @@
 .card__night::before {
   @include pseudo;
   position: relative;
-  background-color: var(--light);
+  background-color: $light;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -164,7 +164,7 @@
   width: 84px;
   height: 18px;
   margin: 3px 0 2px;
-  background-color: var(--light);
+  background-color: $light;
   mask-position: center;
   mask-size: contain;
   mask-repeat: no-repeat;
