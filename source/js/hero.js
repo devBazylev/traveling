@@ -11,9 +11,15 @@ new Swiper('.hero', {
   spaceBetween: 50,
   pagination: {
     el: '.swiper-pagination',
-    // type: 'bullets',
+    bulletClass: 'swiper-pagination-bullet',
+    type: 'bullets',
+    bulletElement: 'button',
     clickable: true,
-    // bulletElement: 'button',
+    // on: {
+    //   init: function onFocus() {
+    //     'swiper-pagination-bullet'.setAttribute('tabIndex', 0);
+    //   }
+    // }
   },
 
   breakpoints: {

@@ -1,17 +1,18 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Manipulation, Virtual } from 'swiper/modules';
 
 const swiper = new Swiper('.adv', {
-  modules: [Navigation],
+  modules: [Navigation, Manipulation, Virtual],
 
   slidesPerView: 'auto',
   slidesPerGroup: 2,
   initialSlide: 2,
   loop: true,
+  watchSlidesProgress: true,
   watchOverflow: true,
   centeredSlides: true,
   loopAddBlankSlides: false,
-  // loopAdditionalSlides: 20,
+  loopAdditionalSlides: 0,
   // loopedSlides: 15,
 
   navigation: {
