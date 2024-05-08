@@ -168,6 +168,10 @@
 
 .training__container {
   @include flex(nowrap);
+
+  @media (min-width: $desk) {
+    justify-content: center;
+  }
 }
 
 .training__instructor {

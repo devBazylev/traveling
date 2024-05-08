@@ -75,6 +75,10 @@
 
 .tours__wrapper {
   @include flex(nowrap);
+
+  @media (min-width: $desk) {
+    justify-content: center;
+  }
 }
 
 .tours__slide {

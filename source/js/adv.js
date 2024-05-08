@@ -13,7 +13,6 @@ const swiper = new Swiper('.adv', {
   centeredSlides: true,
   loopAddBlankSlides: false,
   loopAdditionalSlides: 0,
-  // loopedSlides: 15,
 
   navigation: {
     nextEl: '.adv__button--next',
