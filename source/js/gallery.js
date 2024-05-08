@@ -23,4 +23,3 @@ const swiper = new Swiper('.gallery', {
 if (window.innerWidth > 1439) {
   swiper.destroy();
 }
-

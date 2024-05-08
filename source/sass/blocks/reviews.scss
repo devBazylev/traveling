@@ -3,6 +3,7 @@
 
 .reviews {
   @include grid(1fr 290px 1fr);
+
   padding: 0 0 20px;
   overflow: hidden;
 
@@ -45,6 +46,7 @@
 
 .reviews__button {
   @include btn;
+
   display: none;
   width: 37px;
   height: 35px;
@@ -79,6 +81,7 @@
 .reviews__button::before {
   @media (min-width: $tab) {
     @include pseudo;
+
     position: relative;
     width: 20px;
     height: 9px;
@@ -123,17 +126,19 @@
 
 .reviews__container {
   @include flex(nowrap);
+
   grid-area: 2/2/3/3;
   gap: 20px 0;
 }
 
 .reviews__slide {
   @include grid;
+
   width: 290px;
   height: 484px;
   padding: 20px;
   background-color: $light;
-  box-shadow: 0px 0px 20px 0px $shadow;
+  box-shadow: 0 0 20px 0 $shadow;
   overflow: auto;
 
   @media (min-width: $tab) {

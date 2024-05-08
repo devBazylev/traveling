@@ -3,6 +3,7 @@
 
 .header {
   @include grid(1fr 56px 264px 1fr);
+
   position: relative;
   grid-template-rows: repeat(auto-fit, minmax(62px, auto) minmax(27px, auto) minmax(0, auto));
   grid-auto-flow: dense;
@@ -107,12 +108,12 @@
 }
 
 .header__link:hover {
-  color: var(--light);
+  color: $light;
   border-bottom: 1px solid $light;
 }
 
 .header__link:focus {
-  color: var(--light);
+  color: $light;
   border: 1px solid $light;
 }
 

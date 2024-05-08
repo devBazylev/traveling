@@ -33,9 +33,10 @@
 
 .hero__slide {
   @include grid;
+
   gap: 5px;
   width: 320px;
-  background: linear-gradient(112deg, rgba(15, 20, 41, 0.33) 17.23%, rgba(15, 20, 41, 0.00) 94.93%);
+  background: linear-gradient(112deg, rgba(15, 20, 41, 0.33) 17.23%, rgba(15, 20, 41, 0) 94.93%);
   visibility: hidden;
   transition: 0.2s;
 
@@ -153,6 +154,7 @@
 
   @media (min-width: $desk) {
     @include flex;
+
     align-self: start;
     gap: 10px;
     width: fit-content;
@@ -170,6 +172,7 @@
 
   &::before {
     @include pseudo;
+
     position: relative;
     background-color: $light;
     mask-repeat: no-repeat;
@@ -252,6 +255,7 @@
 .hero__content--expand {
   @media (min-width: $tab) {
     @include grid;
+
     grid-template-rows: repeat(auto-fit, minmax(125px, auto) minmax(109px, auto) minmax(86px, auto) minmax(403px, auto));
     padding: 137px 15px 40px;
   }

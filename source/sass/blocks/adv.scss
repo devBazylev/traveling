@@ -3,6 +3,7 @@
 
 .adv {
   @include grid(1fr 290px 1fr);
+
   padding: 0 0 20px;
   overflow: hidden;
   text-align: center;
@@ -25,7 +26,7 @@
   margin: 37px 0 36px;
 
   @media (min-width: $tab) {
-    margin: 60px 0 60px;
+    margin: 60px 0;
   }
 
   @media (min-width: $desk) {
@@ -48,6 +49,7 @@
 
 .adv__container {
   @include flex;
+
   grid-area: 2/2/3/3;
   gap: 15px;
 
@@ -98,6 +100,7 @@
 
 .adv__card::before {
   @include pseudo;
+
   width: 42px;
   height: 42px;
   margin: 0 auto 20px;
@@ -218,6 +221,7 @@
 
 .adv__button {
   @include btn;
+
   display: none;
   width: 37px;
   height: 35px;
@@ -247,6 +251,7 @@
 .adv__button::before {
   @media (min-width: $tab) {
     @include pseudo;
+
     position: relative;
     width: 20px;
     height: 9px;

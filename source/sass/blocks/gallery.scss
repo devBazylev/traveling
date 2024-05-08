@@ -3,6 +3,7 @@
 
 .gallery {
   @include grid(1fr 320px 1fr);
+
   padding: 0 0 3px;
   overflow: hidden;
 
@@ -102,6 +103,7 @@
 
 .gallery__slide:nth-of-type(2n) {
   @include grid;
+
   grid-template-rows: 134px 1fr;
   gap: 7px;
   width: 157px;
@@ -115,7 +117,6 @@
   }
 
   @media (min-width: $desk) {
-    grid-template-rows: 228px 1fr;
     grid-template-rows: 233px 1fr;
     width: 284px;
     height: 463px;
@@ -182,6 +183,7 @@
 
 .gallery__button {
   @include btn;
+
   display: none;
   width: 37px;
   height: 35px;
@@ -212,6 +214,7 @@
 .gallery__button::before {
   @media (min-width: $tab) {
     @include pseudo;
+
     position: relative;
     width: 20px;
     height: 9px;
