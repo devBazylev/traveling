@@ -5,15 +5,15 @@
   @include grid(1fr 258px 1fr);
   position: relative;
   padding: 175px 0 174px;
-  background-color: var(--malevich-trans-20);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: image-set(
-    url("../../img/form-mob@2x.webp") type("image/webp") 2x,
-    url("../../img/form-mob@1x.webp") type("image/webp") 1x,
-    url("../../img/form-mob@2x.jpg") type("image/jpg") 2x,
-    url("../../img/form-mob@1x.jpg") type("image/jpg") 1x
+    url("../img/form-mob@2x.webp") type("image/webp") 2x,
+    url("../img/form-mob@1x.webp") type("image/webp") 1x,
+    url("../img/form-mob@2x.jpg") type("image/jpg") 2x,
+    url("../img/form-mob@1x.jpg") type("image/jpg") 1x
   );
 
   @media (min-width: $tab) {
@@ -21,10 +21,10 @@
     grid-template-rows: repeat(auto-fit, minmax(54px, auto) minmax(71px, auto) minmax(325px, auto));
     padding: 184px 0 34px;
     background-image: image-set(
-      url("../../img/form-tab@2x.webp") type("image/webp") 2x,
-      url("../../img/form-tab@1x.webp") type("image/webp") 1x,
-      url("../../img/form-tab@2x.jpg") type("image/jpg") 2x,
-      url("../../img/form-tab@1x.jpg") type("image/jpg") 1x
+      url("../img/form-tab@2x.webp") type("image/webp") 2x,
+      url("../img/form-tab@1x.webp") type("image/webp") 1x,
+      url("../img/form-tab@2x.jpg") type("image/jpg") 2x,
+      url("../img/form-tab@1x.jpg") type("image/jpg") 1x
     );
   }
 
@@ -33,10 +33,10 @@
     grid-template-rows: repeat(auto-fit, minmax(53px, auto) minmax(63px, auto) minmax(308px, auto));
     padding: 296px 0 40px;
     background-image: image-set(
-      url("../../img/form-desk@2x.webp") type("image/webp") 2x,
-      url("../../img/form-desk@1x.webp") type("image/webp") 1x,
-      url("../../img/form-desk@2x.jpg") type("image/jpg") 2x,
-      url("../../img/form-desk@1x.jpg") type("image/jpg") 1x
+      url("../img/form-desk@2x.webp") type("image/webp") 2x,
+      url("../img/form-desk@1x.webp") type("image/webp") 1x,
+      url("../img/form-desk@2x.jpg") type("image/jpg") 2x,
+      url("../img/form-desk@1x.jpg") type("image/jpg") 1x
     );
   }
 }
