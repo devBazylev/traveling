@@ -3,6 +3,7 @@
 
 .gallery {
   @include grid(1fr 320px 1fr);
+
   padding: 0 0 3px;
   overflow: hidden;
 
@@ -102,6 +103,7 @@
 
 .gallery__slide:nth-of-type(2n) {
   @include grid;
+
   grid-template-rows: 134px 1fr;
   gap: 7px;
   width: 157px;
@@ -115,42 +117,11 @@
   }
 
   @media (min-width: $desk) {
-    grid-template-rows: 228px 1fr;
     grid-template-rows: 233px 1fr;
     width: 284px;
     height: 463px;
   }
 }
-
-// .gallery__image--fire {
-//   width: 157px;
-//   height: 134px;
-
-//   @media (min-width: $tab) {
-//     width: 252px;
-//     height: 210px;
-//   }
-
-//   @media (min-width: $desk) {
-//     width: 284px;
-//     height: 233px;
-//   }
-// }
-
-// .gallery__image--compass {
-//   width: 157px;
-//   height: 134px;
-
-//   @media (min-width: $tab) {
-//     width: 252px;
-//     height: 202px;
-//   }
-
-//   @media (min-width: $desk) {
-//     width: 284px;
-//     height: 233px;
-//   }
-// }
 
 .gallery__image--rope {
   height: 266px;
@@ -212,6 +183,7 @@
 
 .gallery__button {
   @include btn;
+
   display: none;
   width: 37px;
   height: 35px;
@@ -242,10 +214,11 @@
 .gallery__button::before {
   @media (min-width: $tab) {
     @include pseudo;
+
     position: relative;
     width: 20px;
     height: 9px;
-    background-color: var(--light);
+    background-color: $light;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -270,18 +243,18 @@
 }
 
 .gallery__button:hover::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .gallery__button:focus::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .gallery__button:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .gallery__button:disabled::before,
 .gallery__button--disabled::before {
-  background-color: var(--light);
+  background-color: $light;
 }

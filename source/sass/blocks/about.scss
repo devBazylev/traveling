@@ -3,16 +3,18 @@
 
 .about {
   @include grid(1fr 290px 1fr);
+
   grid-template-rows: repeat(auto-fit, minmax(81px, auto) minmax(29px, auto) minmax(187px, auto) minmax(29px, auto));
   padding: 420px 0 21px;
   background-position: left 20px;
   background-repeat: no-repeat;
-  background-image: image-set(
-    url("../img/about-mob@2x.webp") type("image/webp") 2x,
-    url("../img/about-mob@1x.webp") type("image/webp") 1x,
-    url("../img/about-mob@2x.jpg") type("image/jpg") 2x,
-    url("../img/about-mob@1x.jpg") type("image/jpg") 1x
-  );
+  background-image:
+    image-set(
+      url("../img/about-mob@2x.webp") type("image/webp") 2x,
+      url("../img/about-mob@1x.webp") type("image/webp") 1x,
+      url("../img/about-mob@2x.jpg") type("image/jpg") 2x,
+      url("../img/about-mob@1x.jpg") type("image/jpg") 1x
+    );
 
   @media (min-width: $tab) {
     grid-template-columns: 1fr 270px 1fr;
@@ -20,12 +22,13 @@
     padding: 40px 48px 42px 450px;
     background-position: left 174px;
     background-repeat: no-repeat;
-    background-image: image-set(
-      url("../img/about-tab@2x.webp") type("image/webp") 2x,
-      url("../img/about-tab@1x.webp") type("image/webp") 1x,
-      url("../img/about-tab@2x.jpg") type("image/jpg") 2x,
-      url("../img/about-tab@1x.jpg") type("image/jpg") 1x
-    );
+    background-image:
+      image-set(
+        url("../img/about-tab@2x.webp") type("image/webp") 2x,
+        url("../img/about-tab@1x.webp") type("image/webp") 1x,
+        url("../img/about-tab@2x.jpg") type("image/jpg") 2x,
+        url("../img/about-tab@1x.jpg") type("image/jpg") 1x
+      );
   }
 
   @media (min-width: $desk) {
@@ -34,12 +37,13 @@
     padding: 66px 120px 180px 660px;
     background-position: left 100px;
     background-repeat: no-repeat;
-    background-image: image-set(
-      url("../img/about-desk@2x.webp") type("image/webp") 2x,
-      url("../img/about-desk@1x.webp") type("image/webp") 1x,
-      url("../img/about-desk@2x.jpg") type("image/jpg") 2x,
-      url("../img/about-desk@1x.jpg") type("image/jpg") 1x
-    );
+    background-image:
+      image-set(
+        url("../img/about-desk@2x.webp") type("image/webp") 2x,
+        url("../img/about-desk@1x.webp") type("image/webp") 1x,
+        url("../img/about-desk@2x.jpg") type("image/jpg") 2x,
+        url("../img/about-desk@1x.jpg") type("image/jpg") 1x
+      );
   }
 }
 

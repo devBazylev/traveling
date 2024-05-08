@@ -1,14 +1,18 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Manipulation, Virtual } from 'swiper/modules';
 
 const swiper = new Swiper('.adv', {
-  modules: [Navigation],
+  modules: [Navigation, Manipulation, Virtual],
 
   slidesPerView: 'auto',
   slidesPerGroup: 2,
+  initialSlide: 4,
   loop: true,
-  // loopedSlides: 15,
-  // loopAddBlankSlides: true,
+  watchSlidesProgress: true,
+  watchOverflow: true,
+  centeredSlides: true,
+  loopAddBlankSlides: false,
+  loopAdditionalSlides: 0,
 
   navigation: {
     nextEl: '.adv__button--next',
@@ -17,17 +21,23 @@ const swiper = new Swiper('.adv', {
 
   breakpoints: {
     1440: {
-      // width: 380,
       spaceBetween: 30,
       simulateTouch: false,
     },
   }
 });
 
+if (window.innerWidth > 1440) {
+  const slides = swiper.slides;
+
+  slides.forEach((slide) => {
+    swiper.appendSlide(slide.outerHTML);
+  });
+  swiper.update();
+  swiper.updateSlides();
+  swiper.updateSlidesClasses();
+}
+
 if (window.innerWidth < 1440) {
   swiper.destroy();
 }
-
-// watchOverflow: true,
-// centeredSlides: true,
-// loopAdditionalSlides: 2,

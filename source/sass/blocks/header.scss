@@ -3,12 +3,13 @@
 
 .header {
   @include grid(1fr 56px 264px 1fr);
+
   position: relative;
   grid-template-rows: repeat(auto-fit, minmax(62px, auto) minmax(27px, auto) minmax(0, auto));
   grid-auto-flow: dense;
   gap: 0;
-  color: var(--light);
-  background-color: var(--bright);
+  color: $light;
+  background-color: $bright;
 
   @media (min-width: $tab) {
     grid-template-columns: 1fr 141px 392px 235px 1fr;
@@ -44,7 +45,7 @@
   grid-area: 3/1/4/5;
   width: 100%;
   padding: 4px calc((100vw - 320px) / 2) 39px;
-  background-color: var(--bright);
+  background-color: $bright;
   max-height: calc(100vh - 100%);
   overflow-y: auto;
   scrollbar-width: none;
@@ -83,7 +84,7 @@
 .header__link {
   display: block;
   padding: 10px 14px;
-  color: var(--light);
+  color: $light;
   font-size: 14px;
   line-height: 14px;
   font-weight: 700;
@@ -107,23 +108,23 @@
 }
 
 .header__link:hover {
-  color: var(--light);
-  border-bottom: 1px solid var(--light);
+  color: $light;
+  border-bottom: 1px solid $light;
 }
 
 .header__link:focus {
-  color: var(--light);
-  border: 1px solid var(--light);
+  color: $light;
+  border: 1px solid $light;
 }
 
 .header__link:active {
-  color: var(--dark-bright);
+  color: $dark-bright;
 }
 
 .header__link:disabled,
 .header__link--disabled,
 .header__link:not([href]) {
-  color: var(--stormy);
+  color: $stormy;
 }
 
 .header__phone {
@@ -131,7 +132,7 @@
   grid-area: 2/3/3/4;
   margin: 0 0 0 auto;
   padding: 11px 15px 13px;
-  color: var(--light);
+  color: $light;
   font-size: 14px;
   font-weight: 600;
   line-height: 14px;
@@ -152,21 +153,21 @@
 }
 
 .header__phone:hover {
-  color: var(--light-trans-50);
+  color: $light-trans-50;
 }
 
 .header__phone:focus {
-  color: var(--main);
+  color: $main;
 }
 
 .header__phone:active {
-  color: var(--dark-bright);
+  color: $dark-bright;
 }
 
 .header__phone:disabled,
 .header__phone--disabled,
 .header__phone:not([href]) {
-  color: var(--stormy);
+  color: $stormy;
 }
 
 .header__button {
@@ -194,7 +195,7 @@
   position: relative;
   width: 30px;
   height: 2px;
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .header__navigation + .header__button::before {
@@ -215,12 +216,12 @@
   width: 26px;
   height: 2px;
   transform: rotate(0);
-  box-shadow: 0 -8.4px 0 0 var(--light), 0 8.4px 0 0 var(--light);
+  box-shadow: 0 -8.4px 0 0 $light, 0 8.4px 0 0 $light;
 }
 
 .header__navigation--closed + .header__button::after {
   left: 26px;
   width: 9px;
   transform: rotate(0);
-  background-color: var(--bright);
+  background-color: $bright;
 }

@@ -3,41 +3,45 @@
 
 .form {
   @include grid(1fr 258px 1fr);
+
   position: relative;
   padding: 175px 0 174px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: image-set(
-    url("../img/form-mob@2x.webp") type("image/webp") 2x,
-    url("../img/form-mob@1x.webp") type("image/webp") 1x,
-    url("../img/form-mob@2x.jpg") type("image/jpg") 2x,
-    url("../img/form-mob@1x.jpg") type("image/jpg") 1x
-  );
+  background-image:
+    image-set(
+      url("../img/form-mob@2x.webp") type("image/webp") 2x,
+      url("../img/form-mob@1x.webp") type("image/webp") 1x,
+      url("../img/form-mob@2x.jpg") type("image/jpg") 2x,
+      url("../img/form-mob@1x.jpg") type("image/jpg") 1x
+    );
 
   @media (min-width: $tab) {
     grid-template-columns: 1fr 678px 1fr;
     grid-template-rows: repeat(auto-fit, minmax(54px, auto) minmax(71px, auto) minmax(325px, auto));
     padding: 184px 0 34px;
-    background-image: image-set(
-      url("../img/form-tab@2x.webp") type("image/webp") 2x,
-      url("../img/form-tab@1x.webp") type("image/webp") 1x,
-      url("../img/form-tab@2x.jpg") type("image/jpg") 2x,
-      url("../img/form-tab@1x.jpg") type("image/jpg") 1x
-    );
+    background-image:
+      image-set(
+        url("../img/form-tab@2x.webp") type("image/webp") 2x,
+        url("../img/form-tab@1x.webp") type("image/webp") 1x,
+        url("../img/form-tab@2x.jpg") type("image/jpg") 2x,
+        url("../img/form-tab@1x.jpg") type("image/jpg") 1x
+      );
   }
 
   @media (min-width: $desk) {
     grid-template-columns: 1fr 1360px 1fr;
     grid-template-rows: repeat(auto-fit, minmax(53px, auto) minmax(63px, auto) minmax(308px, auto));
     padding: 296px 0 40px;
-    background-image: image-set(
-      url("../img/form-desk@2x.webp") type("image/webp") 2x,
-      url("../img/form-desk@1x.webp") type("image/webp") 1x,
-      url("../img/form-desk@2x.jpg") type("image/jpg") 2x,
-      url("../img/form-desk@1x.jpg") type("image/jpg") 1x
-    );
+    background-image:
+      image-set(
+        url("../img/form-desk@2x.webp") type("image/webp") 2x,
+        url("../img/form-desk@1x.webp") type("image/webp") 1x,
+        url("../img/form-desk@2x.jpg") type("image/jpg") 2x,
+        url("../img/form-desk@1x.jpg") type("image/jpg") 1x
+      );
   }
 }
 
@@ -49,7 +53,7 @@
   font-size: 22px;
   font-weight: 800;
   line-height: 22px;
-  color: var(--light);
+  color: $light;
   text-align: center;
 
   @media (min-width: $tab) {
@@ -76,13 +80,13 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: var(--light);
+  color: $light;
   text-align: center;
 
   @media (min-width: $tab) {
     max-width: 70%;
     margin: 0 auto;
-    padding: 0 65px 0 65px;
+    padding: 0 65px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -113,6 +117,7 @@
 
 .form__template {
   @include grid;
+
   z-index: 1;
   width: 100%;
   grid-area: 3/2/4/3;
@@ -140,21 +145,21 @@
   min-width: 100%;
   min-height: 50px;
   padding: 14px;
-  background-color: var(--light);
+  background-color: $light;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
-  border: 1px solid var(--bright-trans-10);
+  border: 1px solid $bright-trans-10;
 
   @media (min-width: $tab) {
     width: auto;
-    min-height: 56px;;
+    min-height: 56px;
   }
 
   @media (min-width: $desk) {
     width: auto;
     min-width: 360px;
-    min-height: 56px;;
+    min-height: 56px;
     padding: 14px 29px;
     border-radius: 2px;
   }
@@ -199,32 +204,32 @@
 
 .form__tel:hover,
 .form__mail:hover {
-  border: 1px solid var(--bright);
+  border: 1px solid $bright;
   border-radius: 2px;
 }
 
 .form__tel:focus,
 .form__mail:focus {
-  border: 1px solid var(--main);
+  border: 1px solid $main;
   border-radius: 2px;
 }
 
 .form__tel:disabled,
 .form__mail:disabled {
-  color: var(--stormy-trans-50);
-  border: 1px solid var(--stormy);
+  color: $stormy-trans-50;
+  border: 1px solid $stormy;
   border-radius: 2px;
 }
 
 .form__tel--error,
 .form__mail--error {
-  border: 1px solid var(--alert);
+  border: 1px solid $alert;
   border-radius: 2px;
 }
 
 .form__tel::placeholder,
 .form__mail::placeholder {
-  color: var(--bright-trans-50);
+  color: $bright-trans-50;
 }
 
 .form__tel:placeholder-shown + .form__tel-sign,
@@ -238,19 +243,20 @@
 
 .form__tel:placeholder-shown + .form__tel-sign,
 .form__mail:placeholder-shown + .form__mail-sign {
-  border: 1px solid var(--bright);
+  border: 1px solid $bright;
   border-radius: 2px;
 }
 
 .form__button {
   @include btn;
+
   min-height: 58px;
   width: 100%;
   padding: 11px 20px 10px;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  color: var(--light);
+  color: $light;
 
   @media (min-width: $tab) {
     min-height: 56px;

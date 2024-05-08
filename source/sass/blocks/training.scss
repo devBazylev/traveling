@@ -3,6 +3,7 @@
 
 .training {
   @include grid(1fr 290px 1fr);
+
   padding: 0 0 20px;
 
   @media (min-width: $tab) {
@@ -59,16 +60,17 @@
 
 .training__slider {
   @include grid;
+
   grid-area: 3/1/4/4;
   width: calc(100vw - 30px);
   margin: 0 auto;
 
   @media (min-width: $tab) {
-    width: calc(100vw - 90px)
+    width: calc(100vw - 90px);
   }
 
   @media (min-width: $desk) {
-    width: calc(100vw - 240px)
+    width: calc(100vw - 240px);
   }
 }
 
@@ -86,6 +88,7 @@
 
 .training__button {
   @include btn;
+
   display: none;
   width: 37px;
   height: 35px;
@@ -120,10 +123,11 @@
 .training__button::before {
   @media (min-width: $tab) {
     @include pseudo;
+
     position: relative;
     width: 20px;
     height: 9px;
-    background-color: var(--light);
+    background-color: $light;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -146,35 +150,40 @@
 }
 
 .training__button:hover::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .training__button:focus::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .training__button:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .training__button:disabled::before,
 .training__button--disabled::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .training__container {
   @include flex(nowrap);
+
+  @media (min-width: $desk) {
+    justify-content: center;
+  }
 }
 
 .training__instructor {
   @include grid;
+
   grid-template-rows: repeat(auto-fit, minmax(215px, auto) minmax(47px, auto) minmax(64px, auto));
   align-items: start;
   width: 290px;
   min-height: 356px;
   padding: 14px;
-  background-color: var(--light);
-  border: 1px solid var(--bright-trans-10);
+  background-color: $light;
+  border: 1px solid $bright-trans-10;
   overflow: auto;
   visibility: hidden;
   transition: visibility 0.5s;
@@ -245,17 +254,18 @@
   width: 24px;
   height: 24px;
   margin: 0 0 0 auto;
-  border: 1px solid var(--main-trans-30);
+  border: 1px solid $main-trans-30;
 }
 
 .training__social::before {
   @include pseudo;
+
   position: relative;
   top: 7px;
   left: 4px;
   width: 14px;
   height: 8px;
-  background-color: var(--main);
+  background-color: $main;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -263,7 +273,7 @@
 }
 
 .training__social:hover {
-  border: 1px solid var(--main);
+  border: 1px solid $main;
 }
 
 .training__social:focus {
@@ -271,33 +281,33 @@
 }
 
 .training__social:active {
-  border: 1px solid var(--bright);
-  background-color: var(--bright);
+  border: 1px solid $bright;
+  background-color: $bright;
 }
 
 .training__social:disabled,
 .training__social--disabled,
 .training__social:not([href]) {
-  border: 1px solid var(--main-trans-30);
+  border: 1px solid $main-trans-30;
   cursor: default;
 }
 
 .training__social:hover::before {
-  background-color: var(--main);
+  background-color: $main;
 }
 
 .training__social:focus::before {
-  background-color: var(--main);
+  background-color: $main;
 }
 
 .training__social:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .training__social:disabled::before,
 .training__social--disabled::before,
 .training__social:not([href])::before {
-  background-color: var(--main-trans-30);
+  background-color: $main-trans-30;
 }
 
 .training__instructor p {
@@ -330,6 +340,7 @@
 .training__list {
   @include reset;
   @include grid(2px 1fr);
+
   grid-area: 5/2/6/3;
   margin: 0 0 0 6px;
 
@@ -348,19 +359,20 @@
     grid-template-rows: minmax(97.9px, auto);
     gap: 0 8px;
     padding: 0;
-    border-bottom: 2px solid var(--bright);
+    border-bottom: 2px solid $bright;
   }
 }
 
 .training__list::before {
   @include pseudo;
+
   position: relative;
   top: -6px;
   grid-area: 2/1/8/2;
   align-self: start;
   width: 2px;
   height: 101%;
-  background-color: var(--bright);
+  background-color: $bright;
 
   @media (min-width: $tab) {
     display: none;
@@ -374,12 +386,13 @@
     width: 20px;
     bottom: -4px;
     height: 6px;
-    background-color: var(--light);
+    background-color: $light;
   }
 }
 
 .training__item {
   @include flex;
+
   position: relative;
   margin: 0 0 25px;
   padding: 0 28px 0 55px;
@@ -461,6 +474,7 @@
 
 .training__item::before {
   @include pseudo;
+
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
@@ -547,6 +561,7 @@
 
 .training__item::after {
   @include pseudo;
+
   position: absolute;
   transform: translate(-50%, -51%);
   top: 52%;
@@ -554,7 +569,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: var(--bright);
+  background-color: $bright;
 
   @media (min-width: $tab) {
     display: none;

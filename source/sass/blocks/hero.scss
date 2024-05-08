@@ -33,9 +33,10 @@
 
 .hero__slide {
   @include grid;
+
   gap: 5px;
   width: 320px;
-  background: linear-gradient(112deg, rgba(15, 20, 41, 0.33) 17.23%, rgba(15, 20, 41, 0.00) 94.93%);
+  background: linear-gradient(112deg, rgba(15, 20, 41, 0.33) 17.23%, rgba(15, 20, 41, 0) 94.93%);
   visibility: hidden;
   transition: 0.2s;
 
@@ -84,7 +85,7 @@
   font-size: 26px;
   font-weight: 800;
   line-height: 26px;
-  color: var(--light);
+  color: $light;
   text-align: center;
 
   @media (min-width: $tab) {
@@ -109,7 +110,7 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
-  color: var(--light);
+  color: $light;
   text-align: center;
 
   @media (min-width: $tab) {
@@ -153,6 +154,7 @@
 
   @media (min-width: $desk) {
     @include flex;
+
     align-self: start;
     gap: 10px;
     width: fit-content;
@@ -164,14 +166,15 @@
   gap: 9px;
   width: fit-content;
   padding: 12px 19px 12px 18px;
-  color: var(--light);
+  color: $light;
   background-color: transparent;
-  border: 1px solid var(--light-trans-50);
+  border: 1px solid $light-trans-50;
 
   &::before {
     @include pseudo;
+
     position: relative;
-    background-color: var(--light);
+    background-color: $light;
     mask-repeat: no-repeat;
     mask-position: center;
   }
@@ -222,7 +225,7 @@
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1px solid var(--light);
+  border: 1px solid $light;
   border-radius: 50%;
   cursor: pointer;
 
@@ -233,25 +236,26 @@
 }
 
 .hero .swiper-pagination-bullet-active {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .hero .swiper-pagination-bullet:hover {
-  background-color: var(--cloudy);
+  background-color: $cloudy;
 }
 
 .hero .swiper-pagination-bullet:focus {
-  outline: 1px solid var(--light-trans-50);
+  outline: 1px solid $light-trans-50;
   outline-offset: 1px;
 }
 
 .hero .swiper-pagination-bullet:active {
-  background-color: var(--light-trans-50);
+  background-color: $light-trans-50;
 }
 
 .hero__content--expand {
   @media (min-width: $tab) {
     @include grid;
+
     grid-template-rows: repeat(auto-fit, minmax(125px, auto) minmax(109px, auto) minmax(86px, auto) minmax(403px, auto));
     padding: 137px 15px 40px;
   }
@@ -271,6 +275,7 @@
   @media (min-width: $desk) {
     margin: 0;
     padding: 0;
+    z-index: 1;
   }
 }
 

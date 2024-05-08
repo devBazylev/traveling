@@ -1,3 +1,5 @@
+@import "../global/variables";
+
 @mixin font($font_name, $file_name, $weight: 400, $style: normal) {
   @font-face {
     font-family: #{$font_name};
@@ -36,7 +38,7 @@
   font-weight: #{$font-weight};
 }
 
-@mixin btn($color: var(--light), $bg-color: var(--bright), $hover-color: var(--dark-bright), $hover-bg-color: var(--light), $focus-color: var(--dark-bright), $focus-bg-color: var(--light), $active-color: var(--light), $active-bg-color: var(--dark-bright), $disabled-color: var(--light), $disabled-bg-color: var(--stormy)) {
+@mixin btn($color: $light, $bg-color: $bright, $hover-color: $dark-bright, $hover-bg-color: $light, $focus-color: $dark-bright, $focus-bg-color: $light, $active-color: $light, $active-bg-color: $dark-bright, $disabled-color: $light, $disabled-bg-color: $stormy) {
   border: 1px solid transparent;
   color: $color;
   background-color: $bg-color;
@@ -46,7 +48,7 @@
   &:hover {
     color: $hover-color;
     background-color: $hover-bg-color;
-    border: 1px solid var(--dark-bright);
+    border: 1px solid $dark-bright;
   }
 
   &:focus {
@@ -63,7 +65,7 @@
   &--disabled {
     color: $disabled-color;
     background-color: $disabled-bg-color;
-    border: 1px solid var(--stormy);
+    border: 1px solid $stormy;
     cursor: default;
   }
 }

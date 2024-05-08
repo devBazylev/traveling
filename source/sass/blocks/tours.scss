@@ -3,6 +3,7 @@
 
 .tours {
   @include grid(1fr 290px 1fr);
+
   grid-template-rows: repeat(auto-fit, minmax(55px, auto) minmax(416px, auto) minmax(34px, auto));
   gap: 20px 0;
   margin: 0 auto;
@@ -27,7 +28,7 @@
 }
 
 .tours__title {
-  margin: 19px 0 19px;
+  margin: 19px 0;
 
   @media (min-width: $tab) {
     margin: 20px 0 15px;
@@ -60,6 +61,7 @@
 
   @media (min-width: $tab) {
     @include grid;
+
     grid-template-rows: repeat(auto-fit, minmax(79px, auto));
     grid-area: 1/1/3/4;
     width: calc(100vw - 90px);
@@ -73,11 +75,14 @@
 
 .tours__wrapper {
   @include flex(nowrap);
+
+  @media (min-width: $desk) {
+    justify-content: center;
+  }
 }
 
 .tours__slide {
   visibility: hidden;
-  transition: 0.2s;
 }
 
 .tours__slide--active,
@@ -87,6 +92,7 @@
 
 .tours__button {
   @include btn;
+
   display: none;
   width: 37px;
   height: 35px;
@@ -121,10 +127,11 @@
 .tours__button::before {
   @media (min-width: $tab) {
     @include pseudo;
+
     position: relative;
     width: 20px;
     height: 9px;
-    background-color: var(--light);
+    background-color: $light;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
@@ -147,24 +154,25 @@
 }
 
 .tours__button:hover::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .tours__button:focus::before {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .tours__button:active::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .tours__button:disabled::before,
 .tours__button--disabled::before {
-  background-color: var(--light);
+  background-color: $light;
 }
 
 .tours__link {
   @include flex;
+
   grid-area: 3/2/4/3;
   gap: 10.3px;
   margin: 5px auto 0;
@@ -174,7 +182,7 @@
   line-height: 14px;
   letter-spacing: 0.56px;
   text-transform: uppercase;
-  color: var(--main);
+  color: $main;
 
   @media (min-width: $tab) {
     padding: 11px 30px 11px 33.5px;
@@ -190,10 +198,11 @@
 
 .tours__link::after {
   @include pseudo;
+
   width: 12px;
   height: 14px;
   position: relative;
-  background-color: var(--main);
+  background-color: $main;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -201,37 +210,37 @@
 }
 
 .tours__link:hover {
-  color: var(--bright-trans-10);
+  color: $bright-trans-10;
 }
 
 .tours__link:focus {
-  color: var(--bright);
+  color: $bright;
 }
 
 .tours__link:active {
-  color: var(--dark-bright);
+  color: $dark-bright;
 }
 
 .tours__link:disabled,
 .tours__link--disabled,
 .tours__link:not([href]) {
-  color: var(--stormy);
+  color: $stormy;
 }
 
 .tours__link:hover::after {
-  background-color: var(--bright-trans-10);
+  background-color: $bright-trans-10;
 }
 
 .tours__link:focus::after {
-  background-color: var(--bright);
+  background-color: $bright;
 }
 
 .tours__link:active::after {
-  background-color: var(--dark-bright);
+  background-color: $dark-bright;
 }
 
 .tours__link:disabled::after,
 .tours__link--disabled::after,
 .tours__link:not([href])::after {
-  background-color: var(--stormy);
+  background-color: $stormy;
 }
