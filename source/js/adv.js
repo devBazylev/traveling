@@ -27,15 +27,15 @@ const swiper = new Swiper('.adv', {
   }
 });
 
-if (window.innerWidth > 1440) {
+if (window.innerWidth > 1439) {
   const slides = swiper.slides;
 
   slides.forEach((slide) => {
     swiper.appendSlide(slide.outerHTML);
   });
-  swiper.update();
-  swiper.updateSlides();
-  swiper.updateSlidesClasses();
+  // swiper.update();
+  // swiper.updateSlides();
+  // swiper.updateSlidesClasses();
 }
 
 if (window.innerWidth < 1440) {
