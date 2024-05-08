@@ -6,9 +6,13 @@ const swiper = new Swiper('.adv', {
 
   slidesPerView: 'auto',
   slidesPerGroup: 2,
+  initialSlide: 2,
   loop: true,
+  watchOverflow: true,
+  centeredSlides: true,
+  loopAddBlankSlides: false,
+  // loopAdditionalSlides: 20,
   // loopedSlides: 15,
-  // loopAddBlankSlides: true,
 
   navigation: {
     nextEl: '.adv__button--next',
@@ -17,7 +21,6 @@ const swiper = new Swiper('.adv', {
 
   breakpoints: {
     1440: {
-      // width: 380,
       spaceBetween: 30,
       simulateTouch: false,
     },
@@ -27,7 +30,3 @@ const swiper = new Swiper('.adv', {
 if (window.innerWidth < 1440) {
   swiper.destroy();
 }
-
-// watchOverflow: true,
-// centeredSlides: true,
-// loopAdditionalSlides: 2,
