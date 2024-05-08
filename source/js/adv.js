@@ -6,7 +6,7 @@ const swiper = new Swiper('.adv', {
 
   slidesPerView: 'auto',
   slidesPerGroup: 2,
-  initialSlide: 2,
+  initialSlide: 4,
   loop: true,
   watchSlidesProgress: true,
   watchOverflow: true,
@@ -26,6 +26,17 @@ const swiper = new Swiper('.adv', {
     },
   }
 });
+
+if (window.innerWidth > 1440) {
+  const slides = swiper.slides;
+
+  slides.forEach((slide) => {
+    swiper.appendSlide(slide.outerHTML);
+  });
+  swiper.update();
+  swiper.updateSlides();
+  swiper.updateSlidesClasses();
+}
 
 if (window.innerWidth < 1440) {
   swiper.destroy();
