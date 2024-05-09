@@ -5,12 +5,14 @@ const adv = document.querySelector('.adv');
 const slider = adv.querySelector('.adv__container');
 const slides = adv.querySelectorAll('.adv__card');
 
-if (window.innerWidth >= 1440) {
+const addSlides = () => {
   slides.forEach((slide) => {
     const clone = slide.cloneNode(true);
     slider.appendChild(clone);
   });
+};
 
+const initSwiper = () => {
   new Swiper('.adv', {
     modules: [Navigation],
 
@@ -36,4 +38,17 @@ if (window.innerWidth >= 1440) {
       },
     }
   });
+};
+
+if (window.innerWidth >= 4000) {
+  addSlides();
+}
+
+if (window.innerWidth >= 2600) {
+  addSlides();
+}
+
+if (window.innerWidth >= 1440) {
+  addSlides();
+  initSwiper();
 }

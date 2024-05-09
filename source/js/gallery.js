@@ -5,12 +5,14 @@ const gallery = document.querySelector('.gallery');
 const slider = gallery.querySelector('.gallery__container');
 const slides = gallery.querySelectorAll('.gallery__slide');
 
-if (window.innerWidth < 1440) {
+const addSlides = () => {
   slides.forEach((slide) => {
     const clone = slide.cloneNode(true);
     slider.appendChild(clone);
   });
+};
 
+const initSwiper = () => {
   new Swiper('.gallery', {
     modules: [Navigation],
 
@@ -29,4 +31,12 @@ if (window.innerWidth < 1440) {
       prevEl: '.gallery__button--prev',
     },
   });
+};
+
+if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+  addSlides();
+}
+
+if (window.innerWidth < 1440) {
+  initSwiper();
 }
