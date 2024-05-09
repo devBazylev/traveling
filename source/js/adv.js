@@ -1,12 +1,23 @@
 import Swiper from 'swiper';
-import { Navigation, Manipulation, Virtual } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
+
+const adv = document.querySelector('.adv');
+const slider = adv.querySelector('.adv__container');
+const slides = adv.querySelectorAll('.adv__card');
+
+if (window.innerWidth >= 1440) {
+  slides.forEach((slide) => {
+    const clone = slide.cloneNode(true);
+    slider.appendChild(clone);
+  });
+}
 
 const swiper = new Swiper('.adv', {
-  modules: [Navigation, Manipulation, Virtual],
+  modules: [Navigation],
 
   slidesPerView: 'auto',
   slidesPerGroup: 2,
-  initialSlide: 4,
+  initialSlide: 2,
   loop: true,
   watchSlidesProgress: true,
   watchOverflow: true,
@@ -26,17 +37,6 @@ const swiper = new Swiper('.adv', {
     },
   }
 });
-
-if (window.innerWidth > 1439) {
-  const slides = swiper.slides;
-
-  slides.forEach((slide) => {
-    swiper.appendSlide(slide.outerHTML);
-  });
-  // swiper.update();
-  // swiper.updateSlides();
-  // swiper.updateSlidesClasses();
-}
 
 if (window.innerWidth < 1440) {
   swiper.destroy();
