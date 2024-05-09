@@ -15,11 +15,6 @@ new Swiper('.hero', {
     type: 'bullets',
     bulletElement: 'button',
     clickable: true,
-    // on: {
-    //   init: function onFocus() {
-    //     'swiper-pagination-bullet'.setAttribute('tabIndex', 0);
-    //   }
-    // }
   },
 
   breakpoints: {
@@ -34,4 +29,9 @@ new Swiper('.hero', {
       simulateTouch: false,
     },
   }
+});
+
+const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+bullets.forEach((bullet) => {
+  bullet.setAttribute('aria-label', 'Переключите слайд');
 });

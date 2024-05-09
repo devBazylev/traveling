@@ -6,14 +6,10 @@ new Swiper('.reviews', {
 
   watchSlidesProgress: true,
   slideActiveClass: 'reviews__slide--active',
-  // slideFullyVisibleClass: 'reviews__slide--visible',
-  // slideVisibleClass: 'reviews__slide--part',
-  // slidePrevClass: 'reviews__slide--prev',
 
   slidesPerView: 'auto',
   slidesPerGroup: 1,
   initialSlide: 0,
-  // centeredSlides: true,
 
   navigation: {
     nextEl: '.reviews__button--next',
@@ -32,8 +28,6 @@ new Swiper('.reviews', {
     1440: {
       width: 700,
       spaceBetween: 120,
-      // slidesOffsetBefore: 10,
-      // slidesOffsetAfter: 10,
       simulateTouch: false,
     },
   }
