@@ -5,4 +5,4 @@ import './training.js';
 import './reviews.js';
 import './adv.js';
 import './gallery.js';
-import './form.js';
+// import './form.js';
