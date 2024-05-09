@@ -78,7 +78,7 @@
 }
 
 .gallery__container {
-  grid-area: 3/2/4/3;
+  grid-area: 3/1/4/4;
 
   @media (min-width: $desk) {
     @include flex;
