@@ -221,8 +221,8 @@
   border-radius: 2px;
 }
 
-.form__tel--error,
-.form__mail--error {
+.form__validation .form__tel:invalid,
+.form__validation .form__mail:invalid {
   border: 1px solid $alert;
   border-radius: 2px;
 }

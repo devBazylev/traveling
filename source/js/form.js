@@ -1,71 +1,50 @@
 const form = document.querySelector('.form');
-const inputMail = form.querySelector('.form__mail');
+const formTemplate = form.querySelector('.form__template');
 const inputTel = form.querySelector('.form__tel');
+const inputMail = form.querySelector('.form__mail');
+const labelTel = form.querySelector('.form__tel-sign');
+const labelMail = form.querySelector('.form__mail-sign');
 const submitButton = form.querySelector('.form__button');
 
-const MAX_LETTERS_COUNT = 50;
+const FONT_SIZE = '16px';
 
 const toggleSubmitButton = (isDisabled) => {
   submitButton.disabled = isDisabled;
 };
 
-const validateNumbers = (phone) => {
-  const reg = /^[^a-zа-яё]*$/i;
-  return reg.test(String(phone));
-};
-
-const validateLetters = (mail) => {
-  const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return reg.test(String(mail));
-};
-
-const validateTel = (evt) => {
-  const telValue = inputTel.value;
-
-  if (!validateNumbers(telValue)) {
-    evt.preventDefault();
-    inputTel.classList.add('form__tel--error');
-  }
-  if (telValue.length > MAX_LETTERS_COUNT) {
-    evt.preventDefault();
-    inputTel.classList.add('form__tel--error');
-  }
-  if (telValue.length === 0) {
-    evt.preventDefault();
-    inputTel.classList.add('form__tel--error');
+const onTel = () => {
+  if (inputTel.value !== '') {
+    labelTel.style.fontSize = 0;
+  } else {
+    labelTel.style.fontSize = FONT_SIZE;
   }
 };
 
-const validateMail = (evt) => {
-  const mailValue = inputMail.value;
+const onMail = () => {
+  if (inputMail.value !== '') {
+    labelMail.style.fontSize = 0;
+  } else {
+    labelMail.style.fontSize = FONT_SIZE;
+  }
+};
 
-  if (!validateLetters(mailValue)) {
-    evt.preventDefault();
-    inputMail.classList.add('form__mail--error');
-  }
-  if (mailValue.length > MAX_LETTERS_COUNT) {
-    evt.preventDefault();
-    inputMail.classList.add('form__mail--error');
-  }
-  if (mailValue.length === 0) {
-    evt.preventDefault();
-    inputMail.classList.add('form__mail--error');
-  }
+const onClick = () => {
+  formTemplate.classList.add('form__validation');
+  submitButton.removeEventListener('click', onClick);
 };
 
 const onSubmit = async (evt) => {
-  if (inputTel.classList.contains('form__tel--error')) {
-    inputTel.classList.remove('form__tel--error');
-  }
-  if (inputMail.classList.contains('form__mail--error')) {
-    inputMail.classList.remove('form__mail--error');
-  }
+  formTemplate.submit();
   toggleSubmitButton(true);
-  validateTel(evt);
-  validateMail(evt);
   setTimeout(() => {
     toggleSubmitButton(false);
   }, 1000);
+  evt.preventDefault();
+  formTemplate.classList.remove('form__validation');
+  formTemplate.reset();
 };
 
-form.addEventListener('submit', onSubmit);
+inputTel.addEventListener('input', onTel);
+inputMail.addEventListener('input', onMail);
+submitButton.addEventListener('click', onClick);
+formTemplate.addEventListener('submit', onSubmit);
