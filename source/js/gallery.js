@@ -8,6 +8,7 @@ const slides = gallery.querySelectorAll('.gallery__slide');
 const addSlides = () => {
   slides.forEach((slide) => {
     const clone = slide.cloneNode(true);
+    clone.setAttribute('aria-hidden', true);
     slider.appendChild(clone);
   });
 };

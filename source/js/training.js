@@ -7,7 +7,7 @@ new Swiper('.training__slider', {
   watchSlidesProgress: true,
   slideActiveClass: 'training__instructor--active',
   slideVisibleClass: 'training__instructor--part',
-
+  autoHeight: true,
   slidesPerView: 'auto',
   slidesPerGroup: 1,
 

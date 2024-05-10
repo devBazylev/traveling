@@ -139,7 +139,7 @@
   padding: 20px;
   background-color: $light;
   box-shadow: 0 0 20px 0 $shadow;
-  overflow: auto;
+  // overflow: auto;
 
   @media (min-width: $tab) {
     grid-template-columns: 186px 1fr;

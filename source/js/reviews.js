@@ -10,6 +10,7 @@ new Swiper('.reviews', {
   slidesPerView: 'auto',
   slidesPerGroup: 1,
   initialSlide: 0,
+  autoHeight: true,
 
   navigation: {
     nextEl: '.reviews__button--next',

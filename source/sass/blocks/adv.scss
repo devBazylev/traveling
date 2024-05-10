@@ -72,7 +72,7 @@
   padding: 19px 9px;
   border: 1px solid $bright-trans-10;
   background-color: $light;
-  overflow: auto;
+  // overflow: auto;
 
   @media (min-width: $tab) {
     width: 324px;
