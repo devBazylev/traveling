@@ -1,5 +1,4 @@
 import Swiper from 'swiper';
-
 import { Pagination } from 'swiper/modules';
 
 new Swiper('.hero', {

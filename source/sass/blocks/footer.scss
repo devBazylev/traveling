@@ -296,13 +296,12 @@
 .footer__logo {
   display: block;
   margin: 0 auto;
-  background-color: $main;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   width: 142px;
   height: 42px;
-  mask-image: url("/__spritemap#sprite-logotype-view");
+  background-image: url("/__spritemap#sprite-logotype-view");
 }
 
 .footer__navigation {

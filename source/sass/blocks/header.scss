@@ -28,13 +28,14 @@
   margin: 15px 15px 0 auto;
 
   @media (min-width: $tab) {
-    margin: 0;
-    padding: 20px 50px 10px 172px;
+    margin: 2px 0;
+    padding: 18px 50px 8px 172px;
   }
 
   @media (min-width: $desk) {
     grid-area: 1/2/2/3;
-    padding: 42px 50px 10px 152px;
+    margin: 2px 3px;
+    padding: 40px 49px 12px 149px;
     z-index: 1;
   }
 }
@@ -142,7 +143,8 @@
   }
 
   @media (min-width: $desk) {
-    padding: 56px 120px 20px 70px;
+    margin: 2px;
+    padding: 54px 84px 32px 73px;
     font-size: 18px;
     line-height: 18px;
   }
@@ -207,7 +209,7 @@
 }
 
 .header__navigation--closed + .header__button::before {
-  top: 1px;
+  top: 3px;
   left: 9px;
   width: 26px;
   height: 2px;
@@ -216,8 +218,10 @@
 }
 
 .header__navigation--closed + .header__button::after {
+  top: -3px;
   left: 26px;
   width: 9px;
+  height: 6px;
   transform: rotate(0);
   background-color: $bright;
 }
