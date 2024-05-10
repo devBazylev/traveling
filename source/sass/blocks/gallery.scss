@@ -123,6 +123,10 @@
   }
 }
 
+.gallery .gallery__slide--invisible {
+  display: none;
+}
+
 .gallery__image--rope {
   height: 266px;
   object-fit: cover;

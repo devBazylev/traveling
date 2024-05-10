@@ -87,6 +87,10 @@
   }
 }
 
+.adv__card--invisible {
+  display: none;
+}
+
 .adv__card--leaf {
   @media (min-width: $tab) {
     margin: 0 auto;
