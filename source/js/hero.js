@@ -11,7 +11,8 @@ new Swiper('.hero', {
   spaceBetween: 50,
   pagination: {
     el: '.swiper-pagination',
-    bulletClass: 'swiper-pagination-bullet',
+    bulletActiveClass: 'hero__bullet--active',
+    bulletClass: 'hero__bullet',
     type: 'bullets',
     bulletElement: 'button',
     clickable: true,
@@ -31,7 +32,7 @@ new Swiper('.hero', {
   }
 });
 
-const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+const bullets = document.querySelectorAll('.hero__bullet');
 bullets.forEach((bullet) => {
   bullet.setAttribute('aria-label', 'Переключите слайд');
 });
