@@ -44,6 +44,8 @@
 }
 
 .card__title {
+  @include grid;
+  gap: 14px;
   order: -1;
   margin: 0;
   font-size: 24px;
@@ -59,12 +61,21 @@
   }
 }
 
-.card__divider {
+.card__title::after {
+  @include pseudo;
+
   width: 80px;
   height: 1px;
   margin: 0 0 1px;
   background-color: $light-trans-20;
 }
+
+// .card__divider {
+//   width: 80px;
+//   height: 1px;
+//   margin: 0 0 1px;
+//   background-color: $light-trans-20;
+// }
 
 .card__link {
   @include btn;
@@ -159,6 +170,8 @@
 }
 
 .card__value {
+  position: relative;
+  left: -1px;
   margin: 7px 0 1px;
   font-size: 13px;
   font-weight: 700;

@@ -4,22 +4,22 @@ const setDataId = (elems) => {
   }
 };
 
+const addClass = (varr, classs) => {
+  varr.classList.add(classs);
+};
+
 const removeClass = (varr, classs) => {
   varr.classList.remove(classs);
 };
 
-const addClass = (varr, classs) => {
-  varr.classList.add(classs);
+const toggleClass = (varr, classs) => {
+  varr.classList.toggle(classs);
 };
 
 const addClassArray = (elems, classs) => {
   elems.forEach((elem) => {
     addClass(elem, classs);
   });
-};
-
-const toggleClass = (varr, classs) => {
-  varr.classList.toggle(classs);
 };
 
 const resetClassArray = (array, classs) => {
@@ -45,6 +45,10 @@ const setListener = (varr, action, func) => {
   varr.addEventListener(action, func);
 };
 
+const removeListener = (varr, action, func) => {
+  varr.removeEventListener(action, func);
+};
+
 const setListenerArray = (array, action, func) => {
   array.forEach((elem) => {
     elem.addEventListener(action, func);
@@ -57,4 +61,12 @@ const removeListenerArray = (array, action, func) => {
   });
 };
 
-export { setDataId, addClass, removeClass, addClassArray, toggleClass, setClassArray, resetClassArray, changeText, setListenerArray, removeListenerArray, setListener };
+const cloneSlides = (elems, array) => {
+  elems.forEach((elem) => {
+    const clone = elem.cloneNode(true);
+    clone.setAttribute('aria-hidden', true);
+    array.push(clone);
+  });
+};
+
+export { setDataId, addClass, removeClass, toggleClass, addClassArray, resetClassArray, setClassArray, changeText, setListener, removeListener, setListenerArray, removeListenerArray, cloneSlides };

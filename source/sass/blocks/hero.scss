@@ -221,7 +221,7 @@
   }
 }
 
-.hero .swiper-pagination-bullet {
+.hero__bullet {
   width: 16px;
   height: 16px;
   background-color: transparent;
@@ -235,20 +235,20 @@
   }
 }
 
-.hero .swiper-pagination-bullet-active {
+.hero__bullet--active {
   background-color: $light;
 }
 
-.hero .swiper-pagination-bullet:hover {
+.hero__bullet:hover {
   background-color: $cloudy;
 }
 
-.hero .swiper-pagination-bullet:focus {
+.hero__bullet:focus {
   outline: 1px solid $light-trans-50;
   outline-offset: 1px;
 }
 
-.hero .swiper-pagination-bullet:active {
+.hero__bullet:active {
   background-color: $light-trans-50;
 }
 

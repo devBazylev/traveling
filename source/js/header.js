@@ -1,4 +1,4 @@
-import { removeClass, toggleClass, setListener, setListenerArray } from './util.js';
+import { addClass, removeClass, toggleClass, setListener, removeListener, setListenerArray } from './util.js';
 
 const header = document.querySelector('.header');
 const nav = header.querySelector('.header__navigation');
@@ -20,10 +20,24 @@ const onBurger = () => {
   setListenerArray(links, 'click', onLink);
 };
 
-if (window.innerWidth > 1439){
+if (window.innerWidth > 1439) {
   removeClass(nav, 'header__navigation--closed');
 }
 
-if (window.innerWidth < 1440){
+if (window.innerWidth < 1440) {
   setListener(burger, 'click', onBurger);
 }
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1439) {
+    removeClass(nav, 'header__navigation--closed');
+  } else {
+    addClass(nav, 'header__navigation--closed');
+  }
+
+  if (window.innerWidth < 1440) {
+    setListener(burger, 'click', onBurger);
+  } else {
+    removeListener(burger, 'click', onBurger);
+  }
+});

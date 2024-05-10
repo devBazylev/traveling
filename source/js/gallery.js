@@ -1,42 +1,53 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Manipulation } from 'swiper/modules';
+import { addClassArray, resetClassArray, cloneSlides } from './util.js';
 
 const gallery = document.querySelector('.gallery');
-const slider = gallery.querySelector('.gallery__container');
 const slides = gallery.querySelectorAll('.gallery__slide');
+const clones = [];
 
-const addSlides = () => {
-  slides.forEach((slide) => {
-    const clone = slide.cloneNode(true);
-    slider.appendChild(clone);
-  });
-};
-
-const initSwiper = () => {
-  new Swiper('.gallery', {
-    modules: [Navigation],
-
-    watchSlidesProgress: true,
-    slideActiveClass: 'gallery__slide--active',
-    slideVisibleClass: 'gallery__slide--part',
-
-    spaceBetween: 5,
-    slidesPerView: 'auto',
-    slidesPerGroup: 1,
-    loop: true,
-    autoHeight: false,
-
-    navigation: {
-      nextEl: '.gallery__button--next',
-      prevEl: '.gallery__button--prev',
+const swiper = new Swiper('.gallery', {
+  modules: [Navigation, Manipulation],
+  loop: true,
+  watchSlidesProgress: true,
+  slidesPerGroup: 1,
+  slidesPerView: 'auto',
+  slideActiveClass: 'gallery__slide--active',
+  slideVisibleClass: 'gallery__slide--part',
+  navigation: {
+    nextEl: '.gallery__button--next',
+    prevEl: '.gallery__button--prev',
+  },
+  breakpoints: {
+    320: {
+      spaceBetween: 5,
     },
-  });
-};
+    768: {
+      spaceBetween: 5,
+    },
+    1440: {
+      spaceBetween: 0,
+      simulateTouch: false,
+    },
+  },
+  on: {
+    init: function () {
+      if (clones.length === 0) {
+        cloneSlides(slides, clones);
+      }
+    },
+    breakpoint: function () {
+      if (window.innerWidth > 1439 || window.innerWidth < 768) {
+        addClassArray(clones, 'gallery__slide--invisible');
+      } else {
+        resetClassArray(clones, 'gallery__slide--invisible');
+      }
+    },
+  },
+});
 
-if (window.innerWidth >= 768 && window.innerWidth < 1440) {
-  addSlides();
-}
+swiper.appendSlide(clones);
 
-if (window.innerWidth < 1440) {
-  initSwiper();
-}
+// if (window.innerWidth < 1440 && window.innerWidth >= 768) {
+//   swiper.appendSlide(clones);
+// }
