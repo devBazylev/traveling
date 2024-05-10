@@ -72,7 +72,6 @@
   padding: 19px 9px;
   border: 1px solid $bright-trans-10;
   background-color: $light;
-  // overflow: auto;
 
   @media (min-width: $tab) {
     width: 324px;
@@ -82,7 +81,8 @@
 
   @media (min-width: $desk) {
     width: 380px;
-    height: 329px;
+    height: auto;
+    min-height: 329px;
     padding: 39px 19px;
   }
 }

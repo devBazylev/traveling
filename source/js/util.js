@@ -45,6 +45,10 @@ const setListener = (varr, action, func) => {
   varr.addEventListener(action, func);
 };
 
+const removeListener = (varr, action, func) => {
+  varr.removeEventListener(action, func);
+};
+
 const setListenerArray = (array, action, func) => {
   array.forEach((elem) => {
     elem.addEventListener(action, func);
@@ -57,4 +61,4 @@ const removeListenerArray = (array, action, func) => {
   });
 };
 
-export { setDataId, addClass, removeClass, addClassArray, toggleClass, setClassArray, resetClassArray, changeText, setListenerArray, removeListenerArray, setListener };
+export { setDataId, addClass, removeClass, addClassArray, toggleClass, setClassArray, resetClassArray, changeText, setListenerArray, removeListenerArray, setListener, removeListener };
