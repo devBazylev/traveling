@@ -31,10 +31,11 @@ const swiper = new Swiper('.adv', {
   breakpoints: {
     320: {
       initialSlide: 0,
-      width: 320,
+      spaceBetween: 0,
     },
     768: {
       initialSlide: 0,
+      spaceBetween: 0,
     },
     1440: {
       initialSlide: 2,
@@ -70,4 +71,3 @@ const onScreen = () => {
 
 window.addEventListener('load', onScreen);
 window.addEventListener('resize', onScreen);
-// console.log('achtung!!!');
