@@ -3,10 +3,14 @@ import { Navigation, Manipulation } from 'swiper/modules';
 import { addClassArray, resetClassArray, cloneSlides } from './util.js';
 
 const gallery = document.querySelector('.gallery');
+const slider = gallery.querySelector('.gallery__container');
 const slides = gallery.querySelectorAll('.gallery__slide');
+const desk = window.matchMedia('(min-width: 1440px)');
 const clones = [];
 
-const swiper = new Swiper('.gallery', {
+cloneSlides(slider, slides, clones);
+
+new Swiper('.gallery', {
   modules: [Navigation, Manipulation],
   loop: true,
   watchSlidesProgress: true,
@@ -31,23 +35,14 @@ const swiper = new Swiper('.gallery', {
     },
   },
   on: {
-    init: function () {
-      if (clones.length === 0) {
-        cloneSlides(slides, clones);
-      }
-    },
     breakpoint: function () {
-      if (window.innerWidth > 1439 || window.innerWidth < 768) {
-        addClassArray(clones, 'gallery__slide--invisible');
+      if (desk.matches) {
+        addClassArray(clones, 'gallery__slide--none');
+        this.disable();
       } else {
-        resetClassArray(clones, 'gallery__slide--invisible');
+        resetClassArray(clones, 'gallery__slide--none');
+        this.enable();
       }
     },
   },
 });
-
-swiper.appendSlide(clones);
-
-// if (window.innerWidth < 1440 && window.innerWidth >= 768) {
-//   swiper.appendSlide(clones);
-// }
