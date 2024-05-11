@@ -52,14 +52,14 @@ const onScreen = () => {
     addClassArray(clones, 'adv__card--none');
     setTimeout(() => {
       slider.style.transform = 'translate3d(0px, 0px, 0px)';
-    }, 100);
+    }, 300);
   }
   if (tab.matches) {
     swiper.disable();
     addClassArray(clones, 'adv__card--none');
     setTimeout(() => {
       slider.style.transform = 'translate3d(0px, 0px, 0px)';
-    }, 100);
+    }, 300);
   }
   if (desk.matches) {
     slider.style.transform = 'unset';
