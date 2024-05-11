@@ -3,10 +3,9 @@ import { Pagination } from 'swiper/modules';
 
 new Swiper('.hero', {
   modules: [Pagination],
-
+  loop: true,
   watchSlidesProgress: true,
   slideActiveClass: 'hero__slide--active',
-  loop: true,
   spaceBetween: 50,
   pagination: {
     el: '.swiper-pagination',
@@ -16,7 +15,6 @@ new Swiper('.hero', {
     bulletElement: 'button',
     clickable: true,
   },
-
   breakpoints: {
     320: {
       width: 320,

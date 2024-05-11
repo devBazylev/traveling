@@ -12,24 +12,28 @@ import { Navigation, Manipulation } from 'swiper/modules';
 
 new Swiper('.adv', {
   modules: [Navigation, Manipulation],
-
+  loop: true,
+  watchSlidesProgress: true,
   slidesPerView: 'auto',
   slidesPerGroup: 2,
   initialSlide: 2,
-  loop: true,
-  watchSlidesProgress: true,
   centeredSlides: true,
   loopAddBlankSlides: false,
   loopAdditionalSlides: 0,
-
   navigation: {
     nextEl: '.adv__button--next',
     prevEl: '.adv__button--prev',
   },
-
   breakpoints: {
+    320: {
+      autoHeight: true,
+    },
+    768: {
+      autoHeight: true,
+    },
     1440: {
       spaceBetween: 30,
+      autoHeight: false,
       simulateTouch: false,
     },
   }
