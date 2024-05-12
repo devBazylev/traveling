@@ -14,6 +14,7 @@ new Swiper('.gallery', {
   modules: [Navigation, Manipulation],
   loop: true,
   watchSlidesProgress: true,
+  observer: true,
   loopAddBlankSlides: false,
   slidesPerGroup: 1,
   slidesPerView: 'auto',

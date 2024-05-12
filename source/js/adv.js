@@ -10,14 +10,16 @@ const slider = adv.querySelector('.adv__container');
 const slides = adv.querySelectorAll('.adv__card');
 
 const slideWidth = parseFloat(getComputedStyle(slides[0]).width);
-const totalSlides = slides.length;
+const slidesLength = slides.length;
 const SLIDES_PER_GROUP = 2;
 const clones = [];
+let totalSlides;
 
 const recalcSlides = () => {
+  totalSlides = slidesLength + clones.length;
   const screenWidth = window.innerWidth;
   const minSlides = Math.ceil(screenWidth / slideWidth + SLIDES_PER_GROUP);
-  for (let i = totalSlides; i < minSlides; i = i + totalSlides){
+  for (let i = totalSlides; i < minSlides; i = i + slidesLength) {
     cloneSlides(slider, slides, clones);
   }
 };
@@ -30,9 +32,12 @@ const swiper = new Swiper('.adv', {
   slidesPerView: 'auto',
   slidesPerGroup: 2,
   initialSlide: 2,
+  watchSlidesProgress: true,
   centeredSlides: true,
   loopAddBlankSlides: false,
   loopAdditionalSlides: 0,
+  slideActiveClass: 'adv__card--active',
+  slideVisibleClass: 'adv__card--part',
   navigation: {
     nextEl: '.adv__button--next',
     prevEl: '.adv__button--prev',
@@ -75,6 +80,9 @@ const swiper = new Swiper('.adv', {
         }, 300);
       }
     },
+    resize: function () {
+      recalcSlides();
+    }
   },
 });
 
@@ -88,4 +96,3 @@ const onScreen = () => {
 
 window.addEventListener('load', onScreen);
 window.addEventListener('resize', onScreen);
-window.addEventListener('resize', recalcSlides);
