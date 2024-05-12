@@ -94,16 +94,6 @@
   display: none;
 }
 
-// .adv__card--leaf {
-//   @media (min-width: $tab) {
-//     margin: 0 auto;
-//   }
-
-//   @media (min-width: $desk) {
-//     margin: unset;
-//   }
-// }
-
 .adv__card::before {
   @include pseudo;
 
