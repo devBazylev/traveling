@@ -4,7 +4,6 @@ import { Navigation } from 'swiper/modules';
 new Swiper('.reviews', {
   modules: [Navigation],
   watchSlidesProgress: true,
-  slideActiveClass: 'reviews__slide--active',
   slidesPerView: 'auto',
   slidesPerGroup: 1,
   navigation: {
@@ -13,20 +12,30 @@ new Swiper('.reviews', {
   },
   breakpoints: {
     320: {
-      width: 290,
+      slidesOffsetBefore: 15,
+      slidesOffsetAfter: 15,
       spaceBetween: 15,
       autoHeight: true,
     },
     768: {
-      width: 565,
+      slidesOffsetBefore: 45,
+      slidesOffsetAfter: 45,
       spaceBetween: 30,
       autoHeight: true,
     },
     1440: {
-      width: 700,
+      slidesOffsetBefore: 120,
+      slidesOffsetAfter: 120,
       spaceBetween: 120,
       autoHeight: false,
       simulateTouch: false,
     },
-  }
+    2500: {
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
+      spaceBetween: 120,
+      autoHeight: false,
+      simulateTouch: false,
+    },
+  },
 });

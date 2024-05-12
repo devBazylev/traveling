@@ -10,7 +10,7 @@
   margin: 0 auto;
 
   @media (min-width: $tab) {
-    grid-template-columns: 1fr 678px 1fr;
+    grid-template-columns: 1fr 708px 1fr;
     padding: 0 0 10px;
   }
 
@@ -77,12 +77,14 @@
   @media (min-width: $tab) {
     width: 324px;
     height: 340px;
+    margin: 0 auto;
     padding: 29px 19px;
   }
 
   @media (min-width: $desk) {
     width: 380px;
     height: auto;
+    margin: unset;
     min-height: 329px;
     padding: 39px 19px;
   }
@@ -90,16 +92,6 @@
 
 .adv__card--none {
   display: none;
-}
-
-.adv__card--leaf {
-  @media (min-width: $tab) {
-    margin: 0 auto;
-  }
-
-  @media (min-width: $desk) {
-    margin: unset;
-  }
 }
 
 .adv__card::before {

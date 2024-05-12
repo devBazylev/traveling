@@ -47,4 +47,3 @@ new Swiper('.gallery', {
     },
   },
 });
-// swiper.updateSlides()
