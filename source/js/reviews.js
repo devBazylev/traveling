@@ -30,5 +30,12 @@ new Swiper('.reviews', {
       autoHeight: false,
       simulateTouch: false,
     },
-  }
+    2500: {
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
+      spaceBetween: 120,
+      autoHeight: false,
+      simulateTouch: false,
+    },
+  },
 });
