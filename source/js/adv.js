@@ -13,9 +13,9 @@ const clones = [];
 
 cloneSlides(slider, slides, clones);
 
-const swiper = new Swiper('.adv', {
+new Swiper('.adv', {
   modules: [Navigation, Manipulation],
-  init: false,
+  init: true,
   loop: true,
   watchSlidesProgress: true,
   observer: true,
@@ -31,44 +31,66 @@ const swiper = new Swiper('.adv', {
   },
   breakpoints: {
     320: {
-      initialSlide: 0,
       spaceBetween: 0,
     },
     768: {
-      initialSlide: 0,
       spaceBetween: 0,
     },
     1440: {
-      initialSlide: 2,
       spaceBetween: 30,
       autoHeight: false,
       simulateTouch: false,
     },
   },
+  on: {
+    breakpoint: function () {
+      if (mob.matches) {
+        this.disable();
+        addClassArray(clones, 'adv__card--none');
+        setTimeout(() => {
+          slider.style.transform = 'translate3d(0px, 0px, 0px)';
+        }, 300);
+      }
+      if (tab.matches) {
+        this.disable();
+        addClassArray(clones, 'adv__card--none');
+        setTimeout(() => {
+          slider.style.transform = 'translate3d(0px, 0px, 0px)';
+        }, 300);
+      }
+      if (desk.matches) {
+        this.enable();
+        resetClassArray(clones, 'adv__card--none');
+        setTimeout(() => {
+          slider.style.transform = 'translate3d(-1110px, 0px, 0px)';
+        }, 300);
+      }
+    },
+  },
 });
 
-const onScreen = () => {
-  if (mob.matches) {
-    swiper.disable();
-    addClassArray(clones, 'adv__card--none');
-    setTimeout(() => {
-      slider.style.transform = 'translate3d(0px, 0px, 0px)';
-    }, 300);
-  }
-  if (tab.matches) {
-    swiper.disable();
-    addClassArray(clones, 'adv__card--none');
-    setTimeout(() => {
-      slider.style.transform = 'translate3d(0px, 0px, 0px)';
-    }, 300);
-  }
-  if (desk.matches) {
-    slider.style.transform = 'unset';
-    resetClassArray(clones, 'adv__card--none');
-    swiper.enable();
-    swiper.init();
-  }
-};
+// const onScreen = () => {
+//   if (mob.matches) {
+//     swiper.disable();
+//     addClassArray(clones, 'adv__card--none');
+//     setTimeout(() => {
+//       slider.style.transform = 'translate3d(0px, 0px, 0px)';
+//     }, 300);
+//   }
+//   if (tab.matches) {
+//     swiper.disable();
+//     addClassArray(clones, 'adv__card--none');
+//     setTimeout(() => {
+//       slider.style.transform = 'translate3d(0px, 0px, 0px)';
+//     }, 300);
+//   }
+//   if (desk.matches) {
+//     slider.style.transform = 'translate3d(-1110px, 0px, 0px)';
+//     resetClassArray(clones, 'adv__card--none');
+//     swiper.enable();
+//     swiper.init();
+//   }
+// };
 
-window.addEventListener('load', onScreen);
-window.addEventListener('resize', onScreen);
+// window.addEventListener('load', onScreen);
+// window.addEventListener('resize', onScreen);
