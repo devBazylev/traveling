@@ -129,16 +129,7 @@
 
   grid-area: 2/1/3/4;
   gap: 20px 0;
-  width: calc(100vw - 30px);
   margin: 0 auto;
-
-  @media (min-width: $tab) {
-    width: calc(100vw - 90px);
-  }
-
-  @media (min-width: $desk) {
-    width: calc(100vw - 240px);
-  }
 }
 
 .reviews__slide {

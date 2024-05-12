@@ -18,6 +18,7 @@ const swiper = new Swiper('.adv', {
   init: false,
   loop: true,
   watchSlidesProgress: true,
+  observer: true,
   slidesPerView: 'auto',
   slidesPerGroup: 2,
   initialSlide: 2,
