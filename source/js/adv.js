@@ -36,8 +36,6 @@ const swiper = new Swiper('.adv', {
   centeredSlides: true,
   loopAddBlankSlides: false,
   loopAdditionalSlides: 0,
-  slideActiveClass: 'adv__card--active',
-  slideVisibleClass: 'adv__card--part',
   navigation: {
     nextEl: '.adv__button--next',
     prevEl: '.adv__button--prev',
