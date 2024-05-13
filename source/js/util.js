@@ -61,20 +61,13 @@ const removeListenerArray = (array, action, func) => {
   });
 };
 
-const cloneSlides = (elems, array) => {
+const cloneSlides = (parent, elems, array) => {
   elems.forEach((elem) => {
     const clone = elem.cloneNode(true);
     clone.setAttribute('aria-hidden', true);
     array.push(clone);
+    parent.appendChild(clone);
   });
 };
-// const cloneSlides = (parent, elems, array) => {
-//   elems.forEach((elem) => {
-//     const clone = elem.cloneNode(true);
-//     clone.setAttribute('aria-hidden', true);
-//     array.push(clone);
-//     parent.appendChild(clone);
-//   });
-// };
 
 export { setDataId, addClass, removeClass, toggleClass, addClassArray, resetClassArray, setClassArray, changeText, setListener, removeListener, setListenerArray, removeListenerArray, cloneSlides };

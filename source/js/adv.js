@@ -15,6 +15,15 @@ const SLIDES_PER_GROUP = 2;
 const clones = [];
 let totalSlides;
 
+const recalcSlides = () => {
+  totalSlides = slidesLength + clones.length;
+  const screenWidth = window.innerWidth;
+  const minSlides = Math.ceil(screenWidth / slideWidth + SLIDES_PER_GROUP);
+  for (let i = totalSlides; i < minSlides; i = i + slidesLength) {
+    cloneSlides(slider, slides, clones);
+  }
+};
+
 const swiper = new Swiper('.adv', {
   modules: [Navigation, Manipulation],
   init: false,
@@ -22,7 +31,7 @@ const swiper = new Swiper('.adv', {
   observer: true,
   slidesPerView: 'auto',
   slidesPerGroup: 2,
-  initialSlide: 4,
+  initialSlide: 2,
   watchSlidesProgress: true,
   centeredSlides: true,
   loopAddBlankSlides: false,
@@ -64,32 +73,16 @@ const swiper = new Swiper('.adv', {
         }, 300);
       }
       if (desk.matches) {
+        recalcSlides();
         this.enable();
         resetClassArray(clones, 'adv__card--none');
         setTimeout(() => {
           slider.style.transform = 'translate3d(-1110px, 0px, 0px)';
         }, 300);
-        totalSlides = slidesLength + clones.length;
-        const screenWidth = window.innerWidth;
-        const minSlides = Math.ceil(screenWidth / slideWidth + SLIDES_PER_GROUP);
-        for (let i = totalSlides; i < minSlides; i = i + slidesLength) {
-          cloneSlides(slides, clones);
-          swiper.appendSlide(clones);
-          swiper.update();
-          swiper.updateSlides();
-        }
       }
     },
     resize: function () {
-      totalSlides = slidesLength + clones.length;
-      const screenWidth = window.innerWidth;
-      const minSlides = Math.ceil(screenWidth / slideWidth + SLIDES_PER_GROUP);
-      for (let i = totalSlides; i < minSlides; i = i + slidesLength) {
-        cloneSlides(slides, clones);
-        swiper.appendSlide(clones);
-        swiper.update();
-        swiper.updateSlides();
-      }
+      recalcSlides();
     }
   },
 });
