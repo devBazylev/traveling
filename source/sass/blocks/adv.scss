@@ -73,7 +73,6 @@
   padding: 19px 9px;
   border: 1px solid $bright-trans-10;
   background-color: $light;
-  // visibility: hidden;
 
   @media (min-width: $tab) {
     width: 324px;
@@ -94,11 +93,6 @@
 .adv__card--none {
   display: none;
 }
-
-// .adv__card--active,
-// .adv__card--part {
-//   visibility: visible;
-// }
 
 .adv__card::before {
   @include pseudo;
