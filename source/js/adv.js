@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Manipulation } from 'swiper/modules';
-import { addClassArray, resetClassArray, cloneSlides } from './util.js';
+import { addClassArray, resetClassArray, cloneSlides, setListener, removeListener } from './util.js';
 
 const mob = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
 const tab = window.matchMedia('(min-width: 768px) and (max-width: 1439px)');
@@ -90,10 +90,10 @@ const swiper = new Swiper('.adv', {
 const onScreen = () => {
   if (totalSlides !== 0 && desk.matches) {
     swiper.init();
-    window.removeEventListener('load', onScreen);
-    window.removeEventListener('resize', onScreen);
+    removeListener(window, 'load', onScreen);
+    removeListener(window, 'resize', onScreen);
   }
 };
 
-window.addEventListener('load', onScreen);
-window.addEventListener('resize', onScreen);
+setListener(window, 'load', onScreen);
+setListener(window, 'resize', onScreen);
