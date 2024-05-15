@@ -1,5 +1,11 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+import { addClass, removeClass, setListener } from './util.js';
+
+const reviews = document.querySelector('.reviews');
+const reviewsContainer = reviews.querySelector('.reviews__container');
+const btnPrev = reviews.querySelector('.reviews__button--prev');
+const btnNext = reviews.querySelector('.reviews__button--next');
 
 new Swiper('.reviews', {
   modules: [Navigation],
@@ -39,3 +45,14 @@ new Swiper('.reviews', {
     },
   },
 });
+
+const onScreen = () => {
+  if (btnPrev.disabled && btnNext.disabled) {
+    addClass(reviewsContainer, 'reviews__container--center');
+  } else {
+    removeClass(reviewsContainer, 'reviews__container--center');
+  }
+};
+
+setListener(window, 'resize', onScreen);
+setListener(window, 'load', onScreen);

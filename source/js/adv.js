@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Manipulation } from 'swiper/modules';
+import { Navigation, Manipulation, A11y } from 'swiper/modules';
 import { addClassArray, resetClassArray, cloneSlides, setListener, removeListener } from './util.js';
 
 const mob = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
@@ -25,7 +25,7 @@ const recalcSlides = () => {
 };
 
 const swiper = new Swiper('.adv', {
-  modules: [Navigation, Manipulation],
+  modules: [Navigation, Manipulation, A11y ],
   init: false,
   loop: true,
   observer: true,
@@ -55,6 +55,15 @@ const swiper = new Swiper('.adv', {
       autoHeight: false,
       simulateTouch: false,
     },
+  },
+  a11y: {
+    enabled: true,
+    containerMessage: 'Слайдер с преимуществами.',
+    itemRoleDescriptionMessage: 'Слайд.',
+    firstSlideMessage: 'Первый слайд.',
+    lastSlideMessage: 'Последний слайд.',
+    prevSlideMessage: '123',
+    nextSlideMessage: '321',
   },
   on: {
     breakpoint: function () {
