@@ -58,23 +58,16 @@ const swiper = new Swiper('.adv', {
   },
   a11y: {
     enabled: true,
-    containerMessage: 'Слайдер с преимуществами.',
-    itemRoleDescriptionMessage: 'Слайд.',
-    firstSlideMessage: 'Первый слайд.',
-    lastSlideMessage: 'Последний слайд.',
-    prevSlideMessage: '123',
-    nextSlideMessage: '321',
+    containerMessage: 'Swiper of advantages.',
+    itemRoleDescriptionMessage: 'Slide.',
+    firstSlideMessage: 'First slide.',
+    lastSlideMessage: 'Last slide.',
+    prevSlideMessage: 'Previous slide.',
+    nextSlideMessage: 'Next slide.',
   },
   on: {
     breakpoint: function () {
-      if (mob.matches) {
-        this.disable();
-        addClassArray(clones, 'adv__card--none');
-        setTimeout(() => {
-          slider.style.transform = 'translate3d(0px, 0px, 0px)';
-        }, 300);
-      }
-      if (tab.matches) {
+      if (mob.matches || tab.matches) {
         this.disable();
         addClassArray(clones, 'adv__card--none');
         setTimeout(() => {
@@ -91,7 +84,20 @@ const swiper = new Swiper('.adv', {
       }
     },
     resize: function () {
-      recalcSlides();
+      if (mob.matches || tab.matches) {
+        this.disable();
+        addClassArray(clones, 'adv__card--none');
+        setTimeout(() => {
+          slider.style.transform = 'translate3d(0px, 0px, 0px)';
+        }, 300);
+      } else {
+        recalcSlides();
+        this.enable();
+        resetClassArray(clones, 'adv__card--none');
+        setTimeout(() => {
+          slider.style.transform = 'translate3d(-1110px, 0px, 0px)';
+        }, 300);
+      }
     }
   },
 });
