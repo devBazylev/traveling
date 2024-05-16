@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
-import { Navigation, Manipulation } from 'swiper/modules';
-import { addClassArray, resetClassArray, cloneSlides } from './util.js';
+import { Navigation, Manipulation, A11y } from 'swiper/modules';
+import { addClassArray, resetClassArray, cloneSlides, setListener, removeListener } from './util.js';
 
 const mob = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
 const tab = window.matchMedia('(min-width: 768px) and (max-width: 1439px)');
@@ -25,7 +25,7 @@ const recalcSlides = () => {
 };
 
 const swiper = new Swiper('.adv', {
-  modules: [Navigation, Manipulation],
+  modules: [Navigation, Manipulation, A11y ],
   init: false,
   loop: true,
   observer: true,
@@ -36,6 +36,9 @@ const swiper = new Swiper('.adv', {
   centeredSlides: true,
   loopAddBlankSlides: false,
   loopAdditionalSlides: 0,
+  observeParents: true,
+  resizeObserver: true,
+  updateOnWindowResize: true,
   navigation: {
     nextEl: '.adv__button--next',
     prevEl: '.adv__button--prev',
@@ -53,16 +56,18 @@ const swiper = new Swiper('.adv', {
       simulateTouch: false,
     },
   },
+  a11y: {
+    enabled: true,
+    containerMessage: 'Swiper of advantages.',
+    itemRoleDescriptionMessage: 'Slide.',
+    firstSlideMessage: 'First slide.',
+    lastSlideMessage: 'Last slide.',
+    prevSlideMessage: 'Previous slide.',
+    nextSlideMessage: 'Next slide.',
+  },
   on: {
     breakpoint: function () {
-      if (mob.matches) {
-        this.disable();
-        addClassArray(clones, 'adv__card--none');
-        setTimeout(() => {
-          slider.style.transform = 'translate3d(0px, 0px, 0px)';
-        }, 300);
-      }
-      if (tab.matches) {
+      if (mob.matches || tab.matches) {
         this.disable();
         addClassArray(clones, 'adv__card--none');
         setTimeout(() => {
@@ -79,7 +84,20 @@ const swiper = new Swiper('.adv', {
       }
     },
     resize: function () {
-      recalcSlides();
+      if (mob.matches || tab.matches) {
+        this.disable();
+        addClassArray(clones, 'adv__card--none');
+        setTimeout(() => {
+          slider.style.transform = 'translate3d(0px, 0px, 0px)';
+        }, 300);
+      } else {
+        recalcSlides();
+        this.enable();
+        resetClassArray(clones, 'adv__card--none');
+        setTimeout(() => {
+          slider.style.transform = 'translate3d(-1110px, 0px, 0px)';
+        }, 300);
+      }
     }
   },
 });
@@ -87,10 +105,10 @@ const swiper = new Swiper('.adv', {
 const onScreen = () => {
   if (totalSlides !== 0 && desk.matches) {
     swiper.init();
-    window.removeEventListener('load', onScreen);
-    window.removeEventListener('resize', onScreen);
+    removeListener(window, 'load', onScreen);
+    removeListener(window, 'resize', onScreen);
   }
 };
 
-window.addEventListener('load', onScreen);
-window.addEventListener('resize', onScreen);
+setListener(window, 'load', onScreen);
+setListener(window, 'resize', onScreen);
