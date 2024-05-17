@@ -4,16 +4,16 @@ const setDataId = (elems) => {
   }
 };
 
-const addClass = (varr, classs) => {
-  varr.classList.add(classs);
+const addClass = (elem, classs) => {
+  elem.classList.add(classs);
 };
 
-const removeClass = (varr, classs) => {
-  varr.classList.remove(classs);
+const removeClass = (elem, classs) => {
+  elem.classList.remove(classs);
 };
 
-const toggleClass = (varr, classs) => {
-  varr.classList.toggle(classs);
+const toggleClass = (elem, classs) => {
+  elem.classList.toggle(classs);
 };
 
 const addClassArray = (elems, classs) => {
@@ -35,29 +35,29 @@ const setClassArray = (array, classs, id) => {
   array[id].classList.add(classs);
 };
 
-const changeText = (array, key) => {
+const changeText = (array, text) => {
   array.forEach((elem) => {
-    elem.textContent = key;
+    elem.textContent = text;
   });
 };
 
-const setListener = (varr, action, func) => {
-  varr.addEventListener(action, func);
+const setListener = (elem, action, callback) => {
+  elem.addEventListener(action, callback);
 };
 
-const removeListener = (varr, action, func) => {
-  varr.removeEventListener(action, func);
+const removeListener = (elem, action, callback) => {
+  elem.removeEventListener(action, callback);
 };
 
-const setListenerArray = (array, action, func) => {
+const setListenerArray = (array, action, callback) => {
   array.forEach((elem) => {
-    elem.addEventListener(action, func);
+    elem.addEventListener(action, callback);
   });
 };
 
-const removeListenerArray = (array, action, func) => {
+const removeListenerArray = (array, action, callback) => {
   array.forEach((elem) => {
-    elem.removeEventListener(action, func);
+    elem.removeEventListener(action, callback);
   });
 };
 
