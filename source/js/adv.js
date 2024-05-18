@@ -12,6 +12,7 @@ const slides = adv.querySelectorAll('.adv__card');
 const slideWidth = parseFloat(getComputedStyle(slides[0]).width);
 const slidesLength = slides.length;
 const SLIDES_PER_GROUP = 2;
+const INITIAL_SLIDE = 2;
 const clones = [];
 let totalSlides;
 
@@ -30,8 +31,8 @@ const swiper = new Swiper('.adv', {
   loop: true,
   observer: true,
   slidesPerView: 'auto',
-  slidesPerGroup: 2,
-  initialSlide: 2,
+  slidesPerGroup: SLIDES_PER_GROUP,
+  initialSlide: INITIAL_SLIDE,
   watchSlidesProgress: true,
   centeredSlides: true,
   loopAddBlankSlides: false,
