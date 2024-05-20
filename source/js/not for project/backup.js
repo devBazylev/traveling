@@ -1,44 +1,5 @@
 // git config core.autocrlf false;
 
-const checkString = (stringChars, lengthMax) =>
-  stringChars.length <= lengthMax;
-
-checkString('проверяемая строка', 20);
-checkString('проверяемая строка', 18);
-checkString('проверяемая строка', 10);
-
-// палиндром
-function checkPalindrom(rawString) {
-  const string = rawString.replaceAll(' ', '').toLowerCase();
-  for (let i = 0; i < string.length / 2; i++) {
-    if (string.at(i) !== string.at(-i - 1)) {
-      return false;
-    }
-  }
-  return true;
-}
-
-checkPalindrom('топот');
-checkPalindrom('ДовОд');
-checkPalindrom('Кекс');
-checkPalindrom('Лёша на полке клопа нашёл ');
-
-//еще один палиндром
-
-var poly = 1023094885;
-var ylop = 0;
-var isPalindrome = false;
-var number = poly;
-
-number = number.toString();
-var splitString = number.split("");
-var reverseArray = splitString.reverse();
-ylop = reverseArray.join("");
-
-if (ylop == poly) {
-  isPalindrome = true;
-}
-
 // извлечение числа из строки
 function extractNumber(arg) {
   const string = arg.toString();
@@ -52,10 +13,6 @@ function extractNumber(arg) {
 }
 
 extractNumber('2023 год');
-extractNumber('ECMAScript 2022');
-extractNumber('1 кефир, 0.5 батона');
-extractNumber('агент 007');
-extractNumber('а я томат');
 
 // случайное число
 const getRandomInteger = (a, b) => {
@@ -132,7 +89,7 @@ heart.onclick = function () {
   } else {
     likesNumber.textContent++;
   }
-  
+
   heart.classList.toggle('added');
 };
 
