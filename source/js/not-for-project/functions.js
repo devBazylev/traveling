@@ -1,3 +1,4 @@
+// https://github.com/htmlacademy/html2-basic-template/
 // git config core.autocrlf false;
 
 function getTextNodesIn(elem, optionFilter) {
