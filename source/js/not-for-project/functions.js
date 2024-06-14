@@ -31,9 +31,6 @@ const toggleDisabled = (button, flag) => {
   button.textContent = flag ? 'Отправляем...' : 'Отправить';
 };
 
-const isKeydown = (evt, keydown) => evt.key === keydown;
-const isTargetClick = (evt, selector) => evt.target.closest(selector);
-
 function extractNumber(arg) {
   const string = arg.toString();
   let result = '';
@@ -87,4 +84,4 @@ const debounce = (callback, timeoutDelay = 500) => {
 };
 
 
-export { toggleDisabled, isKeydown, isTargetClick, extractNumber, getRandomPositiveInteger, createRandomIdFromRangeGenerator, debounce };
+export { toggleDisabled, extractNumber, getRandomPositiveInteger, createRandomIdFromRangeGenerator, debounce };
