@@ -1,5 +1,5 @@
-# Проект Traveling
+# Project Traveling
+Among the libraries is used swiper. 6 sliders are realized by it
 
-Из сторонних библиотек использован swiper
-На его основе реализовано 6 слайдеров
-2 из них активированы или декативированы в зависимости от разрешения экрана
+Here is a link to github-pages with this project:
+## https://devbazylev.github.io/traveling/
