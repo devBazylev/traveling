@@ -1,7 +1,17 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
-new Swiper('.training__slider', {
+import { cloneSlides } from './util.js';
+
+const training = document.querySelector('.training');
+const trainingContainer = training.querySelector('.training__container');
+const slides = training.querySelectorAll('.training__instructor');
+
+const clones = [];
+
+cloneSlides(trainingContainer, slides, clones);
+
+const swiper = new Swiper('.training__slider', {
   modules: [Navigation],
   watchSlidesProgress: true,
   slideActiveClass: 'training__instructor--active',
@@ -31,3 +41,5 @@ new Swiper('.training__slider', {
     },
   }
 });
+
+swiper.init();
