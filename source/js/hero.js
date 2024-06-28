@@ -1,5 +1,12 @@
 import Swiper from 'swiper';
 import { Pagination } from 'swiper/modules';
+import { setListener } from './util.js';
+
+let windowWidth;
+
+const onScreen = () => {
+  windowWidth = window.innerWidth;
+};
 
 new Swiper('.hero', {
   modules: [Pagination],
@@ -17,13 +24,13 @@ new Swiper('.hero', {
   },
   breakpoints: {
     320: {
-      width: 320,
+      width: windowWidth,
     },
     768: {
-      width: 768,
+      width: windowWidth,
     },
     1440: {
-      width: 1440,
+      width: windowWidth,
       simulateTouch: false,
     },
   }
@@ -33,3 +40,5 @@ const bullets = document.querySelectorAll('.hero__bullet');
 bullets.forEach((bullet) => {
   bullet.setAttribute('aria-label', 'Переключите слайд');
 });
+
+setListener(window, 'resize', onScreen);

@@ -4,49 +4,28 @@
 .hero {
   @include grid;
 
-  width: 320px;
+  width: 100vw;
   margin: 0 auto;
   overflow: hidden;
-
-  @media (min-width: $tab) {
-    width: 768px;
-  }
-
-  @media (min-width: $desk) {
-    width: 1440px;
-  }
 }
 
 .hero__slider {
   grid-area: 1/1/2/2;
-  width: 320px;
+  width: 100vw;
   margin: 0 auto;
-
-  @media (min-width: $tab) {
-    width: 768px;
-  }
-
-  @media (min-width: $desk) {
-    width: 1440px;
-  }
 }
 
 .hero__slide {
   @include grid;
 
   gap: 5px;
-  width: 320px;
+  width: 100vw;
   background: linear-gradient(112deg, rgba(15, 20, 41, 0.33) 17.23%, rgba(15, 20, 41, 0) 94.93%);
   visibility: hidden;
   transition: 0.2s;
 
-  @media (min-width: $tab) {
-    width: 768px;
-  }
-
   @media (min-width: $desk) {
     gap: 9px;
-    width: 1440px;
   }
 }
 
@@ -78,6 +57,17 @@
 
 .hero__image {
   display: block;
+  width: 100vw;
+  height: 568px;
+  object-fit: cover;
+
+  @media (min-width: $tab) {
+    height: 1034px;
+  }
+
+  @media (min-width: $desk) {
+    height: 800px;
+  }
 }
 
 .hero__slide h2 {
