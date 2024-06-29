@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Pagination, EffectCreative } from 'swiper/modules';
 import { setListener } from './util.js';
 
 let windowWidth;
@@ -9,11 +9,24 @@ const onScreen = () => {
 };
 
 new Swiper('.hero', {
-  modules: [Pagination],
+  modules: [Pagination, EffectCreative],
   loop: true,
   watchSlidesProgress: true,
   slideActiveClass: 'hero__slide--active',
   spaceBetween: 50,
+  effect: 'creative',
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: [800, 0, -800],
+      rotate: [180, 0, 0],
+    },
+    next: {
+      shadow: true,
+      translate: [800, 0, -800],
+      rotate: [-180, 0, 0],
+    },
+  },
   pagination: {
     el: '.swiper-pagination',
     bulletActiveClass: 'hero__bullet--active',
