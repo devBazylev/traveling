@@ -1,14 +1,5 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
-import { cloneSlides } from './util.js';
-
-const tours = document.querySelector('.tours');
-const slidesWrapper = tours.querySelector('.tours__wrapper');
-const slides = tours.querySelectorAll('.card');
-
-const clones = [];
-
-cloneSlides(slidesWrapper, slides, clones);
 
 const swiper = new Swiper('.tours__slider', {
   modules: [Navigation],
